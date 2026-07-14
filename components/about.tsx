@@ -67,11 +67,11 @@ export function About() {
     >
       {/* Background Glow */}
 
-      <div className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-lime-400/10 blur-[140px]" />
+      <div className="absolute left-0 top-0 h-125 w-125 rounded-full bg-lime-400/10 blur-[140px]" />
 
-      <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-slate-300/20 blur-[150px]" />
+      <div className="absolute right-0 bottom-0 h-125 w-125 rounded-full bg-slate-300/20 blur-[150px]" />
 
-      <div className="relative mx-auto max-w-[1500px] px-6 lg:px-12">
+      <div className="relative mx-auto max-w-375 px-6 lg:px-12">
 
         {/* Section Header */}
 
@@ -166,7 +166,7 @@ export function About() {
                 src="/images/about_image.png"
                 alt="Volterra Energy"
                 className="
-                h-[500px]
+                h-125
                 w-full
                 object-cover
                 transition
@@ -1063,7 +1063,7 @@ export function About() {
         >
           {/* Background */}
 
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-[#0f172a] to-slate-800" />
+          <div className="absolute inset-0 bg-linear-to-br from-slate-900 via-[#0f172a] to-slate-800" />
 
           {/* Green Glow */}
 
@@ -1078,8 +1078,8 @@ export function About() {
             absolute
             inset-0
             opacity-[0.05]
-            [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)]
-            [background-size:60px_60px]
+            bg-[linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)]
+            bg-size-[60px_60px]
             "
           />
 

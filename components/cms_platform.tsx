@@ -56,8 +56,8 @@ className="
 absolute
 left-0
 top-0
-h-[450px]
-w-[450px]
+h-112.5
+w-112.5
 rounded-full
 bg-lime-500/10
 blur-[150px]
@@ -69,8 +69,8 @@ className="
 absolute
 right-0
 bottom-0
-h-[450px]
-w-[450px]
+h-112.5
+w-112.5
 rounded-full
 bg-lime-400/10
 blur-[150px]
@@ -84,8 +84,8 @@ className="
 absolute
 inset-0
 opacity-[0.03]
-[background-image:linear-gradient(#0f172a_1px,transparent_1px),linear-gradient(90deg,#0f172a_1px,transparent_1px)]
-[background-size:70px_70px]
+bg-[linear-gradient(#0f172a_1px,transparent_1px),linear-gradient(90deg,#0f172a_1px,transparent_1px)]
+bg-size-[70px_70px]
 "
 />
 
@@ -94,7 +94,7 @@ className="
 relative
 z-10
 mx-auto
-max-w-[1500px]
+max-w-375
 px-6
 lg:px-10
 "
@@ -232,7 +232,7 @@ className="text-center"
                       className="rounded-2xl border border-white/10 bg-[#0E1B2A] p-6 transition-all"
                     >
                       <div
-                        className={`mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br ${item.color}`}
+                        className={`mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-linear-to-br ${item.color}`}
                       >
                         <Icon className="h-6 w-6 text-white" />
                       </div>
@@ -279,7 +279,7 @@ className="text-center"
                     whileInView={{ width: '99.8%' }}
                     transition={{ duration: 1.5 }}
                     viewport={{ once: true }}
-                    className="h-full rounded-full bg-gradient-to-r from-lime-500 to-green-500"
+                    className="h-full rounded-full bg-linear-to-r from-lime-500 to-green-500"
                   />
 
                 </div>
@@ -336,7 +336,7 @@ className="text-center"
                   viewport={{ once: true }}
                   className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white p-4 backdrop-blur-xl"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-lime-500 to-green-600">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br from-lime-500 to-green-600">
 
                     <ChartNoAxesCombined className="h-6 w-6 text-white" />
 

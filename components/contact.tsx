@@ -64,8 +64,8 @@ className="
 absolute
 left-0
 top-0
-h-[500px]
-w-[500px]
+h-125
+w-125
 rounded-full
 bg-lime-500/10
 blur-[150px]
@@ -77,8 +77,8 @@ className="
 absolute
 right-0
 bottom-0
-h-[500px]
-w-[500px]
+h-125
+w-125
 rounded-full
 bg-green-500/10
 blur-[150px]
@@ -92,8 +92,8 @@ className="
 absolute
 inset-0
 opacity-[0.04]
-[background-image:linear-gradient(#0f172a_1px,transparent_1px),linear-gradient(90deg,#0f172a_1px,transparent_1px)]
-[background-size:70px_70px]
+bg-[linear-gradient(#0f172a_1px,transparent_1px),linear-gradient(90deg,#0f172a_1px,transparent_1px)]
+bg-size-[70px_70px]
 "
 />
 
@@ -102,7 +102,7 @@ className="
 relative
 z-10
 mx-auto
-max-w-[1500px]
+max-w-375
 px-6
 lg:px-10
 "
@@ -230,7 +230,7 @@ help you at every step.
       top-28
       overflow-hidden
       rounded-[36px]
-      bg-gradient-to-br
+      bg-linear-to-br
       from-slate-900
       via-[#111827]
       to-slate-900
@@ -819,7 +819,7 @@ help you at every step.
   justify-center
   gap-3
   rounded-2xl
-  bg-gradient-to-r
+  bg-linear-to-r
   from-lime-500
   to-green-600
   py-3
@@ -977,7 +977,7 @@ help you at every step.
           items-center
           gap-3
           rounded-2xl
-          bg-gradient-to-r
+          bg-linear-to-r
           from-lime-500
           to-green-600
           px-8
@@ -1005,7 +1005,7 @@ help you at every step.
       {/* GOOGLE MAP */}
       {/* ================================= */}
 
-      <div className="h-[500px]">
+      <div className="h-125">
 
         <iframe
           src="https://www.google.com/maps?q=Bangalore,+Karnataka&output=embed"

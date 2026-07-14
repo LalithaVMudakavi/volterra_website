@@ -30,16 +30,16 @@ const categories = [
 const products: Product[] = [
   {
     id: 1,
-    name: "Volterra Nova",
+    name: "Nova",
     category: "Home",
     power: "3.3 kW",
-    image: "/images/image.png",
+    image: "/images/home_product.png",
     description:
       "Smart AC charging solution designed for residential EV charging.",
   },
     {
     id: 2,
-    name: "Volterra Vega",
+    name: "Vega",
     category: "Home",
     power: "7.4 kW",
     image: "/images/products/commercial-ac.png",
@@ -48,7 +48,7 @@ const products: Product[] = [
   },
     {
     id: 3,
-    name: "Volterra Lyra",
+    name: "Lyra",
     category: "Home",
     power: "11 kW",
     image: "/images/products/commercial-ac.png",
@@ -58,7 +58,7 @@ const products: Product[] = [
 
   {
     id: 4,
-    name: "Volterra Orion",
+    name: "Orion",
     category: "Business",
     power: "22kW",
     image: "/images/products/commercial-ac.png",
@@ -68,7 +68,7 @@ const products: Product[] = [
 
   {
     id: 5,
-    name: "Volterra Sirius",
+    name: "Sirius",
     category: "Fast DC",
     power: "30kW",
     image: "/images/products/dc-fast.png",
@@ -78,7 +78,7 @@ const products: Product[] = [
 
   {
     id: 6,
-    name: "Volterra Polaris",
+    name: "Polaris",
     category: "Fast DC",
     power: "60kW",
     image: "/images/products/fleet.png",
@@ -88,7 +88,7 @@ const products: Product[] = [
 
   {
     id: 7,
-    name: "Volterra Zenith",
+    name: "Zenith",
     category: "Ultra DC",
     power: "120kW",
     image: "/images/products/fleet.png",
@@ -98,7 +98,7 @@ const products: Product[] = [
 
   {
     id: 7,
-    name: "Volterra Eclipse",
+    name: "Eclipse",
     category: "Fast DC",
     power: "180kW",
     image: "/images/products/fleet.png",
@@ -108,7 +108,7 @@ const products: Product[] = [
 
   {
     id: 8,
-    name: "Volterra Infinity",
+    name: "Infinity",
     category: "Ultra DC",
     power: "240kW",
     image: "/images/products/fleet.png",
@@ -118,7 +118,7 @@ const products: Product[] = [
 
   {
     id: 9,
-    name: "Volterra Cosmos",
+    name: "Cosmos",
     category: "Fast DC",
     power: "360kW",
     image: "/images/products/fleet.png",

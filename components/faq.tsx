@@ -90,8 +90,8 @@ className="
 absolute
 left-0
 top-0
-h-[420px]
-w-[420px]
+h-105
+w-105
 rounded-full
 bg-lime-500/10
 blur-[150px]
@@ -103,8 +103,8 @@ className="
 absolute
 right-0
 bottom-0
-h-[420px]
-w-[420px]
+h-105
+w-105
 rounded-full
 bg-green-500/10
 blur-[150px]
@@ -118,8 +118,8 @@ className="
 absolute
 inset-0
 opacity-[0.04]
-[background-image:linear-gradient(#0f172a_1px,transparent_1px),linear-gradient(90deg,#0f172a_1px,transparent_1px)]
-[background-size:70px_70px]
+bg-[linear-gradient(#0f172a_1px,transparent_1px),linear-gradient(90deg,#0f172a_1px,transparent_1px)]
+bg-size-[70px_70px]
 "
 />
 
@@ -128,7 +128,7 @@ className="
 relative
 z-10
 mx-auto
-max-w-[1500px]
+max-w-375
 px-6
 lg:px-10
 -mt-11
@@ -261,7 +261,7 @@ Charging Management System and nationwide support.
       top-32
       overflow-hidden
       rounded-[36px]
-      bg-gradient-to-br
+      bg-linear-to-br
       from-slate-900
       via-[#111827]
       to-slate-900
@@ -364,7 +364,7 @@ Charging Management System and nationwide support.
 
               <p className="font-semibold">
 
-                +91 XXXXX XXXXX
+                +91 80954 34443
 
               </p>
 
@@ -451,7 +451,7 @@ Charging Management System and nationwide support.
           mt-10
           w-full
           rounded-2xl
-          bg-gradient-to-r
+          bg-linear-to-r
           from-lime-500
           to-green-600
           py-4
