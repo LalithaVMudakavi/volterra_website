@@ -30,7 +30,7 @@ const categories = [
 const products: Product[] = [
   {
     id: 1,
-    name: "Nova",
+    name: "VOLTERRA Lite",
     category: "Home",
     power: "3.3 kW",
     image: "/images/home_product.png",
@@ -39,7 +39,7 @@ const products: Product[] = [
   },
     {
     id: 2,
-    name: "Vega",
+    name: "VOLTERRA GO",
     category: "Home",
     power: "7.4 kW",
     image: "/images/products/commercial-ac.png",
@@ -48,7 +48,7 @@ const products: Product[] = [
   },
     {
     id: 3,
-    name: "Lyra",
+    name: "VOLTERRA One",
     category: "Home",
     power: "11 kW",
     image: "/images/products/commercial-ac.png",
@@ -58,7 +58,7 @@ const products: Product[] = [
 
   {
     id: 4,
-    name: "Orion",
+    name: "VOLTERRA Pro",
     category: "Business",
     power: "22kW",
     image: "/images/products/commercial-ac.png",
@@ -68,7 +68,7 @@ const products: Product[] = [
 
   {
     id: 5,
-    name: "Sirius",
+    name: "VOLTERRA Plus",
     category: "Fast DC",
     power: "30kW",
     image: "/images/products/dc-fast.png",
@@ -78,7 +78,7 @@ const products: Product[] = [
 
   {
     id: 6,
-    name: "Polaris",
+    name: "VOLTERRA Max",
     category: "Fast DC",
     power: "60kW",
     image: "/images/products/fleet.png",
@@ -88,7 +88,7 @@ const products: Product[] = [
 
   {
     id: 7,
-    name: "Zenith",
+    name: "VOLTERRA Prime",
     category: "Ultra DC",
     power: "120kW",
     image: "/images/products/fleet.png",
@@ -98,7 +98,7 @@ const products: Product[] = [
 
   {
     id: 7,
-    name: "Eclipse",
+    name: "VOLTERRA Elite",
     category: "Fast DC",
     power: "180kW",
     image: "/images/products/fleet.png",
@@ -108,7 +108,7 @@ const products: Product[] = [
 
   {
     id: 8,
-    name: "Infinity",
+    name: "VOLTERRA Ultra",
     category: "Ultra DC",
     power: "240kW",
     image: "/images/products/fleet.png",
@@ -118,7 +118,7 @@ const products: Product[] = [
 
   {
     id: 9,
-    name: "Cosmos",
+    name: "VOLTERRA Infinity",
     category: "Fast DC",
     power: "360kW",
     image: "/images/products/fleet.png",
