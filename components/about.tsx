@@ -30,7 +30,7 @@ export function About() {
   },
   {
     no: "02",
-    title: "Charging CMS",
+    title: "CMS",
     desc: "Monitor, control and manage charging stations with real-time analytics.",
     icon: MonitorSmartphone,
   },
@@ -42,7 +42,7 @@ export function About() {
   },
   {
     no: "04",
-    title: "Maintenance",
+    title: "End To End Maintenance",
     desc: "24×7 preventive maintenance and nationwide technical support.",
     icon: ShieldCheck,
   },
@@ -518,12 +518,9 @@ export function About() {
               <div className="mt-4 space-y-2">
 
                 {[
-                  "Deliver safe, reliable and high-quality EV charging solutions.",
-                  "Expand charging infrastructure across cities and highways.",
-                  "Empower businesses with intelligent charging solutions.",
-                  "Leverage advanced CMS and digital innovation.",
-                  "Promote renewable energy integration.",
-                  "Build long-term partnerships through trust and excellence.",
+                  "Deliver safe, reliable, and high-quality EV charging solutions.",
+                  "Expand EV infrastructure through intelligent technology and digital innovation.",
+                  "Promote sustainable mobility through renewable energy and trusted partnerships."
                 ].map((item) => (
 
                   <div

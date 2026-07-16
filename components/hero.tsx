@@ -154,8 +154,9 @@ to-transparent
                 bg-white/10
                 backdrop-blur-xl
                 px-6
-                py-3
+                py-2
                 shadow-xl
+                mt-8
                 "
               >
 
@@ -167,7 +168,7 @@ to-transparent
 
                 </span>
 
-                <span className="text-white text-base font-medium tracking-wide">
+                <span className="text-white text-xs font-medium tracking-wide">
 
                   Driving India's EV Revolution
 
@@ -182,13 +183,13 @@ to-transparent
             <motion.h1
               variants={itemVariants}
               className="
-              mt-8
+              mt-6
               text-white
               text-5xl
               lg:text-6xl
               xl:text-6xl
               font-black
-              leading-[0.99]
+              leading-[0.98]
               tracking-tight
               "
             >
@@ -209,11 +210,11 @@ to-transparent
             <motion.p
               variants={itemVariants}
               className="
-              mt-8
+              mt-6
               max-w-155
               text-base
               md:text-lg
-              leading-9
+              leading-7
               text-gray-300
               "
             >
@@ -287,6 +288,100 @@ to-transparent
               </button>
 
             </motion.div>
+
+            <motion.div
+  variants={itemVariants}
+  className="
+    mt-10
+    inline-flex
+    overflow-hidden
+    rounded-[28px]
+    border
+    border-white/10
+    bg-white/8
+    backdrop-blur-2xl
+    shadow-[0_20px_60px_rgba(0,0,0,0.25)]
+  "
+>
+  {[
+    {
+      icon: <Zap size={18} />,
+      value: "0-80%",
+      label: "in just 15 min",
+    },
+    {
+      icon: <ShieldCheck size={18} />,
+      value: "100%",
+      label: "Safe & Reliable",
+    },
+    {
+      icon: <Leaf size={18} />,
+      value: "100%",
+      label: "Green Energy",
+    },
+    {
+      icon: <Network size={18} />,
+      value: "24/7",
+      label: "Smart Monitoring",
+    },
+  ].map((item, index) => (
+    <div
+      key={item.label}
+      className={`
+        group
+        relative
+        flex
+        w-50
+        flex-col
+        items-center
+        justify-center
+        px-6
+        py-2
+        transition-all
+        duration-300
+        hover:bg-white/5
+        ${index !== 3 ? "border-r border-white/10" : ""}
+      `}
+    >
+      {/* Glow */}
+      <div className="absolute inset-0 bg-gradient-to-b from-lime-400/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
+      {/* Icon */}
+      <div
+        className="
+          relative
+          flex
+          h-8
+          w-8
+          items-center
+          justify-center
+          rounded-full
+          border
+          border-lime-400/20
+          bg-lime-400/10
+          text-lime-400
+          transition-all
+          duration-300
+          group-hover:scale-110
+          group-hover:bg-lime-400
+          group-hover:text-black
+        "
+      >
+        {item.icon}
+      </div>
+
+      {/* Value */}
+      <h3 className="mt-1 text-lg font-bold text-white">
+        {item.value}
+      </h3>
+
+      {/* Label */}
+      <p className="text-center text-sm text-gray-300 leading-5">
+        {item.label}
+      </p>
+    </div>
+  ))}
+</motion.div>
 
                         {/* ================= RIGHT FEATURE CARDS ================= */}
 

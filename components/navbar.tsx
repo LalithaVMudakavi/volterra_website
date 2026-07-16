@@ -36,12 +36,6 @@ const menuItems: MenuItem[] = [
     {
       label: "CMS Platform", href: "/cms_platform",
     },
-    // {
-    //   label: "Projects", href: "/projects",
-    // },
-    {
-      label: "Blogs", href: "/blogs",
-    },
   ];
 
   return (

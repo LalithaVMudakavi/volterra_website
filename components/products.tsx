@@ -631,9 +631,9 @@ shadow-[0_20px_60px_rgba(0,0,0,.06)]
 
   <div className="my-8 h-px bg-slate-200" />
 
-  <div className="flex items-center justify-between">
+  <div className="flex items-center">
 
-    <div>
+    {/* <div>
 
       <p className="text-xs uppercase tracking-[3px] text-slate-400">
         Starting From
@@ -643,7 +643,7 @@ shadow-[0_20px_60px_rgba(0,0,0,.06)]
         ₹54,999
       </h4>
 
-    </div>
+    </div> */}
 
     <button
       className="
