@@ -124,7 +124,7 @@ const industries = [
     title: "Healthcare ",
     icon: Hospital,
     description:
-      "Destination charging that enhances guest experience for EV travelers.",
+      "Reliable EV charging infrastructure for hospitals and healthcare facilities, ensuring convenient access for staff, patients, and visitors.",
     sectors: [
       "Hospitals",
       "Clinics",
