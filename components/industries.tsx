@@ -19,6 +19,7 @@ const industries = [
   {
     title: "Residential",
     icon: Home,
+    image: "/images/industries/residential.png",
     description:
       "Reliable EV charging solutions designed for homes and residential communities.",
     sectors: [
@@ -32,6 +33,7 @@ const industries = [
   {
     title: "Corporate",
     icon: Building2,
+    image: "/images/industries/corporate.jpg",
     description:
       "Smart workplace charging infrastructure for employees and visitors.",
     sectors: [
@@ -45,6 +47,7 @@ const industries = [
   {
     title: "Destination Charging",
     icon: Hotel,
+     image: "/images/industries/hospitality.jpg",
     description:
       "Destination charging that enhances guest experience for EV travelers.",
     sectors: [
@@ -58,6 +61,7 @@ const industries = [
   {
     title: "Highways",
     icon: Zap,
+     image: "/images/industries/highways.jpg",
     description:
       "Ultra-fast charging infrastructure for long-distance travel.",
     sectors: [
@@ -71,6 +75,7 @@ const industries = [
   {
     title: "Fleet & Logistics",
     icon: Truck,
+      image: "/images/industries/fleet.jpg",
     description:
       "Dedicated charging infrastructure for commercial fleet operators.",
     sectors: [
@@ -84,6 +89,7 @@ const industries = [
   {
     title: "Retail & Commercial",
     icon: ShoppingBag,
+       image: "/images/industries/retail.jpg",
     description:
       "Charging solutions that increase customer engagement and dwell time.",
     sectors: [
@@ -97,6 +103,7 @@ const industries = [
   {
     title: "Real Estate",
     icon: Building,
+     image: "/images/industries/real-estate.jpg",
     description:
       "Helping developers build EV-ready communities.",
     sectors: [
@@ -110,6 +117,7 @@ const industries = [
   {
     title: "Public Infrastructure",
     icon: Landmark,
+       image: "/images/industries/public.jpg",
     description:
       "Scalable charging solutions for public mobility.",
     sectors: [
@@ -123,6 +131,7 @@ const industries = [
   {
     title: "Healthcare ",
     icon: Hospital,
+    image: "/images/industries/healthcare.jpg",
     description:
       "Reliable EV charging infrastructure for hospitals and healthcare facilities, ensuring convenient access for staff, patients, and visitors.",
     sectors: [
@@ -287,45 +296,70 @@ export default function Industries() {
 
             {/* Hero */}
 
-            <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-10">
+           <div className="relative overflow-hidden min-h-[420px]">
 
-              <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-lime-500/20 blur-[120px]" />
+  {/* Background Image */}
+  <motion.img
+    key={current.image}
+    src={current.image}
+    alt={current.title}
+    initial={{ scale: 1.08, opacity: 0 }}
+    animate={{ scale: 1, opacity: 1 }}
+    transition={{ duration: 0.6 }}
+    className="absolute inset-0 h-full w-full object-cover"
+  />
 
-              <div className="relative z-10 flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between -mb-6">
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-slate-900/65" />
 
-                <div>
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/70 to-transparent" />
 
-                  <div className="flex h-18 w-18 items-center justify-center rounded-3xl bg-gradient-to-br from-lime-500 to-green-600 text-white shadow-2xl">
+  {/* Decorative Glow */}
+  <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-lime-500/20 blur-[120px]" />
 
-                    <Icon className="h-12 w-12" />
+  {/* Content */}
+  <div className="relative z-10 flex min-h-[420px] flex-col justify-center p-12">
 
-                  </div>
+    <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
 
-                  <h2 className="mt-6 text-5xl font-black text-white">
+      <div className="max-w-2xl">
 
-                    {current.title}
+        <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-lime-500/90 backdrop-blur-xl text-white shadow-2xl">
 
-                  </h2>
+          <Icon className="h-12 w-12" />
 
-                  <p className="mt-3 max-w-2xl text-lg leading-8 text-slate-300">
+        </div>
 
-                    {current.description}
+        <h2 className="mt-8 text-5xl font-black text-white">
 
-                  </p>
+          {current.title}
 
-                </div>
+        </h2>
 
-                <div className="hidden lg:block">
+        <p className="mt-5 text-lg leading-8 text-slate-200">
 
-                  <span className="text-[160px] font-black text-white/5">
-                    {String(active + 1).padStart(2, "0")}
-                  </span>
+          {current.description}
 
-                </div>
+        </p>
 
-              </div>
+      </div>
 
-            </div>
+      <div className="hidden lg:block">
+
+        <span className="text-[180px] font-black text-white/10">
+
+          {String(active + 1).padStart(2, "0")}
+
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
                         {/* Content */}
 
             <div className="grid gap-12 p-12 lg:grid-cols-[1fr_280px]">
