@@ -19,7 +19,7 @@ const industries = [
   {
     title: "Residential",
     icon: Home,
-    image: "/images/industries/residential.png",
+    image: "/industries/residential.png",
     description:
       "Reliable EV charging solutions designed for homes and residential communities.",
     sectors: [
