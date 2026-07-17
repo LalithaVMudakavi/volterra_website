@@ -1704,7 +1704,7 @@ export function Solutions() {
                 text-lime-400
                 "
               >
-                Partner With VOLTERRA
+                Want to join With VOLTERRA ?
               </div>
 
               <h2

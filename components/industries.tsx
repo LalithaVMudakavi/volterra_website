@@ -12,6 +12,7 @@ import {
   Building,
   Landmark,
   ArrowRight,
+  Hospital,
 } from "lucide-react";
 
 const industries = [
@@ -116,6 +117,18 @@ const industries = [
       "Government Projects",
       "Institutions",
       "Public Charging",
+    ],
+  },
+
+  {
+    title: "Healthcare ",
+    icon: Hospital,
+    description:
+      "Destination charging that enhances guest experience for EV travelers.",
+    sectors: [
+      "Hospitals",
+      "Clinics",
+      " Medical Centres",
     ],
   },
 ];
