@@ -15,7 +15,7 @@ export default function CMSPlatform() {
   return (
     <section
       id="cms-platform"
-      className="relative overflow-hidden bg-[#F7F9FC] py-28"
+      className="relative overflow-hidden bg-[#F7F9FC] py-32"
     >
       {/* Background */}
 

@@ -19,9 +19,9 @@ const industries = [
   {
     title: "Residential",
     icon: Home,
-    image: "/public/industries/residential.png",
+    image: "/industries/residential.png",
     description:
-      "Reliable EV charging solutions designed for homes and residential communities.",
+      "Reliable EV charging solutions for apartments, gated communities, villas, and individual homes.",
     sectors: [
       "Apartments",
       "RWAs",
@@ -33,9 +33,9 @@ const industries = [
   {
     title: "Corporate",
     icon: Building2,
-    image: "/public/industries/corporate.jpg",
+    image: "/industries/corporate.png",
     description:
-      "Smart workplace charging infrastructure for employees and visitors.",
+      "Smart workplace charging infrastructure for offices, business parks, and employee parking facilities.",
     sectors: [
       "Corporate Offices",
       "Technology Parks",
@@ -47,9 +47,9 @@ const industries = [
   {
     title: "Destination Charging",
     icon: Hotel,
-     image: "/public/industries/hospitality.jpg",
+     image: "/industries/destinationcharging.png",
     description:
-      "Destination charging that enhances guest experience for EV travelers.",
+      "Enhance guest experiences with convenient EV charging at hotels, resorts, restaurants, and cafés.",
     sectors: [
       "Hotels",
       "Resorts",
@@ -61,9 +61,9 @@ const industries = [
   {
     title: "Highways",
     icon: Zap,
-     image: "/public/industries/highways.jpg",
+     image: "/industries/highway.png",
     description:
-      "Ultra-fast charging infrastructure for long-distance travel.",
+      "High-speed DC fast charging designed for intercity travel, highways, and long-distance EV journeys.",
     sectors: [
       "Expressways",
       "National Highways",
@@ -75,9 +75,9 @@ const industries = [
   {
     title: "Fleet & Logistics",
     icon: Truck,
-      image: "/public/industries/fleet.jpg",
+      image: "/industries/fleetlogistics.png",
     description:
-      "Dedicated charging infrastructure for commercial fleet operators.",
+      "Scalable charging infrastructure for fleet operators, logistics hubs, delivery services, and commercial EVs.",
     sectors: [
       "Fleet Operators",
       "Logistics",
@@ -89,9 +89,9 @@ const industries = [
   {
     title: "Retail & Commercial",
     icon: ShoppingBag,
-       image: "/public/industries/retail.jpg",
+       image: "/industries/retail&commercial.png",
     description:
-      "Charging solutions that increase customer engagement and dwell time.",
+      "Attract more visitors with seamless EV charging at shopping malls, retail stores, supermarkets, and commercial centers.",
     sectors: [
       "Shopping Malls",
       "Retail Stores",
@@ -103,9 +103,9 @@ const industries = [
   {
     title: "Real Estate",
     icon: Building,
-     image: "/public/industries/real-estate.jpg",
+     image: "/industries/realestate.png",
     description:
-      "Helping developers build EV-ready communities.",
+      "Future-ready EV charging solutions that increase property value across residential and commercial developments.",
     sectors: [
       "Builders",
       "Developers",
@@ -117,9 +117,9 @@ const industries = [
   {
     title: "Public Infrastructure",
     icon: Landmark,
-       image: "/public/industries/public.jpg",
+       image: "/industries/publicinfrastructure.png",
     description:
-      "Scalable charging solutions for public mobility.",
+      "Reliable public charging networks for parking facilities, government projects, institutions, and urban mobility.",
     sectors: [
       "Public Parking",
       "Government Projects",
@@ -131,7 +131,7 @@ const industries = [
   {
     title: "Healthcare ",
     icon: Hospital,
-    image: "/public/industries/healthcare.jpg",
+    image: "/industries/healthcare.png",
     description:
       "Reliable EV charging infrastructure for hospitals and healthcare facilities, ensuring convenient access for staff, patients, and visitors.",
     sectors: [
@@ -149,7 +149,7 @@ export default function Industries() {
   const Icon = current.icon;
 
   return (
-    <section    className="relative overflow-hidden bg-[#F8FAFC] py-28"
+    <section className="relative overflow-hidden bg-[#F8FAFC] py-32"
     >
       {/* Background Glow */}
 
@@ -228,7 +228,7 @@ export default function Industries() {
 
           {/* ================= LEFT SIDE ================= */}
 
-          <div>
+          {/* <div>
 
             <div className="sticky top-28">
 
@@ -282,7 +282,149 @@ export default function Industries() {
 
             </div>
 
+          </div> */}
+
+          <div className="sticky top-28">
+
+  {/* Header */}
+  <div className="mb-8">
+
+    <span className="text-sm font-semibold uppercase tracking-[4px] text-lime-600">
+      Explore
+    </span>
+
+    <h3 className="mt-2 text-3xl font-black text-slate-900">
+      Industries
+    </h3>
+
+    <div className="mt-4 h-1 w-16 rounded-full bg-lime-500" />
+
+  </div>
+
+  <div className="space-y-4">
+
+    {industries.map((industry, index) => (
+
+      <button
+        key={industry.title}
+        onClick={() => setActive(index)}
+        className={`
+          group
+          relative
+          w-full
+          overflow-hidden
+          rounded-2xl
+          border
+          transition-all
+          duration-300
+
+          ${
+            active === index
+              ? "border-lime-500 bg-lime-500 shadow-2xl"
+              : "border-slate-200 bg-white hover:border-lime-300 hover:-translate-y-1 hover:shadow-xl"
+          }
+        `}
+      >
+
+        {/* Left Accent */}
+        <div
+          className={`
+            absolute
+            left-0
+            top-0
+            h-full
+            w-1
+            transition-all
+
+            ${
+              active === index
+                ? "bg-white"
+                : "bg-transparent group-hover:bg-lime-500"
+            }
+          `}
+        />
+
+        <div className="flex items-center justify-between px-6 py-3">
+
+          {/* Left */}
+          <div className="flex items-center gap-3">
+
+            {/* Number */}
+            <div
+              className={`
+                flex
+                h-10
+                w-10
+                items-center
+                justify-center
+                rounded-xl
+                text-sm
+                font-black
+                transition-all
+
+                ${
+                  active === index
+                    ? "bg-white/20 text-white"
+                    : "bg-slate-100 text-slate-500 group-hover:bg-lime-100 group-hover:text-lime-700"
+                }
+              `}
+            >
+              {String(index + 1).padStart(2, "0")}
+            </div>
+
+            {/* Title */}
+            <div>
+
+              <h4
+                className={`
+                  text-lg
+                  font-bold
+
+                  ${
+                    active === index
+                      ? "text-white"
+                      : "text-slate-800"
+                  }
+                `}
+              >
+                {industry.title}
+              </h4>
+
+            </div>
+
           </div>
+
+          {/* Arrow */}
+           <div
+            className={`
+              flex
+              ${
+                active === index
+                  ? " text-white"
+                  : " text-slate-500"
+              }
+            `}
+          >
+            <ArrowRight
+                      className={`h-5 w-5 transition-transform duration-300
+
+                      ${
+                        active === index
+                          ? "translate-x-1"
+                          : "group-hover:translate-x-1"
+                      }`}
+                    />
+          </div>
+
+        </div>
+
+      </button>
+
+    ))}
+
+  </div>
+
+</div>
 
           {/* ================= RIGHT SIDE ================= */}
 
@@ -296,7 +438,7 @@ export default function Industries() {
 
             {/* Hero */}
 
-           <div className="relative overflow-hidden min-h-[420px]">
+           <div className="relative overflow-hidden min-h-105">
 
   {/* Background Image */}
   <motion.img
@@ -310,50 +452,92 @@ export default function Industries() {
   />
 
   {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-slate-900/65" />
+  <div className="absolute inset-0 bg-slate-900/35" />
 
   {/* Gradient Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/70 to-transparent" />
+  <div className="absolute inset-0 bg-linear-to-r from-slate-900/90 via-slate-800/70 to-transparent" />
 
   {/* Decorative Glow */}
   <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-lime-500/20 blur-[120px]" />
 
   {/* Content */}
-  <div className="relative z-10 flex min-h-[420px] flex-col justify-center p-12">
+  <div className="relative z-10 flex min-h-105 flex-col justify-center p-12">
 
     <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
 
       <div className="max-w-2xl">
 
-        <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-lime-500/90 backdrop-blur-xl text-white shadow-2xl">
+        {/* <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-lime-500/90 backdrop-blur-xl text-white shadow-2xl">
 
           <Icon className="h-12 w-12" />
 
-        </div>
+        </div> */}
+          <div
+      className="
+      flex
+      h-16
+      w-16
+      items-center
+      justify-center
+      rounded-2xl
+      border
+      border-white/20
+      bg-white/10
+      backdrop-blur-xl
+      shadow-2xl
+      "
+    >
+      <Icon className="h-8 w-8 text-lime-400" />
+    </div>
 
-        <h2 className="mt-8 text-5xl font-black text-white">
+           <h2
+      className="
+      mt-6
+      text-4xl
+      lg:text-5xl
+      font-extrabold
+      tracking-tight
+      text-white
+      drop-shadow-xl
+      "
+    >
+      {current.title}
+    </h2>
 
-          {current.title}
+          {/* Green Line */}
+    <div className="mt-4 h-1 w-14 rounded-full bg-lime-400" />
 
-        </h2>
-
-        <p className="mt-5 text-lg leading-8 text-slate-200">
-
-          {current.description}
-
-        </p>
+    {/* Description */}
+    <p
+      className="
+      mt-5
+      max-w-lg
+      text-lg
+      leading-8
+      text-slate-200
+      "
+    >
+      {current.description}
+    </p>
 
       </div>
 
-      <div className="hidden lg:block">
+      {/* Industry Number */}
+  <div className="absolute right-10 top-8 hidden lg:block">
 
-        <span className="text-[180px] font-black text-white/10">
+    <span
+      className="
+      text-[140px]
+      font-black
+      leading-none
+      text-white/8
+      select-none
+      "
+    >
+      {String(active + 1).padStart(2, "0")}
+    </span>
 
-          {String(active + 1).padStart(2, "0")}
-
-        </span>
-
-      </div>
+  </div>
 
     </div>
 
@@ -443,7 +627,7 @@ export default function Industries() {
 
               {/* Right Sidebar */}
 
-              <div className="rounded-[30px] bg-gradient-to-br from-lime-500 to-green-600 p-8 text-white">
+              <div className="rounded-[30px] bg-linear-to-br from-lime-500 to-green-600 p-8 text-white">
 
                 <h3 className="text-2xl font-bold">
                   Ready to Electrify?

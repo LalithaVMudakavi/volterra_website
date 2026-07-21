@@ -1339,7 +1339,7 @@ icon:Building2,
        <div className="relative overflow-hidden rounded-[36px] shadow-2xl mt-3">
 
     <img
-        src="/images/about_image.png"
+        src="/images/about.png"
         className="w-full h-[520px] object-cover"
     />
 
@@ -1447,7 +1447,7 @@ icon:Building2,
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-32"
+          className="mt-28"
         >
           {/* Section Title */}
 
@@ -1546,15 +1546,15 @@ icon:Building2,
     Building the Future of Intelligent Mobility
   </h3>
 
-  <div className="relative z-10 mt-8 space-y-5">
-    <p className="text-lg leading-9 text-slate-300">
+  <div className="relative z-10 mt-6 space-y-4">
+    <p className="text-lg leading-8 text-slate-300">
       To build one of India's most trusted, intelligent and sustainable EV
       charging networks—creating a connected energy ecosystem where
       electric mobility, Artificial Intelligence, IoT and renewable energy
       work together seamlessly.
     </p>
 
-    <p className="text-lg leading-9 text-slate-300">
+    <p className="text-lg leading-8 text-slate-300">
       We envision a future where reliable and accessible EV charging is
       available wherever people live, work, travel and connect, enabling
       cleaner transportation and accelerating India's transition toward a
@@ -1597,9 +1597,9 @@ icon:Building2,
     Driving Sustainable Mobility
   </h3>
 
-  <div className="relative z-10 mt-8 space-y-5">
+  <div className="relative z-10 mt-6 space-y-2 text-lg">
     {[
-      "Building a robust network of AC and DC fast-charging infrastructure.",
+      "Building a robust network of AC & DC fast-charging infrastructure.",
       "Leveraging AI, IoT, cloud technology and data analytics.",
       "Delivering high charger availability through predictive maintenance.",
       "Creating opportunities for investors and franchise partners.",
@@ -1608,7 +1608,7 @@ icon:Building2,
       "Providing a seamless charging experience for every EV user.",
     ].map((item) => (
       <div key={item} className="flex items-start gap-4">
-        <div className="mt-2 h-2.5 w-2.5 rounded-full bg-lime-400" />
+        <div className="mt-3 h-2.5 w-2.5 rounded-full bg-lime-400" />
         <p className="flex-1 leading-8 text-slate-600">{item}</p>
       </div>
     ))}
@@ -1627,7 +1627,7 @@ icon:Building2,
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: .8 }}
-          className="mt-36"
+          className="mt-28"
         >
 
           {/* Heading */}
