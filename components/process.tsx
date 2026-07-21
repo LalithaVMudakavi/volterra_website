@@ -231,408 +231,181 @@ for homes, businesses and public networks.
 
 </motion.div>
 
-{/* PART 2 WILL START HERE */}
 
 {/* ========================================= */}
 {/* TOP PROCESS ROW */}
 {/* ========================================= */}
 
-<div className="relative mt-16">
 
-  {/* Connector Line */}
+    <div className="mt-12 grid gap-6 lg:grid-cols-4">
 
-  <div
-    className="
-    absolute
-    left-[12%]
-    right-[12%]
-    top-14
-    h-[2px]
-    bg-slate-300
-    "
-  />
+  {processSteps.map((step, index) => {
 
-  <div className="grid grid-cols-4 gap-12">
+    const Icon = step.icon;
 
-    {processSteps.slice(0,4).map((step,index)=>{
+    return (
 
-      const Icon = step.icon;
+      <motion.div
+        key={step.number}
+        initial={{
+          opacity: 0,
+          y: 40,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        viewport={{
+          once: true,
+        }}
+        transition={{
+          delay: index * 0.08,
+          duration: .6,
+        }}
+        whileHover={{
+          y: 0,
+        }}
+        className="
+        group
+        relative
+        overflow-hidden
+        rounded-3xl
+        border
+        border-slate-200
+        bg-white
+        p-6
+        shadow-[0_15px_45px_rgba(0,0,0,.06)]
+        transition-all
+        duration-500
+        hover:border-lime-400
+        "
+      >
 
-      return(
+                  {/* Glow */}
 
-        <motion.div
-
-          key={step.number}
-
-          initial={{
-            opacity:0,
-            y:40
-          }}
-
-          whileInView={{
-            opacity:1,
-            y:0
-          }}
-
-          viewport={{
-            once:true
-          }}
-
-          transition={{
-            delay:index*.15,
-            duration:.6
-          }}
-
-          className="
-          relative
-          flex
-          flex-col
-          items-center
-          text-center
-          group
-          "
-
-        >
-
-          {/* STEP NUMBER */}
-
-          <div
-            className="
-            absolute
-            left-12
-            top-0
-            z-20
-            flex
-            h-12
-            w-12
-            items-center
-            justify-center
-            rounded-full
-            border-4
-            border-white
-            bg-lime-600
-            text-lg
-            font-bold
-            text-white
-            shadow-lg
-            "
-          >
-
-            {step.number}
-
-          </div>
-
-          {/* ICON CIRCLE */}
-
-          <div
-
-            className="
-            relative
-            flex
-            h-28
-            w-28
-            items-center
-            justify-center
-            rounded-full
-            border
-            border-lime-200
-            bg-white
-            shadow-[0_20px_60px_rgba(0,0,0,.08)]
-            transition-all
-            duration-500
-            group-hover:-translate-y-2
-            group-hover:shadow-[0_30px_70px_rgba(132,204,22,.25)]
-            "
-
-          >
-
-            {/* OUTER RING */}
-
-            <div
-              className="
-              absolute
-              inset-2
-              rounded-full
-              border-2
-              border-lime-500/30
-              "
-            />
-
-            {/* INNER ICON */}
-
-            <Icon
-              className="
-              h-12
-              w-12
-              text-lime-600
-              transition-all
-              duration-500
-              group-hover:scale-110
-              "
-            />
-
-          </div>
-
-
-          {/* TITLE */}
-
-          <h3
-            className="
-            mt-3
-            text-2xl
-            font-bold
-            text-slate-900
-            "
-          >
-
-            {step.title}
-
-          </h3>
-
-
-          {/* DESCRIPTION */}
-
-          <p
-            className="
-            mt-2
-            max-w-3xl
-            text-base
-            leading-6
-            text-slate-600
-            "
-          >
-
-            {step.description}
-
-          </p>
-
-        </motion.div>
-
-      )
-
-    })}
-
-  </div>
-
-</div>
-
-<div
-  className="
-  absolute
-  right-[12%]
-  top-[460px]
-  hidden
-  xl:flex
-  flex-col
-  items-center
-  "
->
-
-  {/* Vertical Line */}
-
-  <div
-    className="
-    w-[2px]
-    h-[40px]
-    bg-slate-300
-    "
-  />
-
-  {/* Arrow */}
-
-  <div
-    className="
-    h-3
-    w-3
-    rotate-45
-    border-r-2
-    border-b-2
-    border-slate-300
-    -mt-1
-    "
-  />
-
-</div>
-
-
-{/* ========================================= */}
-{/* BOTTOM PROCESS ROW */}
-{/* ========================================= */}
-
-<div className="mt-20">
-
-  {/* Bottom Connector */}
-
-<div
-  className="
-  absolute
-  left-[12%]
-  right-[12%]
-  top-[580px]
-  h-[1.5px]
-  bg-slate-300
-  "
+                  <div
+                    className="
+                    absolute
+                    -right-16
+                    -top-16
+                    h-44
+                    w-44
+                    rounded-full
+                    bg-lime-500/10
+                    blur-[80px]
+                    opacity-0
+                    transition-all
+                    duration-500
+                    group-hover:opacity-100
+                    "
+                  />
+                  
+      <div
+className="
+absolute
+left-0
+top-0
+h-1
+w-full
+origin-left
+scale-x-0
+bg-gradient-to-r
+from-lime-400
+to-green-500
+transition-transform
+duration-500
+group-hover:scale-x-100
+"
 />
 
-  <div className="grid grid-cols-4 gap-12">
+        {/* Background Number */}
 
-    {processSteps
-  .slice(4)
-  .map((step, index) => {
-
-      const Icon = step.icon;
-
-      return(
-
-        <motion.div
-
-          key={step.number}
-
-          initial={{
-            opacity:0,
-            y:40
-          }}
-
-          whileInView={{
-            opacity:1,
-            y:0
-          }}
-
-          viewport={{
-            once:true
-          }}
-
-          transition={{
-            delay:index*.15,
-            duration:.6
-          }}
-
+        <span
           className="
-          relative
-          flex
-          flex-col
-          items-center
-          text-center
-          group
-          "
+absolute
+right-5
+top-3
+mt-2
+text-[46px]
+font-black
+leading-none
+bg-gradient-to-b
+from-slate-100
+to-transparent
+bg-clip-text
+text-transparent
+select-none
+transition-all
+duration-500
+group-hover:scale-110
+group-hover:from-lime-200
+"
+        >
+          {step.number}
+        </span>
 
+        <div
+          className="
+          flex
+          h-12
+          w-12
+          items-center
+          justify-center
+          rounded-2xl
+          bg-lime-500/10
+          transition-all
+          duration-500
+         
+          group-hover:bg-lime-500
+          "
         >
 
-          {/* STEP NUMBER */}
-
-          <div
+          <Icon
             className="
-            absolute
-            left-12
-            top-0
-            z-20
-            flex
-            h-12
-            w-12
-            items-center
-            justify-center
-            rounded-full
-            border-4
-            border-white
-            bg-lime-600
-            text-lg
-            font-bold
-            text-white
-            shadow-lg
-            "
-          >
-
-            {step.number}
-
-          </div>
-
-          {/* ICON */}
-
-          <div
-            className="
-            relative
-            flex
-            h-28
-            w-28
-            items-center
-            justify-center
-            rounded-full
-            border
-            border-lime-200
-            bg-white
-            shadow-[0_20px_60px_rgba(0,0,0,.08)]
+            h-7
+            w-7
+            text-lime-600
             transition-all
             duration-500
-            group-hover:-translate-y-2
-            group-hover:shadow-[0_30px_70px_rgba(132,204,22,.25)]
+            group-hover:text-white
             "
-          >
+          />
 
-            <div
-              className="
-              absolute
-              inset-2
-              rounded-full
-              border-2
-              border-lime-500/30
-              "
-            />
+        </div>
 
-            <Icon
-              className="
-              h-12
-              w-12
-              text-lime-600
-              transition-all
-              duration-500
-              group-hover:scale-110
-              "
-            />
+
+                  {/* Title */}
+
+                  <h3
+                    className="
+                    mt-6
+                    text-xl
+                    font-bold
+                    text-slate-900
+                    "
+                  >
+                    {step.title}
+                  </h3>
+
+                  {/* Description */}
+
+                  <p
+                    className="
+                    mt-2
+                    leading-7
+                    text-slate-600
+                    "
+                  >
+                    {step.description}
+                  </p>
+
+                </motion.div>
+
+              );
+
+            })}
 
           </div>
-
-
-          {/* Title */}
-
-          <h3
-            className="
-            mt-3
-            text-2xl
-            font-bold
-            text-slate-900
-            "
-          >
-
-            {step.title}
-
-          </h3>
-
-
-          {/* Description */}
-
-          <p
-            className="
-            mt-2
-            max-w-3xl
-            text-base
-            leading-6
-            text-slate-600
-            "
-          >
-
-            {step.description}
-
-          </p>
-
-        </motion.div>
-
-      )
-
-    })}
-
-  </div>
-
-</div>
 
 {/* ========================================= */}
 {/* CTA STRIP */}

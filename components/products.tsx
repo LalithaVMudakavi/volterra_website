@@ -51,7 +51,7 @@ const products: Product[] = [
     name: "Volterra One",
     category: "Residential",
     power: "11 kW",
-    image: "/images/products/commercial-ac.png",
+     image: "/images/productsimages/11kw_charger.png",
     description:
       "Smart AC charging solution designed for residential EV charging.",
   },
@@ -81,7 +81,7 @@ const products: Product[] = [
     name: "Volterra Max",
     category: "Destination",
     power: "60kW",
-    image: "/images/products/fleet.png",
+    image: "/images/productsimages/60kw_charger.png",
     description:
       "Intelligent charging infrastructure for commercial fleets.",
   },
@@ -91,7 +91,7 @@ const products: Product[] = [
     name: "Volterra Prime",
     category: "Public",
     power: "120kW",
-    image: "/images/products/fleet.png",
+    image: "/images/productsimages/120kw_charger.png",
     description:
       "Intelligent charging infrastructure for commercial fleets.",
   },
@@ -101,7 +101,7 @@ const products: Product[] = [
     name: "Volterra Elite",
     category: "Public",
     power: "180kW",
-    image: "/images/products/fleet.png",
+    image: "/images/productsimages/180kw_charger.png",
     description:
       "Intelligent charging infrastructure for commercial fleets.",
   },
@@ -554,7 +554,6 @@ shadow-[0_20px_60px_rgba(0,0,0,.06)]
     alt={product.name}
     whileHover={{
       scale: 1.08,
-      rotate: -2,
     }}
     transition={{ duration: .4 }}
     className="
