@@ -438,7 +438,7 @@ Charging Management System and nationwide support.
 
               <p className="font-semibold">
 
-                Mon – Sat | 9 AM – 7 PM
+                Mon - Sat | 9:30 AM - 6:30 PM
 
               </p>
 
