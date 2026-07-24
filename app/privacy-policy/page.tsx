@@ -66,17 +66,17 @@ export default function PrivacyPolicy() {
 
       {/* Background Glow */}
 
-      <div className="absolute left-0 top-0 h-[450px] w-[450px] rounded-full bg-lime-500/10 blur-[140px]" />
+      <div className="absolute left-0 top-0 h-112.5 w-112.5 rounded-full bg-lime-500/10 blur-[140px]" />
 
-      <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-green-500/10 blur-[150px]" />
+      <div className="absolute right-0 bottom-0 h-125 w-125 rounded-full bg-green-500/10 blur-[150px]" />
 
       {/* Engineering Grid */}
 
       <div className="absolute inset-0 opacity-[0.04]
-      [background-image:linear-gradient(#0f172a_1px,transparent_1px),linear-gradient(90deg,#0f172a_1px,transparent_1px)]
-      [background-size:60px_60px]" />
+      bg-[linear-gradient(#0f172a_1px,transparent_1px),linear-gradient(90deg,#0f172a_1px,transparent_1px)]
+      bg-size-[60px_60px]" />
 
-      <div className="relative z-10 mx-auto max-w-[1500px] px-6 lg:px-10">
+      <div className="relative z-10 mx-auto max-w-375 px-6 lg:px-10">
 
         {/* ====================================================== */}
         {/* HERO */}

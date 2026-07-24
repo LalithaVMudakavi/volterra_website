@@ -43,7 +43,7 @@ const menuItems: MenuItem[] = [
   initial={{ y: -40, opacity: 0 }}
   animate={{ y: 0, opacity: 1 }}
   transition={{ duration: 0.5 }}
-  className="fixed top-5 left-1/2 -translate-x-1/2 w-[95%] max-w-[1500px] z-50"
+  className="fixed top-5 left-1/2 -translate-x-1/2 w-[95%] max-w-375 z-50"
 >
     <div
   className="
@@ -94,7 +94,7 @@ const menuItems: MenuItem[] = [
                 bg-white
                 rounded-2xl
                 shadow-2xl
-                min-w-[240px]
+                min-w-60
                 opacity-0
                 translate-y-3
                 pointer-events-none
@@ -134,7 +134,7 @@ ${
 after:absolute
 after:left-0
 after:-bottom-2
-after:h-[2px]
+after:h-0.5
 after:bg-lime-400
 after:transition-all
 ${
@@ -161,7 +161,7 @@ ${
   items-center
   gap-2
   rounded-2xl
-  bg-gradient-to-r
+  bg-linear-to-r
   from-lime-500
   to-green-600
   px-4

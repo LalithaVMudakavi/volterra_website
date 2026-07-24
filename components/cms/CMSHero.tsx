@@ -279,9 +279,9 @@ export default function CMSHero() {
 
       <div className="absolute inset-0 bg-slate-950/55" />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/75 via-slate-950/35 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-r from-slate-950/75 via-slate-950/35 to-transparent" />
 
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-950/30" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-slate-950/30" />
 
       {/* Hero Content */}
 

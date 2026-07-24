@@ -1,10 +1,9 @@
 import Navbar from "@/components/navbar";
 import { Hero } from "@/components/hero";
-import { Testimonials } from "@/components/testimonials";
-// import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { Process } from "@/components/process";
 import { FAQ } from "@/components/faq";
+import { CompanyOverview } from "@/components/CompanyOverview";
 
 export default function Page() {
   return (
@@ -13,15 +12,14 @@ export default function Page() {
 
       <Hero />
 
-      <Process />
+      {/* <CompanyOverview /> */}
 
-      {/* <Testimonials /> */}
+      <Process />
 
       <FAQ />
 
-      {/* <Contact /> */}
-
       <Footer />
+      
     </main>
   );
 }

@@ -87,7 +87,7 @@ className="
 relative
 overflow-hidden
 bg-white
-py-28
+py-32
 "
 >
 
@@ -98,8 +98,8 @@ className="
 absolute
 left-0
 top-0
-h-[450px]
-w-[450px]
+h-112.5
+w-112.5
 rounded-full
 bg-lime-500/10
 blur-[140px]
@@ -111,8 +111,8 @@ className="
 absolute
 right-0
 bottom-0
-h-[450px]
-w-[450px]
+h-112.5
+w-112.5
 rounded-full
 bg-green-500/10
 blur-[140px]
@@ -126,8 +126,8 @@ className="
 absolute
 inset-0
 opacity-[0.04]
-[background-image:linear-gradient(#0f172a_1px,transparent_1px),linear-gradient(90deg,#0f172a_1px,transparent_1px)]
-[background-size:70px_70px]
+bg-[linear-gradient(#0f172a_1px,transparent_1px),linear-gradient(90deg,#0f172a_1px,transparent_1px)]
+bg-size-[60px_60px]
 "
 />
 
@@ -136,7 +136,7 @@ className="
 relative
 z-10
 mx-auto
-max-w-[1500px]
+max-w-375
 px-6
 lg:px-10
  -mt-10
@@ -324,7 +324,7 @@ h-1
 w-full
 origin-left
 scale-x-0
-bg-gradient-to-r
+bg-linear-to-r
 from-lime-400
 to-green-500
 transition-transform
@@ -344,7 +344,7 @@ mt-2
 text-[46px]
 font-black
 leading-none
-bg-gradient-to-b
+bg-linear-to-b
 from-slate-100
 to-transparent
 bg-clip-text

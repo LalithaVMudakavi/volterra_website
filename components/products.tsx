@@ -965,7 +965,7 @@ shadow-[0_20px_60px_rgba(0,0,0,.06)]
 
     <div className="mt-12 flex flex-wrap justify-center gap-5">
 
-      <button
+      {/* <button
         onClick={() => setShowPartnerModal(true)}
         className="
         rounded-2xl
@@ -981,22 +981,20 @@ shadow-[0_20px_60px_rgba(0,0,0,.06)]
         "
       >
         Join Volterra
-      </button>
+      </button> */}
 
       <button
            onClick={() => router.push('/contact')}
-        className="
+ className="
         rounded-2xl
-        border
-        border-white/20
-        bg-white/10
+        bg-lime-500
         px-8
-        py-4
+        py-3
         font-semibold
-        backdrop-blur-xl
+        text-white
         transition-all
         duration-300
-        hover:bg-white/20
+        hover:scale-105
         cursor-pointer
         "
       >
@@ -1103,8 +1101,7 @@ justify-center
 rounded-full
 bg-slate-100
 hover:bg-slate-200
-"
-
+" 
 >
 
 <X className="h-5 w-5"/>

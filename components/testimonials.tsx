@@ -93,7 +93,7 @@ export function Testimonials() {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-green-50 to-white border-t border-border">
+    <section className="py-24 bg-linear-to-b from-green-50 to-white border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10">
 
         
@@ -102,8 +102,8 @@ className="
 absolute
 left-0
 top-0
-h-[450px]
-w-[450px]
+h-112.5
+w-112.5
 rounded-full
 bg-lime-500/10
 blur-[140px]

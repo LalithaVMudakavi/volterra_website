@@ -121,7 +121,7 @@ absolute
 inset-0
 opacity-[0.04]
 bg-[linear-gradient(#0f172a_1px,transparent_1px),linear-gradient(90deg,#0f172a_1px,transparent_1px)]
-bg-size-[70px_70px]
+bg-size-[60px_60px]
 "
 />
 
@@ -133,7 +133,7 @@ mx-auto
 max-w-375
 px-6
 lg:px-10
--mt-11
+-mt-10
 "
 >
 

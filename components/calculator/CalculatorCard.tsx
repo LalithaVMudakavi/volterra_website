@@ -129,7 +129,7 @@ export default function CalculatorCard({
           {title}
         </p>
 
-        <h3 className="mt-3 break-words text-3xl font-black text-slate-900">
+        <h3 className="mt-3 wrap-break-word text-3xl font-black text-slate-900">
           {value}
         </h3>
 

@@ -20,7 +20,6 @@ import {
   HandCoins,
   BadgeDollarSign,
   Car,
-  Sparkles,
   TrendingUp,
   Settings2,
   Zap,
@@ -30,6 +29,7 @@ import {
   ArrowRight,
   X,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const stakeholders = [
   {
@@ -315,6 +315,9 @@ const challenges = [
 ];
 
 export function Solutions() {
+
+  const router = useRouter()
+  
    const [active, setActive] = useState(0);
 
    const [showPartnerModal, setShowPartnerModal] = useState(false);
@@ -343,17 +346,17 @@ const openHostForm = () => {
     >
         <div className="absolute inset-0">
 
-        <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-lime-500/10 blur-[130px]" />
+        <div className="absolute left-1/2 top-0 h-125 w-125 -translate-x-1/2 rounded-full bg-lime-500/10 blur-[130px]" />
 
-        <div className="absolute right-0 bottom-0 h-[350px] w-[350px] rounded-full bg-emerald-500/10 blur-[120px]" />
+        <div className="absolute right-0 bottom-0 h-87.5 w-87.5 rounded-full bg-emerald-500/10 blur-[120px]" />
 
         <div
           className="
           absolute
           inset-0
           opacity-[0.03]
-          [background-image:linear-gradient(#0f172a_1px,transparent_1px),linear-gradient(90deg,#0f172a_1px,transparent_1px)]
-          [background-size:70px_70px]
+          bg-[linear-gradient(#0f172a_1px,transparent_1px),linear-gradient(90deg,#0f172a_1px,transparent_1px)]
+          bg-size-[70px_70px]
           "
         />
 
@@ -374,7 +377,7 @@ const openHostForm = () => {
 >
 
 
-  <div className="relative z-10 mx-auto max-w-[1500px] px-8">
+  <div className="relative z-10 mx-auto max-w-375 px-8">
 
     <div className="grid items-start gap-20 lg:grid-cols-[0.95fr_1.05fr] -mt-10">
 
@@ -413,7 +416,7 @@ const openHostForm = () => {
         <h2
           className="
           mt-5
-          max-w-[650px]
+          max-w-162.5
           text-[39px]
           font-black
           leading-[1.08]
@@ -469,7 +472,7 @@ const openHostForm = () => {
         {/* IMAGE */}
         {/* ===================================================== */}
 
-        <div className="relative mt-10 max-w-[760px]">
+        <div className="relative mt-10 max-w-190">
 
           {/* Glow */}
 
@@ -564,7 +567,7 @@ const openHostForm = () => {
     <p
       className="
         mt-2
-        max-w-[520px]
+        max-w-130
         text-[12px]
         leading-[1.6]
         text-green-100
@@ -627,7 +630,7 @@ const openHostForm = () => {
 
     {/* Text */}
 
-    <div className="max-w-[560px]">
+    <div className="max-w-140">
 
       <h3
         className="
@@ -690,7 +693,7 @@ const openHostForm = () => {
           group
           relative
           flex
-          min-h-[160px]
+          min-h-40
           flex-col
           items-center
           justify-center
@@ -716,7 +719,7 @@ const openHostForm = () => {
             absolute
             inset-0
             rounded-[28px]
-            bg-gradient-to-br
+            bg-linear-to-br
             from-lime-50
             to-transparent
             opacity-0
@@ -1772,7 +1775,8 @@ const openHostForm = () => {
             </div>
 
             <button
-  onClick={() => setShowPartnerModal(true)}
+            onClick={() => router.push('/contact')}
+  // onClick={() => setShowPartnerModal(true)}
   className="
   rounded-2xl
   bg-gradient-to-r
@@ -1791,7 +1795,7 @@ const openHostForm = () => {
   cursor-pointer
   "
 >
- Join Volterra
+ Contact Us
 </button>
 
           </div>

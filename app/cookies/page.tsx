@@ -45,17 +45,17 @@ export default function CookiesPolicyPage() {
       {/* Background */}
       {/* ====================================================== */}
 
-      <div className="absolute left-0 top-0 h-[420px] w-[420px] rounded-full bg-lime-500/10 blur-[130px]" />
+      <div className="absolute left-0 top-0 h-105 w-105 rounded-full bg-lime-500/10 blur-[130px]" />
 
-      <div className="absolute right-0 bottom-0 h-[520px] w-[520px] rounded-full bg-green-500/10 blur-[150px]" />
+      <div className="absolute right-0 bottom-0 h-130 w-130 rounded-full bg-green-500/10 blur-[150px]" />
 
       <div
         className="absolute inset-0 opacity-[0.04]
-        [background-image:linear-gradient(#0f172a_1px,transparent_1px),linear-gradient(90deg,#0f172a_1px,transparent_1px)]
-        [background-size:70px_70px]"
+        bg-[linear-gradient(#0f172a_1px,transparent_1px),linear-gradient(90deg,#0f172a_1px,transparent_1px)]
+        bg-size-[70px_70px]"
       />
 
-      <div className="relative z-10 mx-auto max-w-[1500px] px-6 lg:px-10">
+      <div className="relative z-10 mx-auto max-w-375 px-6 lg:px-10">
 
         {/* ====================================================== */}
         {/* HERO */}
@@ -859,7 +859,7 @@ export default function CookiesPolicyPage() {
           className="mt-32"
         >
 
-          <div className="overflow-hidden rounded-[40px] bg-gradient-to-r from-lime-500 to-green-600 p-14 text-white shadow-[0_30px_80px_rgba(132,204,22,.30)]">
+          <div className="overflow-hidden rounded-[40px] bg-linear-to-r from-lime-500 to-green-600 p-14 text-white shadow-[0_30px_80px_rgba(132,204,22,.30)]">
 
             <div className="mx-auto max-w-4xl text-center">
 
