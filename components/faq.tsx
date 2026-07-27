@@ -174,7 +174,7 @@ text-lime-600
 "
 >
 
-<div className="h-px w-12 bg-lime-500"/>
+<div className="h-0.5 w-12 bg-lime-500"/>
 
 <p
 className="
