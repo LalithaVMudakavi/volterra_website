@@ -569,6 +569,7 @@ Charging Management System and nationwide support.
             justify-center
             rounded-full
             bg-lime-500/10
+            cursor-pointer
             "
 
           >
