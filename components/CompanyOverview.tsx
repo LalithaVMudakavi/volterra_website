@@ -451,7 +451,6 @@
 import { motion } from "framer-motion";
 import {
   ArrowRight,
-  BadgeCheck,
   Building2,
   Cpu,
   Leaf,

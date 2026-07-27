@@ -20,7 +20,7 @@ const industries = [
   {
     title: "Residential",
     icon: Home,
-    image: "/industries/images/residential.png",
+    image: "/images/industries/residential.png",
     description:
       "Reliable EV charging solutions for apartments, gated communities, villas, and individual homes.",
     sectors: [
@@ -34,7 +34,7 @@ const industries = [
   {
     title: "Corporate",
     icon: Building2,
-    image: "/industries/images/corporate.png",
+    image: "/images/industries/corporate.png",
     description:
       "Smart workplace charging infrastructure for offices, business parks, and employee parking facilities.",
     sectors: [
@@ -48,7 +48,7 @@ const industries = [
   {
     title: "Destination Charging",
     icon: Hotel,
-     image: "/industries/images/destinationcharging.png",
+     image: "/images/industries/destinationcharging.png",
     description:
       "Enhance guest experiences with convenient EV charging at hotels, resorts, restaurants, and cafés.",
     sectors: [
@@ -62,7 +62,7 @@ const industries = [
   {
     title: "Highways",
     icon: Zap,
-     image: "/industries/images/highway.png",
+     image: "/images/industries/highway.png",
     description:
       "High-speed DC fast charging designed for intercity travel, highways, and long-distance EV journeys.",
     sectors: [
@@ -76,7 +76,7 @@ const industries = [
   {
     title: "Fleet & Logistics",
     icon: Truck,
-      image: "/industries/images/fleetlogistics.png",
+      image: "/images/industries/fleetlogistics.png",
     description:
       "Scalable charging infrastructure for fleet operators, logistics hubs, delivery services, and commercial EVs.",
     sectors: [
@@ -90,7 +90,7 @@ const industries = [
   {
     title: "Retail & Commercial",
     icon: ShoppingBag,
-       image: "/industries/images/retail&commercial.png",
+       image: "/images/industries/retail&commercial.png",
     description:
       "Attract more visitors with seamless EV charging at shopping malls, retail stores, supermarkets, and commercial centers.",
     sectors: [
@@ -104,7 +104,7 @@ const industries = [
   {
     title: "Real Estate",
     icon: Building,
-     image: "/industries/images/realestate.png",
+     image: "/images/industries/realestate.png",
     description:
       "Future-ready EV charging solutions that increase property value across residential and commercial developments.",
     sectors: [
@@ -118,7 +118,7 @@ const industries = [
   {
     title: "Public Infrastructure",
     icon: Landmark,
-       image: "/industries/images/publicinfrastructure.png",
+       image: "/images/industries/publicinfrastructure.png",
     description:
       "Reliable public charging networks for parking facilities, government projects, institutions, and urban mobility.",
     sectors: [
@@ -132,7 +132,7 @@ const industries = [
   {
     title: "Healthcare ",
     icon: Hospital,
-    image: "/industries/images/healthcare.png",
+    image: "/images/industries/healthcare.png",
     description:
       "Reliable EV charging infrastructure for hospitals and healthcare facilities, ensuring convenient access for staff, patients, and visitors.",
     sectors: [
@@ -528,14 +528,14 @@ export default function Industries() {
       </div>
 
       {/* Industry Number */}
-  <div className="absolute right-10 top-8 hidden lg:block">
+  <div className="absolute right-6 bottom-4 hidden lg:block">
 
     <span
       className="
-      text-[140px]
+      text-[40px]
       font-black
       leading-none
-      text-white/8
+      text-white/40
       select-none
       "
     >

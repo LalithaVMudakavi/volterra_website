@@ -7,9 +7,7 @@ import {
   MessageCircle,
   MapPinned,
   FileText,
-  CircuitBoard,
   Wrench,
-  ShieldCheck,
   Zap,
   Headphones,
   Leaf,
@@ -131,6 +129,7 @@ bg-size-[60px_60px]
 "
 />
 
+
 <div
 className="
 relative
@@ -139,7 +138,7 @@ mx-auto
 max-w-375
 px-6
 lg:px-10
- -mt-10
+-mt-10
 "
 >
 
@@ -315,7 +314,7 @@ for homes, businesses and public networks.
                     "
                   />
                   
-      <div
+<div
 className="
 absolute
 left-0
@@ -355,7 +354,7 @@ duration-500
 group-hover:scale-110
 group-hover:from-lime-200
 "
-        >
+>
           {step.number}
         </span>
 
@@ -552,14 +551,13 @@ mt-8
 flex
 justify-center
 "
-
 >
 
 <button
-   onClick={() => router.push('/contact')}
+onClick={() => router.push('/contact')}
 className="
 rounded-2xl
-bg-gradient-to-r
+bg-linear-to-r
 from-lime-500
 to-green-600
 px-6

@@ -121,7 +121,7 @@ icon:Building2,
 
     <img
         src="/images/about.png"
-        className="w-full h-[520px] object-cover"
+        className="w-full h-130 object-cover"
     />
 
 </div>
