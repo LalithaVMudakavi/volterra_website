@@ -320,7 +320,7 @@ className="
 absolute
 left-0
 top-0
-h-1
+h-0.5
 w-full
 origin-left
 scale-x-0
