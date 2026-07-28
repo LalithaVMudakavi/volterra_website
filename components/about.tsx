@@ -15,10 +15,23 @@ import {
   Radar,
   Landmark,
   Route,
+  ArrowRight,
+  Factory,
+  Building,
+  MapPinned,
+  Store,
+  Truck,
+  Hotel,
+  Home,
+  ShieldCheck,
+  Zap,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export function About() {
-const features = [
+   const router = useRouter();
+   
+const solutions = [
   {
     no: "01",
     title: "End-to-End Infrastructure",
@@ -100,7 +113,70 @@ no:"05",
 title:"strategic revenue-sharing partnerships",
 icon:Building2,
 }
-]
+];
+
+ const industries = [
+    {
+      icon: <Home className="h-5 w-5" />,
+      title: "Residential",
+    },
+    {
+      icon: <Building2 className="h-5 w-5" />,
+      title: "Corporate",
+    },
+    {
+      icon: <Hotel className="h-5 w-5" />,
+      title: "Hospitality",
+    },
+    {
+      icon: <Store className="h-5 w-5" />,
+      title: "Retail",
+    },
+    {
+      icon: <Truck className="h-5 w-5" />,
+      title: "Fleet",
+    },
+    {
+      icon: <MapPinned className="h-5 w-5" />,
+      title: "Highways",
+    },
+    {
+      icon: <Building className="h-5 w-5" />,
+      title: "Real Estate",
+    },
+    {
+      icon: <Landmark className="h-5 w-5" />,
+      title: "Public",
+    },
+  ];
+
+    const features = [
+      {
+        icon: <Leaf className="h-6 w-6" />,
+        title: "Clean Energy",
+        description:
+          "Building sustainable EV charging infrastructure across India.",
+      },
+      {
+        icon: <Zap className="h-6 w-6" />,
+        title: "Smart Charging",
+        description:
+          "Reliable AC & DC charging solutions for every application.",
+      },
+      {
+        icon: <Cpu className="h-6 w-6" />,
+        title: "AI Powered CMS",
+        description:
+          "Real-time monitoring, analytics and intelligent charger management.",
+      },
+      {
+        icon: <ShieldCheck className="h-6 w-6" />,
+        title: "End-to-End Services",
+        description:
+          "Planning, installation, commissioning and lifetime support.",
+      },
+    ];
+
 
   return (
     <section
@@ -140,8 +216,8 @@ icon:Building2,
         </h2>
 
         <p className="mt-3 text-lg leading-8 text-slate-600">
-           We are building an intelligent, scalable, and future-ready energy network that integrates 
-           EV charging with renewable energy, digital innovation, and smart infrastructure.
+          Volterra Energy, a brand of Vayutattva Ventures LLP, is a clean-energy and electric mobility infrastructure
+          company committed to accelerating India’s transition toward sustainable transportation.
         </p>
 
     </div>
@@ -182,6 +258,11 @@ icon:Building2,
         advanced technology and reliable infrastructure.
       </p>
 
+      <p className="mt-5 text-lg leading-8 text-slate-600">
+        Our portfolio includes a comprehensive range of AC and DC EV charging solutions, from convenient 
+        destination charging to high-power DC fast-charging infrastructure.
+       </p>
+
     </div>
 
     {/* Section 2 */}
@@ -198,17 +279,21 @@ icon:Building2,
 
       <p className="text-lg leading-8 text-slate-600">
         As a technology-driven Charge Point Operator (CPO), we offer
-        end-to-end EV charging solutions across residential communities,
-        corporate campuses, commercial establishments, fleet operators,
-        hospitality, public infrastructure, and highway corridors.
+        end-to-end EV charging solutions across  residential communities, corporate workplaces,
+        commercial properties, hotels and restaurants, malls and supermarkets, highways, 
+        fleet operators, real estate developments, and public charging networks.
       </p>
 
       <p className="mt-5 text-lg leading-8 text-slate-600">
-        Our integrated platform leverages Artificial Intelligence (AI),
-        IoT, cloud-based Charge Management Systems (CMS), and data
-        analytics to deliver smart charging, real-time monitoring,
-        predictive maintenance, seamless digital payments, and an
-        exceptional customer experience.
+        From selecting the right charging technology to site assessment, solution design, 
+        installation, commissioning, software integration, and ongoing operational support, 
+        Volterra Energy provides comprehensive, end-to-end EV charging solutions tailored to
+        the unique requirements of every location.
+      </p>
+
+      <p className="mt-5 text-lg leading-8 text-slate-600">
+         At Volterra Energy, we are building intelligent charging infrastructure that connects people, vehicles, properties, 
+         businesses, and clean energy creating a stronger foundation for the future of electric mobility.
       </p>
 
     </div>
@@ -219,7 +304,7 @@ icon:Building2,
 
 
 
-                {/* ========================================= */}
+        {/* ========================================= */}
         {/* VISION & MISSION */}
         {/* ========================================= */}
 
@@ -482,7 +567,7 @@ icon:Building2,
 
           <div className="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
-          {features.map((item, index) => {
+          {solutions.map((item, index) => {
   const Icon = item.icon;
 
   return (

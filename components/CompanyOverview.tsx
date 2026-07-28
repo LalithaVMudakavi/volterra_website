@@ -657,7 +657,7 @@ return (
           "
         >
 
-        About Us
+        Who we are
 
       </div>
 
@@ -1075,7 +1075,7 @@ group-hover:translate-x-1
 
 </div>
 </motion.div>
-
+ 
 {/* ====================================== */}
 {/* RIGHT SIDE */}
 {/* ====================================== */}
