@@ -547,6 +547,10 @@ export function Footer() {
         name: "Contact Us",
         href: "/contact",
       },
+       {
+        name: "FAQ",
+        href: "/faq",
+      },
     ],
   },
 
@@ -747,7 +751,7 @@ lg:px-14 px-6 py-20">
       <ul className="space-y-2">
 
         {footerSections[0].links
-          .filter((_, i) => i <= 5)
+          .filter((_, i) => i <= 7)
           .map((link) => (
 
             <li key={link.name}>

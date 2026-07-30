@@ -417,25 +417,15 @@ icon:Building2,
     Our Vision
   </span>
 
-  <h3 className="relative z-10 mt-3 text-3xl font-black">
-    Building the Future of Intelligent Mobility
-  </h3>
+ <h3 className="relative z-10 mt-3 text-3xl font-black">
+  Building the Future of Intelligent Mobility
+</h3>
 
-  <div className="relative z-10 mt-6 space-y-4">
-    <p className="text-lg leading-8 text-slate-300">
-      To build one of India's most trusted, intelligent and sustainable EV
-      charging networks—creating a connected energy ecosystem where
-      electric mobility, Artificial Intelligence, IoT and renewable energy
-      work together seamlessly.
-    </p>
-
-    <p className="text-lg leading-8 text-slate-300">
-      We envision a future where reliable and accessible EV charging is
-      available wherever people live, work, travel and connect, enabling
-      cleaner transportation and accelerating India's transition toward a
-      sustainable energy future.
-    </p>
-  </div>
+<p className="relative z-10 mt-6 text-lg leading-8 text-slate-300">
+  To become India's most trusted EV charging infrastructure company by
+  building an intelligent, connected, and sustainable charging ecosystem
+  that accelerates the transition to clean mobility.
+</p>
 </motion.div>
 
             {/* Mission */}
@@ -469,277 +459,23 @@ icon:Building2,
   </span>
 
   <h3 className="relative z-10 mt-3 text-3xl font-black">
-    Driving Sustainable Mobility
-  </h3>
+  Driving Sustainable Mobility
+</h3>
 
-  <div className="relative z-10 mt-6 space-y-2 text-lg">
-    {[
-      "Building a robust network of AC & DC fast-charging infrastructure.",
-      "Leveraging AI, IoT, cloud technology and data analytics.",
-      "Delivering high charger availability through predictive maintenance.",
-      "Creating opportunities for investors and franchise partners.",
-      "Expanding charging accessibility across cities and highways.",
-      "Integrating renewable energy and intelligent energy management.",
-      "Providing a seamless charging experience for every EV user.",
-    ].map((item) => (
-      <div key={item} className="flex items-start gap-4">
-        <div className="mt-3 h-2.5 w-2.5 rounded-full bg-lime-400" />
-        <p className="flex-1 leading-8 text-slate-600">{item}</p>
-      </div>
-    ))}
-  </div>
+<p className="relative z-10 mt-6 text-lg leading-8 text-slate-600">
+  Our mission is to simplify EV charging through intelligent,
+  accessible, and end-to-end solutions for homes, businesses, fleets,
+  and public charging networks while enabling a smarter, greener, and
+  more connected transportation ecosystem.
+</p>
 </motion.div>
           </div>
 
         </motion.div>
 
-                {/* ========================================= */}
+        {/* ========================================= */}
         {/* WHY CHOOSE VOLTERRA */}
         {/* ========================================= */}
-
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: .8 }}
-          className="mt-28"
-        >
-
-          {/* Heading */}
-
-          <div className="text-center">
-
-            <div
-              className="
-              inline-flex
-              items-center
-              rounded-full
-              border
-              border-lime-500/20
-              bg-lime-500
-              px-4
-              py-2
-              text-xs
-              font-semibold
-              uppercase
-              tracking-[3px]
-              text-white
-              shadow-[0_20px_50px_rgba(132,204,22,.35)]
-
-              "
-            >
-
-              Why Choose Volterra
-
-            </div>
-
-            <h2
-              className="
-                  mt-4
-            text-4xl
-            lg:text-5xl
-              font-black
-              text-slate-900
-              "
-            >
-
-              Complete EV Charging
-              <span className="text-lime-600">
-
-                {" "}Solutions
-
-              </span>
-
-            </h2>
-
-            <p
-              className="
-              mx-auto
-              mt-3
-              max-w-4xl
-              text-lg
-              leading-7
-              text-slate-600
-              "
-            >
-
-              From smart charging hardware to intelligent software,
-              installation, maintenance and nationwide support,
-              Volterra delivers end-to-end EV charging ecosystems.
-
-            </p>
-
-          </div>
-
-          {/* Features */}
-
-          <div className="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-
-          {solutions.map((item, index) => {
-  const Icon = item.icon;
-
-  return (
-    <motion.div
-      key={item.title}
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{
-        delay: index * 0.08,
-        duration: 0.6,
-      }}
-      whileHover={{
-        y: -10,
-      }}
-      className="
-      group
-      relative
-      overflow-hidden
-      rounded-[30px]
-      border
-      border-slate-200
-      bg-white
-      p-6
-      shadow-[0_15px_45px_rgba(0,0,0,.05)]
-      transition-all
-      duration-500
-      hover:border-lime-400
-      hover:shadow-[0_25px_60px_rgba(132,204,22,.18)]
-      "
-    >
-
-      {/* Glow */}
-
-      <div
-        className="
-        absolute
-        -right-20
-        -top-20
-        h-10
-        w-10
-        rounded-full
-        bg-lime-500/10
-        blur-[90px]
-        opacity-0
-        transition-all
-        duration-300
-        group-hover:opacity-100
-        "
-      />
-
-      {/* Top */}
-
-      <div className="flex items-start justify-between">
-
-        <span
-          className="
-          text-2xl
-          font-black
-          text-slate-200
-          transition
-          group-hover:text-lime-500/30
-          "
-        >
-          {item.no}
-        </span>
-
-        <div
-          className="
-          flex
-          h-11
-          w-11
-          items-center
-          justify-center
-          rounded-2xl
-          bg-lime-500/10
-          transition-all
-          duration-500
-         
-          group-hover:bg-lime-500
-          "
-        >
-
-          <Icon
-            className="
-            h-6
-            w-6
-            text-lime-600
-            transition-all
-            duration-500
-            group-hover:text-white
-            "
-          />
-
-        </div>
-
-      </div>
-
-      {/* Title */}
-
-      <h3
-        className="
-        mt-5
-        text-xl
-        font-bold
-        text-slate-900
-        "
-      >
-        {item.title}
-      </h3>
-
-      {/* Description */}
-
-      <p
-        className="
-        mt-3
-        leading-7
-        text-slate-600
-        "
-      >
-        {item.desc}
-      </p>
-
-      {/* Divider */}
-
-      {/* <div className="my-6 h-px bg-slate-200 " /> */}
-
-      {/* Footer */}
-
-      {/* <button
-        className="
-        flex
-        items-center
-        gap-3
-        font-semibold
-        text-lime-600
-        transition-all
-        group-hover:gap-5
-        "
-      >
-
-        Learn More
-
-        <ArrowUpRight
-          className="
-          h-5
-          w-5
-          transition-transform
-          duration-300
-          group-hover:translate-x-1
-          group-hover:-translate-y-1
-          "
-        />
-
-      </button> */}
-
-    </motion.div>
-  );
-})}
-
-          </div>
-
-        </motion.div>
-
 
       </div>
 

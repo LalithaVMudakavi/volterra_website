@@ -177,7 +177,8 @@ to-transparent
 
                 <span className="text-white text-xs font-medium tracking-wide">
 
-                 India's Trusted EV Charging Infrastructure Partner
+                  
+India's Trusted EV Charging Infrastructure Partner
 
                 </span>
 
@@ -201,11 +202,13 @@ to-transparent
               "
             >
 
-          Powering the Future of 
+           Powering the Future of
+
 
               <span className="mt-2 block bg-linear-to-r from-lime-300 via-lime-400 to-lime-500 bg-clip-text text-transparent">
 
-               Sustainable Mobility
+                Sustainable Mobility
+
               </span>
 
             </motion.h1>
@@ -223,7 +226,8 @@ to-transparent
               text-gray-300
               "
             >
-Our mission is to simplify EV charging through intelligent, accessible solutions that power a cleaner and more sustainable future. Through end-to-end EV charging solutions for homes, businesses, fleet operators, and public charging networks, we are building a smarter, greener, and more connected transportation ecosystem.
+           Our mission is to simplify EV charging through intelligent, accessible solutions that power a cleaner and more sustainable future. Through end-to-end EV charging solutions for homes, businesses, fleet operators, and public charging networks, we are building a smarter, greener, and more connected transportation ecosystem.
+
             </motion.p>
 
             {/* Buttons */}
@@ -538,3 +542,333 @@ pointer-events-none
 
   );
 }
+
+
+// "use client";
+
+// import { AnimatePresence, motion, type Variants } from "framer-motion";
+
+// import {
+//   ArrowRight,
+//   Zap,
+//   ShieldCheck,
+//   Leaf,
+//   Network,
+//   MapPin,
+//   Building2,
+//   BatteryCharging,
+//   ChevronDown,
+//   Cpu,
+//   BadgeDollarSign,
+//   X,
+// } from "lucide-react";
+// import { useRouter } from "next/navigation";
+// import { useState } from "react";
+
+// export function Hero() {
+//     const router = useRouter()
+
+//   const containerVariants = {
+//     hidden: { opacity: 0 },
+//     visible: {
+//       opacity: 1,
+//       transition: {
+//         staggerChildren: 0.18,
+//         delayChildren: 0.3,
+//       },
+//     },
+//   };
+
+// const itemVariants: Variants = {
+//   hidden: {
+//     opacity: 0,
+//     y: 25,
+//   },
+//   visible: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       duration: 0.8,
+//       ease: [0.25, 0.1, 0.25, 1],
+//     },
+//   },
+// };
+
+//   return (
+//     <section  id="hero" className="relative h-screen overflow-hidden">
+
+//       {/* ================= BACKGROUND ================= */}
+//       <div
+// className="
+// absolute
+// top-0
+// left-0
+// right-0
+// h-48
+// bg-linear-to-b
+// from-black/30
+// to-transparent
+// "
+// />
+
+//    <div
+//   className="
+//   absolute
+//   inset-0
+//   bg-cover
+//   bg-no-repeat
+//   scale-[1.08]
+//   "
+//   style={{
+//     backgroundImage: "url('/image.png')",
+//     backgroundPosition: "72% center",
+//   }}
+// />
+
+//       {/* Dark Overlay */}
+
+// <div className="absolute inset-0 bg-black/30" />
+
+
+
+// <div
+// className="
+// absolute
+// inset-0
+// "
+// />
+
+// <div
+// className="
+// absolute
+// top-0
+// left-1/2
+// -translate-x-1/2
+// w-225
+// h-87.5
+// bg-white/5
+// blur-[120px]
+// rounded-full
+// "
+// />
+//       {/* Left Gradient */}
+
+//       <div
+// className="
+// absolute
+// inset-0
+// bg-linear-to-r
+// from-[#08111d]/88
+// via-[#08111d]/45
+// to-transparent
+// "
+// />
+
+//       {/* ================= CONTENT ================= */}
+//       <div
+//   className="
+//   absolute
+//   left-0
+//   top-0
+//   bottom-0
+//   w-[55%]
+//   bg-linear-to-r
+//   from-[#08111d]/35
+//   to-transparent
+//   backdrop-blur-[2px]
+//   "
+// />
+
+//       <div className="relative z-20 max-w-[1750px] mx-auto h-full px-8 lg:px-16">
+
+//         <div className="flex h-full items-center">
+
+//           {/* LEFT CONTENT */}
+
+//           <motion.div
+//             variants={containerVariants}
+//             initial="hidden"
+//             animate="visible"
+//             className="max-w-190"
+//           >
+
+//             {/* Badge */}
+
+//             <motion.div variants={itemVariants}>
+
+//               <div
+//                 className="
+//                 inline-flex
+//                 items-center
+//                 gap-3
+//                 rounded-full
+//                 border
+//                 border-white/15
+//                 bg-white/10
+//                 backdrop-blur-xl
+//                 px-6
+//                 py-2
+//                 shadow-xl
+//                 mt-16
+//                 "
+//               >
+
+//                 <span className="relative flex h-3 w-3">
+
+//                   <span className="absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75 animate-ping" />
+
+//                   <span className="relative inline-flex h-3 w-3 rounded-full bg-lime-400" />
+
+//                 </span>
+
+//                 <span className="text-white text-xs font-medium tracking-wide">
+
+//                  India's Trusted EV Charging Infrastructure Partner
+
+//                 </span>
+
+//               </div>
+
+//             </motion.div>
+
+//             {/* Heading */}
+
+//             <motion.h1
+//               variants={itemVariants}
+//               className="
+//               mt-6
+//               text-white
+//               text-4xl
+//               lg:text-5xl
+//               xl:text-5xl
+//               font-black
+//               leading-[0.98]
+//               tracking-tight
+//               "
+//             >
+
+//           Powering the Future of 
+
+//               <span className="mt-2 block bg-linear-to-r from-lime-300 via-lime-400 to-lime-500 bg-clip-text text-transparent">
+
+//                Sustainable Mobility
+//               </span>
+
+//             </motion.h1>
+
+//             {/* Description */}
+
+//             <motion.p
+//               variants={itemVariants}
+//               className="
+//               mt-6
+//               max-w-155
+//               text-base
+//               md:text-lg
+//               leading-7
+//               text-gray-300
+//               "
+//             >
+//              Our mission is to simplify EV charging through intelligent, accessible solutions that power a cleaner and 
+//              more sustainable future. Through end-to-end EV charging solutions for homes, businesses, fleet operators,
+//              and public charging networks, we are building a smarter, greener, and more connected transportation ecosystem.
+//             </motion.p>
+
+//             {/* Buttons */}
+
+//             <motion.div
+//               variants={itemVariants}
+//               className="mt-10 flex flex-wrap gap-5"
+//             >
+
+//               {/* Primary */}
+
+//               <button
+//                onClick={() => router.push('/products')}
+//                 className="
+//                 group
+//                 h-11
+//                 rounded-2xl
+//                 bg-lime-500
+//                 px-6
+//                 font-semibold
+//                 text-white
+//                 shadow-lg
+//                 shadow-lime-500/20
+//                 transition-all
+//                 duration-300
+//                 hover:scale-105
+//                 hover:bg-lime-400
+//                 cursor-pointer
+//                 "
+//               >
+
+//                 <span className="flex items-center gap-3">
+
+//                   Explore Products
+//                   <ArrowRight
+//                     size={18}
+//                     className="transition-transform duration-300 group-hover:translate-x-1"
+//                   />
+
+//                 </span>
+
+//               </button>
+
+//               {/* Secondary */}
+
+//               <button
+//                 onClick={() => router.push('/about')}
+//                 className="
+//                 h-11
+//                 rounded-2xl
+//                 border
+//                 border-white/20
+//                 bg-white/10
+//                 backdrop-blur-xl
+//                 px-6
+//                 font-semibold
+//                 text-white
+//                 transition-all
+//                 duration-300
+//                 hover:bg-white/20
+//                 hover:border-white/40
+//                 cursor-pointer
+//                 "
+//               >
+//               Learn More
+
+//               </button>
+
+//             </motion.div>
+
+
+//                         {/* ================= RIGHT FEATURE CARDS ================= */}
+
+           
+
+//           </motion.div>
+
+//         </div>
+
+//       </div>
+
+//       <div
+// className="
+// absolute
+// left-1/2
+// bottom-0
+// -translate-x-1/2
+// w-225
+// h-55
+// bg-lime-400/10
+// blur-[140px]
+// rounded-full
+// pointer-events-none
+// "
+// />
+
+//     </section>
+
+//   );
+// }
