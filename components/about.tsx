@@ -206,18 +206,23 @@ icon:Building2,
 
     <div className="rounded-[32px] bg-white p-8 shadow-2xl">
 
-        <span className="text-lime-600 font-semibold tracking-widest uppercase">
+        <span className="text-2xl text-lime-600  font-black tracking-widest uppercase">
             About Volterra Energy
         </span>
 
-        <h2 className="mt-3 text-5xl font-black">
+        {/* <h2 className="mt-3 text-5xl font-black">
             Powering Intelligent
             <span className="text-lime-600"> Mobility</span>
-        </h2>
+        </h2> */}
 
         <p className="mt-3 text-lg leading-8 text-slate-600">
-          Volterra Energy, a brand of Vayutattva Ventures LLP, is a clean-energy and electric mobility infrastructure
-          company committed to accelerating India’s transition toward sustainable transportation.
+          Volterra Energy, a brand of Vayutattva Ventures LLP, is a clean-energy and electric mobility infrastructure company committed to accelerating India’s transition toward sustainable transportation.
+
+        </p>
+
+        <p className="mt-3 text-lg leading-8 text-slate-600">
+          We deliver intelligent, reliable, and scalable EV charging solutions for residential communities, corporate workplaces, commercial properties, hotels and restaurants, malls and supermarkets, highways, fleet operators, real estate developments, and public charging networks.
+
         </p>
 
     </div>
@@ -237,67 +242,70 @@ icon:Building2,
     className="space-y-10"
   >
 
-    {/* Section 1 */}
 
-    <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+   {/* Section 1 */}
 
-      <div className="mb-4 flex items-center gap-3">
-        <div className="h-10 w-1 rounded-full bg-lime-500"></div>
+<div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+  <div className="mb-4 flex items-center gap-3">
+    <div className="h-10 w-1 rounded-full bg-lime-500"></div>
 
-        <h3 className="text-2xl font-bold text-slate-900">
-          AI-Powered EV Charging Infrastructure
-        </h3>
-      </div>
+    <h3 className="text-2xl font-bold text-slate-900">
+      Comprehensive EV Charging Solutions
+    </h3>
+  </div>
 
-      <p className="text-lg leading-8 text-slate-600">
-        <strong>VOLTERRA Energy</strong> is an AI-powered EV charging and
-        energy infrastructure company committed to accelerating India's
-        transition to sustainable mobility. We design, deploy, operate,
-        and manage intelligent EV charging networks that connect electric
-        vehicles, businesses, investors, and property owners through
-        advanced technology and reliable infrastructure.
-      </p>
+  <p className="text-lg leading-8 text-slate-600">
+    <strong>VOLTERRA Energy</strong> provides a comprehensive portfolio of
+    intelligent AC and DC EV charging solutions, supporting everything from
+    convenient destination charging to high-speed DC fast-charging corridors.
+  </p>
 
-      <p className="mt-5 text-lg leading-8 text-slate-600">
-        Our portfolio includes a comprehensive range of AC and DC EV charging solutions, from convenient 
-        destination charging to high-power DC fast-charging infrastructure.
-       </p>
+  <p className="mt-5 text-lg leading-8 text-slate-600">
+    Our solutions are designed for <strong>residential communities, real
+    estate developments, corporate workplaces, hospitality venues, retail
+    destinations, fleet operators, highways, and public charging
+    networks</strong>, delivering reliable and scalable infrastructure for
+    every charging ecosystem.
+  </p>
 
-    </div>
+  <p className="mt-5 text-lg leading-8 text-slate-600">
+    Whether for homes, businesses, or public infrastructure, we enable
+    seamless EV charging experiences through future-ready technology,
+    intelligent hardware, and integrated software platforms.
+  </p>
+</div>
 
-    {/* Section 2 */}
+{/* Section 2 */}
 
-    <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+<div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+  <div className="mb-4 flex items-center gap-3">
+    <div className="h-10 w-1 rounded-full bg-lime-500"></div>
 
-      <div className="mb-4 flex items-center gap-3">
-        <div className="h-10 w-1 rounded-full bg-lime-500"></div>
+    <h3 className="text-2xl font-bold text-slate-900">
+      End-to-End Deployment & Smart Infrastructure
+    </h3>
+  </div>
 
-        <h3 className="text-2xl font-bold text-slate-900">
-          Intelligent Technology Platform
-        </h3>
-      </div>
+  <p className="text-lg leading-8 text-slate-600">
+    We manage the complete lifecycle of EV charging infrastructure—from
+    <strong> site assessment, feasibility analysis, and solution design{" "}</strong>
+    to <strong>installation, commissioning, software integration, and ongoing
+    operations</strong>, ensuring a seamless experience for every client.
+  </p>
 
-      <p className="text-lg leading-8 text-slate-600">
-        As a technology-driven Charge Point Operator (CPO), we offer
-        end-to-end EV charging solutions across  residential communities, corporate workplaces,
-        commercial properties, hotels and restaurants, malls and supermarkets, highways, 
-        fleet operators, real estate developments, and public charging networks.
-      </p>
+  <p className="mt-5 text-lg leading-8 text-slate-600">
+    Our intelligent platform enables user authentication, billing, energy
+    monitoring, remote diagnostics, and performance optimization while helping
+    businesses maximize uptime and operational efficiency.
+  </p>
 
-      <p className="mt-5 text-lg leading-8 text-slate-600">
-        From selecting the right charging technology to site assessment, solution design, 
-        installation, commissioning, software integration, and ongoing operational support, 
-        Volterra Energy provides comprehensive, end-to-end EV charging solutions tailored to
-        the unique requirements of every location.
-      </p>
-
-      <p className="mt-5 text-lg leading-8 text-slate-600">
-         At Volterra Energy, we are building intelligent charging infrastructure that connects people, vehicles, properties, 
-         businesses, and clean energy creating a stronger foundation for the future of electric mobility.
-      </p>
-
-    </div>
-
+  <p className="mt-5 text-lg leading-8 text-slate-600">
+    By deploying accessible, connected, and scalable charging infrastructure,
+    VOLTERRA Energy is building a smarter, greener, and future-ready
+    transportation ecosystem that grows alongside India's accelerating EV
+    adoption.
+  </p>
+</div>
   </motion.div>
 
 </div>

@@ -90,7 +90,7 @@ const products: Product[] = [
     name: "Volterra Pro",
     category: "Corporate",
     power: "22kW",
-    image: "/images/productsimages/22kwcharger.png",
+    image: "/images/productsimages/image.png",
     description:
       "Smart and efficient charging solutions designed for locations where vehicles have longer parking durations.",
 

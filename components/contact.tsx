@@ -33,7 +33,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Office",
-    value: "Bangalore, Karnataka",
+    value: "#3, Second Floor, 80 Feet Road, BSK 3 Stage Srinivas Nagar, Bangalore Karnataka, India - 560050",
     sub: "Visit our corporate office",
   },
 
@@ -1044,7 +1044,7 @@ help you at every step.
 {/* ====================================== */}
 {/* GOOGLE MAP */}
 {/* ====================================== */}
-
+{/* 
 <motion.div
 
   initial={{
@@ -1088,9 +1088,6 @@ help you at every step.
       "
     >
 
-      {/* ================================= */}
-      {/* OFFICE DETAILS */}
-      {/* ================================= */}
 
       <div
         className="
@@ -1185,9 +1182,6 @@ help you at every step.
 </button>
       </div>
 
-      {/* ================================= */}
-      {/* GOOGLE MAP */}
-      {/* ================================= */}
 
       <div className="h-125">
 
@@ -1209,7 +1203,7 @@ help you at every step.
 
   </div>
 
-</motion.div>
+</motion.div> */}
 
 </div>
 

@@ -177,7 +177,7 @@ to-transparent
 
                 <span className="text-white text-xs font-medium tracking-wide">
 
-                  Driving India's EV Revolution
+                 India's Trusted EV Charging Infrastructure Partner
 
                 </span>
 
@@ -201,12 +201,11 @@ to-transparent
               "
             >
 
-            Building The Infrastructure For 
+          Powering the Future of 
 
               <span className="mt-2 block bg-linear-to-r from-lime-300 via-lime-400 to-lime-500 bg-clip-text text-transparent">
 
-                Electric Mobility
-
+               Sustainable Mobility
               </span>
 
             </motion.h1>
@@ -224,8 +223,7 @@ to-transparent
               text-gray-300
               "
             >
-            Our goal is to make EV charging accessible, convenient, connected, and future-ready while building a smarter, greener, and more sustainable mobility ecosystem for everyone.
-
+Our mission is to simplify EV charging through intelligent, accessible solutions that power a cleaner and more sustainable future. Through end-to-end EV charging solutions for homes, businesses, fleet operators, and public charging networks, we are building a smarter, greener, and more connected transportation ecosystem.
             </motion.p>
 
             {/* Buttons */}
