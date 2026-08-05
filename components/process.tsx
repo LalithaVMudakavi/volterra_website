@@ -733,7 +733,6 @@ mx-auto
 max-w-375
 px-6
 lg:px-10
--mt-10
 "
 >
 

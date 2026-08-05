@@ -1,3 +1,6 @@
+
+
+
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -174,179 +177,361 @@ const nextSlug =
 
       {/* ================================= */}
 
-      <section className="relative overflow-hidden mt-10">
 
-        {/* Background */}
+<section className="relative overflow-hidden bg-gradient-to-br from-lime-50 via-white to-emerald-50 pt-36 pb-24">
 
-        <div className="absolute inset-0 bg-linear-to-b from-lime-50 via-white to-white" />
+  {/* Background Blur */}
 
-    
-        <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-10">
+  <div className="absolute inset-0 overflow-hidden">
 
-         {/* Breadcrumb + Back Button */}
+    <div className="absolute -left-24 top-10 h-80 w-80 rounded-full bg-lime-300/20 blur-[120px]" />
 
-<div className="mt-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+    <div className="absolute right-0 top-32 h-[420px] w-[420px] rounded-full bg-green-200/20 blur-[140px]" />
 
-  {/* Breadcrumb */}
+    <div className="absolute bottom-0 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-emerald-200/20 blur-[120px]" />
 
-  <nav
-    aria-label="Breadcrumb"
-    className="flex flex-wrap items-center gap-2 text-sm text-slate-500"
-  >
-    <Link
-      href="/"
-      className="transition-colors hover:text-lime-600"
-    >
-      Home
-    </Link>
+    <div
+      className="
+      absolute
+      inset-0
+      opacity-[0.04]
+      [background-image:radial-gradient(#65a30d_1px,transparent_1px)]
+      [background-size:28px_28px]
+      "
+    />
 
-    <ChevronRight className="h-4 w-4" />
+  </div>
 
-    <Link
-      href="/#process"
-      className="transition-colors hover:text-lime-600"
-    >
-      Process
-    </Link>
+  <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
 
-    <ChevronRight className="h-4 w-4" />
+    {/* Top */}
 
-    <span className="font-semibold text-slate-900">
-      {process.title}
+    <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+
+      {/* Breadcrumb */}
+
+      <nav
+        aria-label="Breadcrumb"
+        className="flex flex-wrap items-center gap-2 text-sm text-slate-500"
+      >
+
+        <Link
+          href="/"
+          className="transition hover:text-lime-600"
+        >
+          Home
+        </Link>
+
+        <ChevronRight className="h-4 w-4" />
+
+        <Link
+          href="/#process"
+          className="transition hover:text-lime-600"
+        >
+          Process
+        </Link>
+
+        <ChevronRight className="h-4 w-4" />
+
+        <span className="font-semibold text-slate-900">
+          {process.title}
+        </span>
+
+      </nav>
+
+    </div>
+
+    {/* Main Grid */}
+
+    <div className=" grid items-center gap-16 lg:grid-cols-[1.05fr_.95fr]">
+
+      {/* ====================================================== */}
+      {/* LEFT */}
+      {/* ====================================================== */}
+
+<div className="flex flex-col justify-center lg:pr-10">
+
+  {/* Step Badge */}
+
+  <div className="inline-flex w-fit items-center gap-2 rounded-full border border-lime-200 bg-lime-100 px-4 py-2 mt-10">
+
+    <span className="h-2 w-2 rounded-full bg-lime-600" />
+
+    <span className="text-xs font-bold uppercase tracking-[3px] text-lime-700">
+      Step {process.number}
     </span>
-  </nav>
 
-  {/* Back Button */}
+  </div>
 
-  <Link
-    href="/#process"
+  {/* Heading */}
+
+  <h1 className="mt-6 max-w-xl text-3xl font-black leading-tight text-slate-900 lg:text-4xl">
+
+    {process.title}
+
+  </h1>
+
+  {/* Description */}
+
+  <p className="mt-2 max-w-xl text-lg leading-8 text-slate-600">
+
+    {process.short}
+
+  </p>
+
+  {/* Divider */}
+
+  <div className="mt-6 h-px w-full max-w-md bg-gradient-to-r from-lime-400 via-lime-200 to-transparent" />
+
+  {/* Duration */}
+
+ <div
+  className="
+  mt-8
+  flex
+  items-center
+  gap-5
+  rounded-3xl
+  border
+  border-lime-200
+  bg-white
+  px-5
+  py-4
+  shadow-sm
+  max-w-md
+  "
+>
+
+  <div
     className="
-    inline-flex
+    flex
+    h-12
+    w-12
     items-center
-    gap-2
-    rounded-full
-    border
-    border-slate-200
-    bg-white
-    px-5
-    py-3
-    text-sm
-    font-medium
-    text-slate-700
-    shadow-sm
-    transition-all
-    duration-300
-    hover:-translate-x-1
-    hover:border-lime-400
-    hover:bg-lime-50
-    hover:text-lime-600
+    justify-center
+    rounded-2xl
+    bg-lime-100
     "
   >
-    <ArrowLeft className="h-4 w-4" />
-    <span>Back to Process</span>
-  </Link>
+    <svg
+      className="h-6 w-6 text-lime-600"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 8v5l3 3M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    </svg>
+  </div>
+
+  <div>
+
+    <p className="text-xs uppercase tracking-[2px] text-slate-500">
+      Estimated Duration
+    </p>
+
+    <h3 className="mt-1 text-2xl font-bold text-slate-900">
+      {process.duration}
+    </h3>
+
+  </div>
 
 </div>
 
-          
-          {/* Grid */}
+  {/* Highlights */}
+<div className="mt-10">
 
-          <div className="mt-12 grid items-center gap-16 lg:grid-cols-2">
+  <h3 className="mb-5 text-sm font-semibold uppercase tracking-[3px] text-slate-500">
+    Key Activities
+  </h3>
 
-            {/* Left */}
+  <div className="grid gap-4 sm:grid-cols-2">
 
-            <div>
+    {process.highlights.map((item) => (
 
-              <span
-                className="
-                inline-flex
-                rounded-full
-                bg-lime-100
-                px-4
-                py-2
-                text-xs
-                font-bold
-                tracking-[3px]
-                uppercase
-                text-lime-700
-                "
-              >
-                Step {process.number}
-              </span>
+      <div
+        key={item}
+        className="
+group
+flex
+items-center
+gap-3
+rounded-xl
+px-3
+py-2
+transition-all
+duration-300
+hover:bg-white
+hover:shadow-md
+"
+      >
 
-              <h1
-                className="
-                mt-6
-                text-5xl
-                font-black
-                leading-tight
-                text-slate-900
-                lg:text-6xl
-                "
-              >
-                {process.title}
-              </h1>
-
-              <p
-                className="
-                mt-6
-                text-xl
-                leading-9
-                text-slate-600
-                "
-              >
-                {process.short}
-              </p>
-
-              <div className="mt-10 flex flex-wrap gap-4">
-
-                <div
-                  className="
-                  rounded-2xl
-                  border
-                  border-lime-200
-                  bg-lime-50
-                  px-6
-                  py-4
-                  "
-                >
-                  <p className="text-sm text-slate-500">
-                    Estimated Duration
-                  </p>
-
-                  <h3 className="text-xl font-bold text-lime-700">
-                    {process.duration}
-                  </h3>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            {/* Right */}
-
-            <div className="relative">
-
-              <div className="overflow-hidden rounded-[32px]">
-
-                <Image
-                  src={process.image}
-                  alt={process.title}
-                  width={900}
-                  height={700}
-                  className="h-full w-full object-cover"
-                />
-
-              </div>
-
-            </div>
-
-          </div>
-
+        <div
+          className="
+          flex
+          h-9
+          w-9
+          items-center
+          justify-center
+          rounded-full
+          bg-lime-100
+          "
+        >
+          <CheckCircle2 className="h-5 w-5 text-lime-600" />
         </div>
 
-      </section>
+        <span className="font-medium text-slate-700">
+          {item}
+        </span>
+
+      </div>
+
+    ))}
+
+  </div>
+
+</div>
+  
+  {/* Button */}
+
+  {/* <div className="mt-8">
+
+    <Link
+      href="/#process"
+      className="
+      inline-flex
+      items-center
+      gap-3
+      rounded-2xl
+      bg-slate-900
+      px-6
+      py-3
+      font-semibold
+      text-white
+      transition-all
+      duration-300
+      hover:-translate-y-1
+      hover:bg-lime-600
+      "
+    >
+
+      <ArrowLeft className="h-5 w-5" />
+
+      Back to Process
+
+    </Link>
+
+  </div> */}
+
+</div>
+
+   {/* ====================================================== */}
+{/* RIGHT */}
+{/* ====================================================== */}
+
+<div className="relative mx-auto w-full max-w-xl lg:max-w-none mt-16">
+
+  {/* Decorative Circle */}
+
+  <div className="absolute -top-8 -left-8 h-40 w-40 rounded-full bg-lime-300/20 blur-3xl" />
+
+  <div className="absolute -right-10 bottom-8 h-48 w-48 rounded-full bg-emerald-300/20 blur-3xl" />
+
+  {/* Decorative Border */}
+
+  <div
+    className="
+    absolute
+    -top-6
+    -right-6
+    hidden
+    h-full
+    w-full
+    rounded-[36px]
+    border-2
+    border-dashed
+    border-lime-200
+    lg:block
+    "
+  />
+
+  {/* Main Image */}
+
+  <div
+    className="
+    relative
+    overflow-hidden
+    rounded-[36px]
+    bg-white
+    p-3
+    shadow-[0_35px_80px_rgba(15,23,42,0.18)]
+    "
+  >
+
+    <div className="overflow-hidden rounded-[28px]">
+
+      <Image
+        src={process.image}
+        alt={process.title}
+        width={900}
+        height={700}
+        priority
+        className="
+        h-[280px]
+        w-full
+        object-cover
+        transition-transform
+        duration-700
+        hover:scale-105
+        sm:h-[260px]
+        md:h-[350px]
+        lg:h-[440px]
+        "
+      />
+
+    </div>
+
+  </div>
+
+  {/* Floating Badge */}
+
+  <div
+    className="
+    absolute
+    top-8
+    -left-5
+    hidden
+    rounded-2xl
+    bg-lime-600
+    px-5
+    py-4
+    text-white
+    shadow-xl
+    md:block
+    "
+  >
+
+    <p className="text-xs uppercase tracking-[2px] text-lime-100">
+      Project Phase
+    </p>
+
+    <h4 className="mt-1 text-xl font-bold">
+      {process.number}/06
+    </h4>
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
       {/* ================================= */}
 
@@ -354,21 +539,24 @@ const nextSlug =
 
       {/* ================================= */}
 
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+  
+  <section className="relative overflow-hidden bg-gradient-to-b from-white via-lime-50/40 to-white py-24">
+
+  {/* Background Blur */}
+
+  <div className="absolute inset-0 overflow-hidden">
+
+    <div className="absolute -left-32 top-0 h-72 w-72 rounded-full bg-lime-300/20 blur-[120px]" />
+
+    <div className="absolute right-0 bottom-0 h-80 w-80 rounded-full bg-emerald-300/20 blur-[140px]" />
+
+  </div>
+    <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
 
       {/* ====================================================== */}
 {/* PROCESS DETAILS */}
 {/* ====================================================== */}
-
-<div className="grid gap-20 lg:grid-cols-[1.2fr_.8fr]">
-
-  {/* LEFT CONTENT */}
-
-  <div>
-
-    {/* Section Heading */}
-
-    <div>
+ <div>
 
       <span
         className="
@@ -415,119 +603,20 @@ const nextSlug =
       {process.description}
     </p>
 
+
+<div className="mt-12 grid gap-8 lg:grid-cols-2">
+
+  {/* LEFT CONTENT */}
+
+  <div>
+
     {/* ================================= */}
 
     {/* WHAT WE DO */}
 
     {/* ================================= */}
 
-    <div className="mt-16">
-
-      <h3
-        className="
-        text-2xl
-        font-bold
-        text-slate-900
-        "
-      >
-        What We Do
-      </h3>
-
-      <p className="mt-3 text-slate-600">
-        Our experienced EV infrastructure specialists carefully execute
-        every activity to ensure your charging project is delivered with
-        maximum efficiency, safety and long-term reliability.
-      </p>
-
-      <div className="mt-8 grid gap-5">
-
-        {process.highlights.map((item) => (
-
-          <div
-            key={item}
-            className="
-            group
-            flex
-            items-start
-            gap-4
-            rounded-2xl
-            border
-            border-slate-200
-            bg-white
-            p-5
-            transition
-            duration-300
-            hover:border-lime-300
-            hover:shadow-lg
-            "
-          >
-
-            <div
-              className="
-              flex
-              h-12
-              w-12
-              shrink-0
-              items-center
-              justify-center
-              rounded-xl
-              bg-lime-100
-              transition
-              group-hover:bg-lime-500
-              "
-            >
-
-              <CheckCircle2
-                className="
-                h-6
-                w-6
-                text-lime-700
-                transition
-                group-hover:text-white
-                "
-              />
-
-            </div>
-
-            <div>
-
-              <h4
-                className="
-                text-lg
-                font-semibold
-                text-slate-900
-                "
-              >
-                {item}
-              </h4>
-
-              <p
-                className="
-                mt-1
-                text-slate-600
-                "
-              >
-                Our team ensures this activity is completed following
-                industry standards and best engineering practices.
-              </p>
-
-            </div>
-
-          </div>
-
-        ))}
-
-      </div>
-
-    </div>
-
-  </div>
-
-  {/* RIGHT SIDEBAR */}
-
-  <div className="space-y-8">
-
-    {/* Timeline */}
+  {/* Timeline */}
 
     <div
       className="
@@ -537,6 +626,7 @@ const nextSlug =
       bg-white
       p-8
       shadow-xl
+      
       "
     >
 
@@ -550,7 +640,7 @@ const nextSlug =
         Timeline
       </h3>
 
-      <div className="mt-8 space-y-8">
+      <div className="mt-8 space-y-9">
 
         {[
           "Requirement Discussion",
@@ -571,10 +661,10 @@ const nextSlug =
               <div
                 className="
                 absolute
-                left-4
+                left-5
                 top-10
                 h-16
-                w-px
+                w-[2px]
                 bg-lime-200
                 "
               />
@@ -586,8 +676,8 @@ const nextSlug =
             <div
               className="
               flex
-              h-8
-              w-8
+              h-10
+              w-10
               items-center
               justify-center
               rounded-full
@@ -605,13 +695,14 @@ const nextSlug =
               <h4
                 className="
                 font-semibold
+                text-lg
                 text-slate-900
                 "
               >
                 {stepItem}
               </h4>
 
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-base text-slate-500">
                 Executed by our engineering team.
               </p>
 
@@ -625,310 +716,452 @@ const nextSlug =
 
     </div>
 
-    {/* Deliverables */}
+  </div>
 
-    <div
+  {/* RIGHT SIDEBAR */}
+
+  <div className="space-y-6">
+
+    {/* Need Help */}
+
+     <div
+    className="
+    overflow-hidden
+    rounded-[32px]
+    bg-gradient-to-br
+    from-slate-900
+    via-slate-800
+    to-slate-900
+    p-8
+    text-white
+    "
+  >
+
+    <span
       className="
-      rounded-[30px]
-      border
-      border-slate-200
-      bg-gradient-to-br
-      from-lime-50
-      to-white
-      p-8
+      inline-flex
+      rounded-full
+      bg-lime-500/20
+      px-4
+      py-2
+      text-xs
+      font-bold
+      uppercase
+      tracking-[3px]
+      text-lime-300
       "
     >
+      Need Assistance?
+    </span>
 
-      <h3
-        className="
-        text-2xl
-        font-bold
-        text-slate-900
-        "
-      >
-        Deliverables
-      </h3>
+    <h3
+      className="
+      mt-6
+      text-3xl
+      font-black
+      leading-tight
+      "
+    >
+      Talk to Our Experts
+    </h3>
 
-      <div className="mt-6 space-y-4">
+    <p
+      className="
+      mt-5
+      leading-7
+      text-slate-300
+      "
+    >
+      Have questions about this stage of the project?
+      Our EV charging specialists are available to guide
+      you through every step of the implementation process.
+    </p>
 
-        {[
-          "Detailed Documentation",
-          "Engineering Report",
-          "Project Recommendations",
-          "Implementation Strategy",
-          "Quality Assurance",
-        ].map((item) => (
+    {/* Quick Info */}
 
-          <div
-            key={item}
-            className="
-            flex
-            items-center
-            gap-3
-            "
-          >
+    <div className="mt-7 space-y-3">
 
-            <CheckCircle2 className="h-5 w-5 text-lime-600" />
+      <div className="flex items-center gap-3">
 
-            <span className="text-slate-700">
-              {item}
-            </span>
+        <CheckCircle2 className="h-5 w-5 text-lime-400" />
 
-          </div>
+        <span className="text-slate-200">
+          Free Technical Consultation
+        </span>
 
-        ))}
+      </div>
+
+      <div className="flex items-center gap-3">
+
+        <CheckCircle2 className="h-5 w-5 text-lime-400" />
+
+        <span className="text-slate-200">
+          Expert Engineering Support
+        </span>
+
+      </div>
+
+      <div className="flex items-center gap-3">
+
+        <CheckCircle2 className="h-5 w-5 text-lime-400" />
+
+        <span className="text-slate-200">
+          Customized Project Planning
+        </span>
 
       </div>
 
     </div>
 
-    {/* Need Help */}
+    {/* Button */}
 
-    <div
+    <Link
+      href="/contact"
       className="
-      rounded-[30px]
-      bg-slate-900
-      p-8
+      mt-8
+      inline-flex
+      w-full
+      items-center
+      justify-center
+      gap-3
+      rounded-2xl
+      bg-lime-500
+      px-6
+      py-3
+      font-semibold
       text-white
+      transition-all
+      duration-300
+      hover:bg-lime-600
       "
     >
 
-      <h3
-        className="
-        text-2xl
-        font-bold
-        "
-      >
-        Need Expert Guidance?
-      </h3>
+      Contact Our Team
 
-      <p
-        className="
-        mt-4
-        leading-8
-        text-slate-300
-        "
-      >
-        Speak with our EV charging specialists and receive
-        personalized recommendations for your project.
-      </p>
+      <ArrowRight className="h-5 w-5" />
 
-      <button
-        className="
-        mt-8
-        inline-flex
-        items-center
-        gap-3
-        rounded-2xl
-        bg-lime-500
-        px-6
-        py-4
-        font-semibold
-        text-white
-        transition
-        hover:bg-lime-600
-        "
-      >
-        Contact Our Team
+    </Link>
 
-        <ArrowRight className="h-5 w-5" />
-
-      </button>
-
-    </div>
+  </div>
 
   </div>
 
 </div>
-
+</div>
       </section>
 
       {/* ====================================================== */}
 {/* FAQ SECTION */}
 {/* ====================================================== */}
-
-<section className="bg-slate-50 py-24">
+{/* 
+<section className="bg-slate-50 py-24 text">
 
   <div className="mx-auto max-w-7xl px-6 lg:px-10">
 
-    <div className="max-w-3xl">
+  
+<div className="mx-auto max-w-7xl text-center">
 
-      <span
-        className="
-        rounded-full
-        bg-lime-100
-        px-4
-        py-2
-        text-xs
-        font-bold
-        uppercase
-        tracking-[3px]
-        text-lime-700
-        "
-      >
-        FAQs
-      </span>
+  <div className="flex justify-center">
 
-      <h2
-        className="
-        mt-6
-        text-4xl
-        font-black
-        text-slate-900
-        "
-      >
-        Frequently Asked Questions
-      </h2>
+    <span
+      className="
+      inline-flex
+      items-center
+      gap-2
+      rounded-full
+      border
+      border-lime-200
+      bg-lime-100
+      px-5
+      py-2
+      text-xs
+      font-bold
+      uppercase
+      tracking-[3px]
+      text-lime-700
+      "
+    >
 
-    </div>
+      <span className="h-2.5 w-2.5 rounded-full bg-lime-600" />
 
-    <div className="mt-14 space-y-6">
+      FAQs
 
-      {[
-        {
-          q: "How long does this stage usually take?",
-          a: "The duration depends on project size, site readiness and electrical infrastructure. Our team provides a clear timeline before execution.",
-        },
-        {
-          q: "Will I receive documentation?",
-          a: "Yes. Every phase includes detailed documentation, reports and recommendations for complete transparency.",
-        },
-        {
-          q: "Can this process be customized?",
-          a: "Absolutely. Every EV charging project is unique, and our workflow adapts to your technical and business requirements.",
-        },
-      ].map((faq) => (
-
-        <div
-          key={faq.q}
-          className="
-          rounded-3xl
-          border
-          border-slate-200
-          bg-white
-          p-8
-          shadow-sm
-          "
-        >
-
-          <h3
-            className="
-            text-xl
-            font-bold
-            text-slate-900
-            "
-          >
-            {faq.q}
-          </h3>
-
-          <p
-            className="
-            mt-4
-            leading-8
-            text-slate-600
-            "
-          >
-            {faq.a}
-          </p>
-
-        </div>
-
-      ))}
-
-    </div>
+    </span>
 
   </div>
 
-</section>
+  <h2
+    className="
+    mt-7
+    text-3xl
+    font-black
+    leading-tight
+    text-slate-900
+    sm:text-4xl
+    lg:text-5xl
+    "
+  >
+    Frequently Asked Questions
+  </h2>
 
-{/* ====================================================== */}
-{/* PREVIOUS / NEXT */}
-{/* ====================================================== */}
+  <p
+    className="
+    mx-auto
+    mt-3
+    max-w-4xl
+    text-base
+    leading-8
+    text-slate-600
+    sm:text-lg
+    "
+  >
+    Find answers to the most common questions about this
+    stage of our EV charging implementation process and
+    understand what to expect before moving forward.
+  </p>
 
-<section className="py-20">
+</div>
 
-  <div className="mx-auto flex max-w-7xl flex-wrap justify-between gap-6 px-6 lg:px-10">
+   <div className="mt-14 mx-auto max-w-4xl space-y-5">
 
-    {previousSlug ? (
+  {[
+    {
+      q: "How long does this stage usually take?",
+      a: "The duration depends on project size, site readiness and electrical infrastructure. Our team provides a clear timeline before execution.",
+    },
+    {
+      q: "Will I receive documentation?",
+      a: "Yes. Every phase includes detailed documentation, reports and recommendations for complete transparency.",
+    },
+    {
+      q: "Can this process be customized?",
+      a: "Absolutely. Every EV charging project is unique, and our workflow adapts to your technical and business requirements.",
+    },
+  ].map((faq) => (
 
-      <Link
-        href={`/process/${previousSlug}`}
+    <details
+      key={faq.q}
+className="
+group
+overflow-hidden
+rounded-[28px]
+border
+border-slate-200
+bg-white/90
+backdrop-blur
+shadow-sm
+transition-all
+duration-300
+hover:border-lime-300
+hover:shadow-xl
+open:border-lime-300
+open:shadow-xl
+"
+    >
+
+      <summary
         className="
-        group
-        flex
-        items-center
-        gap-4
-        rounded-3xl
-        border
-        border-slate-200
-        bg-white
-        px-8
-        py-6
-        transition
-        hover:border-lime-400
-        hover:shadow-xl
-        "
+flex
+cursor-pointer
+list-none
+items-center
+justify-between
+gap-6
+px-7
+py-6
+"
       >
 
-        <ArrowLeft className="transition group-hover:-translate-x-1" />
+        <h3 className="text-lg font-bold text-slate-900">
+          {faq.q}
+        </h3>
 
-        <div>
+      <div
+  className="
+  flex
+  h-8
+  w-8
+  shrink-0
+  items-center
+  justify-center
+  rounded-full
+  border
+  border-lime-200
+  bg-lime-100
+  text-xl
+  font-bold
+  text-lime-700
+  transition-all
+  duration-300
+  group-hover:bg-lime-500
+  group-hover:text-white
+  group-open:rotate-45
+  group-open:bg-lime-500
+  group-open:text-white
+  "
+>
+  +
+</div>
 
-          <p className="text-sm text-slate-500">
-            Previous Step
-          </p>
+      </summary>
 
-          <h4 className="font-bold capitalize">
-            {previousSlug.replace("-", " ")}
-          </h4>
+      <div className="px-7 pb-7">
+
+        <p className="leading-8 text-slate-600">
+          {faq.a}
+        </p>
+
+      </div>
+
+    </details>
+
+  ))}
+
+</div>
+
+  </div>
+
+</section> */}
+
+{/* ====================================================== */}
+{/* PROCESS NAVIGATION */}
+{/* ====================================================== */}
+
+<section className="py-16">
+
+  <div className="mx-auto max-w-7xl px-6">
+
+    <div
+      className="
+      rounded-[32px]
+      border
+      border-slate-200
+      bg-white
+      px-6
+      py-6
+      shadow-lg
+      "
+    >
+
+      <div className="flex items-center justify-between">
+
+        {/* Previous */}
+
+        <div className="min-w-[150px]">
+
+          {previousSlug && (
+
+            <Link
+              href={`/process/${previousSlug}`}
+              className="
+              group
+              inline-flex
+              items-center
+              gap-3
+              font-semibold
+              text-slate-700
+              transition
+              hover:text-lime-600
+              "
+            >
+
+              <ArrowLeft className="h-5 w-5 transition group-hover:-translate-x-1" />
+
+              <div>
+
+                <p className="text-xs uppercase tracking-[2px] text-slate-400">
+                  Previous
+                </p>
+
+                <span className="capitalize">
+
+                  {previousSlug.replace("-", " ")}
+
+                </span>
+
+              </div>
+
+            </Link>
+
+          )}
 
         </div>
 
-      </Link>
+        {/* Center */}
 
-    ) : (
-      <div />
-    )}
+        <div className="hidden flex-col items-center lg:flex">
 
-    {nextSlug && (
+          <span className="text-sm font-semibold text-slate-500">
 
-      <Link
-        href={`/process/${nextSlug}`}
-        className="
-        group
-        ml-auto
-        flex
-        items-center
-        gap-4
-        rounded-3xl
-        border
-        border-slate-200
-        bg-white
-        px-8
-        py-6
-        transition
-        hover:border-lime-400
-        hover:shadow-xl
-        "
-      >
+            Step {process.number} of 06
 
-        <div className="text-right">
+          </span>
 
-          <p className="text-sm text-slate-500">
-            Next Step
-          </p>
+          <div className="mt-4 flex items-center gap-4">
 
-          <h4 className="font-bold capitalize">
-            {nextSlug.replace("-", " ")}
-          </h4>
+            {[1,2,3,4,5,6].map((step)=>(
+              <div
+                key={step}
+                className={`
+                  h-3 w-3 rounded-full transition-all
+                  ${
+                   step <= Number(process.number)
+                      ? "bg-lime-600"
+                      : "bg-slate-300"
+                  }
+                `}
+              />
+            ))}
+
+          </div>
 
         </div>
 
-        <ArrowRight className="transition group-hover:translate-x-1" />
+        {/* Next */}
 
-      </Link>
+        <div className="min-w-[150px] text-right">
 
-    )}
+          {nextSlug && (
+
+            <Link
+              href={`/process/${nextSlug}`}
+              className="
+              group
+              inline-flex
+              items-center
+              gap-3
+              font-semibold
+              text-slate-700
+              transition
+              hover:text-lime-600
+              "
+            >
+
+              <div>
+
+                <p className="text-xs uppercase tracking-[2px] text-slate-400">
+                  Next
+                </p>
+
+                <span className="capitalize">
+
+                  {nextSlug.replace("-", " ")}
+
+                </span>
+
+              </div>
+
+              <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" />
+
+            </Link>
+
+          )}
+
+        </div>
+
+      </div>
+
+    </div>
 
   </div>
 
@@ -940,7 +1173,8 @@ const nextSlug =
 
 <section className="pb-24">
 
-  <div className="mx-auto max-w-7xl px-6 lg:px-10">
+    <div className="mx-auto max-w-7xl px-6">
+
 
     <div
       className="
@@ -999,25 +1233,28 @@ const nextSlug =
             className="
             rounded-2xl
             bg-white
-            px-8
-            py-4
+            px-6
+            py-3
             font-bold
             text-lime-700
             transition
             hover:scale-105
             "
           >
-            Book Consultation
+           Contact Us
           </Link>
 
           <Link
             href="/solutions"
             className="
+              inline-flex
+               items-center
+            gap-2
             rounded-2xl
             border
             border-white/30
-            px-8
-            py-4
+            px-6
+            py-3
             font-semibold
             text-white
             transition
@@ -1025,6 +1262,7 @@ const nextSlug =
             "
           >
             Explore Solutions
+                <ArrowRight className="h-5 w-5" />
           </Link>
 
         </div>
