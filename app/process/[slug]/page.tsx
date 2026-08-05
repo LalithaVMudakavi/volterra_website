@@ -178,7 +178,7 @@ const nextSlug =
 
         {/* Background */}
 
-        <div className="absolute inset-0 bg-gradient-to-b from-lime-50 via-white to-white" />
+        <div className="absolute inset-0 bg-linear-to-b from-lime-50 via-white to-white" />
 
     
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-10">
@@ -398,7 +398,7 @@ const nextSlug =
         Why This Step Matters
       </h2>
 
-      <div className="mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-lime-500 to-green-600" />
+      <div className="mt-4 h-1 w-24 rounded-full bg-linear-to-r from-lime-500 to-green-600" />
 
     </div>
 
@@ -947,7 +947,7 @@ const nextSlug =
       relative
       overflow-hidden
       rounded-[40px]
-      bg-gradient-to-r
+      bg-linear-to-r
       from-lime-600
       via-green-600
       to-emerald-600

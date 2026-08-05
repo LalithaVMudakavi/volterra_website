@@ -8,16 +8,10 @@ import {
   ShieldCheck,
   Leaf,
   Network,
-  MapPin,
-  Building2,
   BatteryCharging,
-  ChevronDown,
   Cpu,
-  BadgeDollarSign,
-  X,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
 
 export function Hero() {
     const router = useRouter()
@@ -353,7 +347,7 @@ label:"Energy Ready",
       `}
     >
       {/* Glow */}
-      <div className="absolute inset-0 bg-gradient-to-b from-lime-400/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      <div className="absolute inset-0 bg-linear-to-b from-lime-400/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
       {/* Icon */}
       <div

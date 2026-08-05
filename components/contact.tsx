@@ -3,6 +3,9 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
+import { STATES, CITIES } from "@/lib/location-data";
+import { SearchableCombobox } from "@/components/ui/searchable-combobox";
+
 
 import {
   Phone,
@@ -14,6 +17,7 @@ import {
   User,
   ArrowRight,
 } from "lucide-react";
+import { SearchSelect } from "./ui/search-select";
 
 const contactInfo = [
   {
@@ -45,14 +49,19 @@ const contactInfo = [
 //   },
 ];
 
+
 export function Contact() {
 
-  const [formData, setFormData] = useState({
+const [formData, setFormData] = useState({
   fullName: "",
   company: "",
   phone: "",
   email: "",
-  location: "",
+
+  streetAddress: "",
+  city: "",
+  state: "",
+
   businessType: "",
   requirements: "",
 });
@@ -87,7 +96,9 @@ const handleSubmit = async (
     !formData.fullName ||
     !formData.phone ||
     !formData.email ||
-    !formData.location ||
+    !formData.streetAddress ||
+!formData.city ||
+!formData.state ||
     !formData.businessType ||
     !formData.requirements
   ) {
@@ -132,15 +143,19 @@ const handleSubmit = async (
       "Thank you! Your request has been submitted successfully."
     );
 
-    setFormData({
-      fullName: "",
-      company: "",
-      phone: "",
-      email: "",
-      location: "",
-      businessType: "",
-      requirements: "",
-    });
+  setFormData({
+  fullName: "",
+  company: "",
+  phone: "",
+  email: "",
+
+  streetAddress: "",
+  city: "",
+  state: "",
+
+  businessType: "",
+  requirements: "",
+});
 
   } catch (err) {
     console.error(err);
@@ -737,7 +752,7 @@ help you at every step.
   onChange={handleChange}
   placeholder="+91 XXXXX XXXXX"
   required
-          className="
+             className="
           h-12
           w-full
           rounded-2xl
@@ -789,7 +804,7 @@ help you at every step.
   onChange={handleChange}
   placeholder="example@email.com"
   required
-          className="
+            className="
           h-12
           w-full
           rounded-2xl
@@ -813,60 +828,102 @@ help you at every step.
     </div>
 
     {/* Location */}
+    {/* Street Address */}
 
-    <div>
+<div className="md:col-span-2">
 
-      <label className="mb-2 block font-semibold text-slate-800">
-        Project Location  <span className="text-red-500">*</span>
-      </label>
+  <label className="mb-2 block font-semibold text-slate-800">
+    Address 
+  </label>
 
-      <div className="relative">
+  <div className="relative">
 
-        <MapPin
-          className="
-          absolute
-          left-4
-          top-1/2
-          h-4
-          w-4
-          -translate-y-1/2
-          text-slate-400
-          "
-        />
+    <MapPin
+      className="
+      absolute
+      left-4
+      top-5
+      h-4
+      w-4
+      text-slate-400
+      "
+    />
 
-        <input
-  type="text"
-  name="location"
-  value={formData.location}
-  onChange={handleChange}
-  placeholder="City / State"
-  required
-          className="
-          h-12
-          w-full
-          rounded-2xl
-          border
-          border-slate-200
-          bg-slate-50
-          pl-12
-          pr-4
-          outline-none
-          transition-all
-          duration-300
-          focus:border-lime-500
-          focus:bg-white
-          focus:ring-4
-          focus:ring-lime-500/10
-          "
-        />
+    <textarea
+      rows={2}
+      name="streetAddress"
+      value={formData.streetAddress}
+      onChange={handleChange}
+      placeholder="Enter address"
+      className="
+      w-full
+      rounded-2xl
+      border
+      border-slate-200
+      bg-slate-50
+      pl-12
+      pr-4
+      pt-4
+      pb-4
+      outline-none
+      transition-all
+      duration-300
+      resize-none
+      focus:border-lime-500
+      focus:bg-white
+      focus:ring-4
+      focus:ring-lime-500/10
+      "
+    />
 
-      </div>
+  </div>
 
-    </div>
+</div>
+
+<div>
+
+  <label className="mb-2 block font-semibold text-slate-800">
+    City <span className="text-red-500">*</span>
+  </label>
+
+<SearchSelect
+  value={formData.city}
+  onChange={(value) =>
+    setFormData((prev) => ({
+      ...prev,
+      city: value,
+    }))
+  }
+  options={CITIES}
+  placeholder="Select city"
+/>
+
+</div>
+
+<div>
+
+  <label className="mb-2 block font-semibold text-slate-800">
+    State <span className="text-red-500">*</span>
+  </label>
+
+  <SearchSelect
+  value={formData.state}
+  onChange={(value) =>
+    setFormData((prev) => ({
+      ...prev,
+      state: value,
+    }))
+  }
+  options={STATES}
+  placeholder="Select state"
+/>
+
+</div>
+
 
     {/* Business Type */}
 
-    <div>
+    <div className="md:col-span-2">
 
       <label className="mb-2 block font-semibold text-slate-800">
         Business Type  <span className="text-red-500">*</span>

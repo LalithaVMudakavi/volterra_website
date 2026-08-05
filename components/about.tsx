@@ -15,8 +15,6 @@ import {
   Radar,
   Landmark,
   Route,
-  ArrowRight,
-  Factory,
   Building,
   MapPinned,
   Store,
