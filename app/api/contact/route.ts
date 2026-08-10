@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { Analytics } from "@vercel/analytics/next"
 
 export async function POST(request: Request) {
   try {
