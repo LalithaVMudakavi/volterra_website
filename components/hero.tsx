@@ -589,257 +589,482 @@ pointer-events-none
 // };
 
 //   return (
-//     <section  id="hero" className="relative h-screen overflow-hidden">
+//    <section
+//   id="hero"
+//   className="relative min-h-screen overflow-hidden bg-[#050B12]"
+// >
+//   {/* ========================================================= */}
+//   {/* BACKGROUND IMAGE */}
+//   {/* ========================================================= */}
 
-//       {/* ================= BACKGROUND ================= */}
-//       <div
-// className="
-// absolute
-// top-0
-// left-0
-// right-0
-// h-48
-// bg-linear-to-b
-// from-black/30
-// to-transparent
-// "
-// />
+//   <motion.div
+//     initial={{ scale: 1.12 }}
+//     animate={{ scale: 1.03 }}
+//     transition={{
+//       duration: 15,
+//       ease: "easeOut",
+//     }}
+//     className="absolute inset-0"
+//   >
+//     <div
+//       className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+//       style={{
+//         backgroundImage: "url('/image.png')",
+//         backgroundPosition: "center center",
+//       }}
+//     />
+//   </motion.div>
 
-//    <div
-//   className="
-//   absolute
-//   inset-0
-//   bg-cover
-//   bg-no-repeat
-//   scale-[1.08]
-//   "
-//   style={{
-//     backgroundImage: "url('/image.png')",
-//     backgroundPosition: "72% center",
-//   }}
-// />
+//   {/* ========================================================= */}
+//   {/* OVERLAYS */}
+//   {/* ========================================================= */}
 
-//       {/* Dark Overlay */}
+//   {/* Soft Black Overlay */}
 
-// <div className="absolute inset-0 bg-black/30" />
+//   <div className="absolute inset-0 bg-black/30" />
 
+//   {/* Left Gradient */}
 
+//   <div
+//     className="
+//       absolute
+//       inset-0
+//       bg-gradient-to-r
+//       from-[#040A11]/90
+//       via-[#07111C]/65
+//       via-35%
+//       to-transparent
+//     "
+//   />
 
-// <div
-// className="
-// absolute
-// inset-0
-// "
-// />
+//   {/* Top Gradient */}
 
-// <div
-// className="
-// absolute
-// top-0
-// left-1/2
-// -translate-x-1/2
-// w-225
-// h-87.5
-// bg-white/5
-// blur-[120px]
-// rounded-full
-// "
-// />
-//       {/* Left Gradient */}
+//   <div
+//     className="
+//       absolute
+//       top-0
+//       inset-x-0
+//       h-40
+//       bg-gradient-to-b
+//       from-black/50
+//       to-transparent
+//     "
+//   />
 
-//       <div
-// className="
-// absolute
-// inset-0
-// bg-linear-to-r
-// from-[#08111d]/88
-// via-[#08111d]/45
-// to-transparent
-// "
-// />
+//   {/* Bottom Gradient */}
 
-//       {/* ================= CONTENT ================= */}
-//       <div
-//   className="
-//   absolute
-//   left-0
-//   top-0
-//   bottom-0
-//   w-[55%]
-//   bg-linear-to-r
-//   from-[#08111d]/35
-//   to-transparent
-//   backdrop-blur-[2px]
-//   "
-// />
+//   <div
+//     className="
+//       absolute
+//       bottom-0
+//       inset-x-0
+//       h-56
+//       bg-gradient-to-t
+//       from-[#050B12]
+//       via-[#050B12]/75
+//       to-transparent
+//     "
+//   />
 
-//       <div className="relative z-20 max-w-[1750px] mx-auto h-full px-8 lg:px-16">
+//   {/* ========================================================= */}
+//   {/* AMBIENT GREEN LIGHT */}
+//   {/* ========================================================= */}
 
-//         <div className="flex h-full items-center">
+//   <div
+//     className="
+//       absolute
+//       left-[28%]
+//       top-[22%]
+//       h-[420px]
+//       w-[420px]
+//       rounded-full
+//       bg-lime-400/10
+//       blur-[160px]
+//     "
+//   />
 
+//   <div
+//     className="
+//       absolute
+//       right-[10%]
+//       bottom-[18%]
+//       h-[260px]
+//       w-[260px]
+//       rounded-full
+//       bg-lime-400/20
+//       blur-[120px]
+//     "
+//   />
+
+//   {/* ========================================================= */}
+//   {/* GRID EFFECT */}
+//   {/* ========================================================= */}
+
+//   <div
+//     className="absolute inset-0 opacity-[0.03]"
+//     style={{
+//       backgroundImage: `
+//         linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px),
+//         linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px)
+//       `,
+//       backgroundSize: "70px 70px",
+//     }}
+//   />
+
+//   {/* ========================================================= */}
+//   {/* LIGHT VIGNETTE */}
+//   {/* ========================================================= */}
+
+//   <div
+//     className="
+//       absolute
+//       inset-0
+//       bg-[radial-gradient(circle_at_center,transparent_25%,rgba(0,0,0,.35)_100%)]
+//     "
+//   />
+
+//   {/* ========================================================= */}
+//   {/* CONTENT WRAPPER */}
+//   {/* ========================================================= */}
+
+//   <div className="relative z-20 mx-auto flex min-h-screen max-w-[1600px] items-center px-6 pt-24 lg:px-12 xl:px-20">
+
+//       {/* <div className="relative z-20 max-w-[1750px] mx-auto h-full px-8 lg:px-16"> */}
+
+// <div className="grid w-full items-center gap-12 lg:grid-cols-[46%_54%]">
 //           {/* LEFT CONTENT */}
+// {/* ========================================================= */}
+// {/* LEFT CONTENT */}
+// {/* ========================================================= */}
 
-//           <motion.div
-//             variants={containerVariants}
-//             initial="hidden"
-//             animate="visible"
-//             className="max-w-190"
-//           >
+// <motion.div
+//   variants={containerVariants}
+//   initial="hidden"
+//   animate="visible"
+//   className="max-w-[640px]"
+// >
 
-//             {/* Badge */}
+//   {/* Small Label */}
 
-//             <motion.div variants={itemVariants}>
+//   <motion.div variants={itemVariants}>
 
-//               <div
-//                 className="
-//                 inline-flex
-//                 items-center
-//                 gap-3
-//                 rounded-full
-//                 border
-//                 border-white/15
-//                 bg-white/10
-//                 backdrop-blur-xl
-//                 px-6
-//                 py-2
-//                 shadow-xl
-//                 mt-16
-//                 "
-//               >
+//     <div
+//       className="
+//       inline-flex
+//       items-center
+//       gap-3
+//       rounded-full
+//       border
+//       border-lime-400/20
+//       bg-white/[0.08]
+//       backdrop-blur-xl
+//       px-5
+//       py-2.5
+//       shadow-lg
+//       "
+//     >
 
-//                 <span className="relative flex h-3 w-3">
+//       <span className="relative flex h-3 w-3">
 
-//                   <span className="absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75 animate-ping" />
+//         <span className="absolute inline-flex h-full w-full rounded-full bg-lime-400 animate-ping opacity-70" />
 
-//                   <span className="relative inline-flex h-3 w-3 rounded-full bg-lime-400" />
+//         <span className="relative inline-flex h-3 w-3 rounded-full bg-lime-400" />
 
-//                 </span>
+//       </span>
 
-//                 <span className="text-white text-xs font-medium tracking-wide">
+//       <span className="text-xs uppercase tracking-wide text-lime-200 font-semibold">
 
-//                  India's Trusted EV Charging Infrastructure Partner
+//         India's Trusted EV Infrastructure Partner
 
-//                 </span>
+//       </span>
 
-//               </div>
+//     </div>
 
-//             </motion.div>
+//   </motion.div>
 
-//             {/* Heading */}
+//   {/* Heading */}
 
-//             <motion.h1
-//               variants={itemVariants}
-//               className="
-//               mt-6
-//               text-white
-//               text-4xl
-//               lg:text-5xl
-//               xl:text-5xl
-//               font-black
-//               leading-[0.98]
-//               tracking-tight
-//               "
-//             >
+//   <motion.h1
+//     variants={itemVariants}
+//     className="
+//       mt-8
+//       font-black
+//       text-white
+//       leading-[0.92]
+//       tracking-tight
+//       text-5xl
+//       md:text-5xl
+//       xl:text-5xl
+//     "
+//   >
 
-//           Powering the Future of 
+//     Powering the Future of
 
-//               <span className="mt-2 block bg-linear-to-r from-lime-300 via-lime-400 to-lime-500 bg-clip-text text-transparent">
+//     <span
+//       className="
+//       mt-3
+//       block
+//       bg-gradient-to-r
+//       from-lime-300
+//       via-lime-400
+//       to-emerald-400
+//       bg-clip-text
+//       text-transparent
+//       "
+//     >
 
-//                Sustainable Mobility
-//               </span>
+//       Sustainable Mobility
 
-//             </motion.h1>
+//     </span>
 
-//             {/* Description */}
+//   </motion.h1>
 
-//             <motion.p
-//               variants={itemVariants}
-//               className="
-//               mt-6
-//               max-w-155
-//               text-base
-//               md:text-lg
-//               leading-7
-//               text-gray-300
-//               "
-//             >
-//              Our mission is to simplify EV charging through intelligent, accessible solutions that power a cleaner and 
-//              more sustainable future. Through end-to-end EV charging solutions for homes, businesses, fleet operators,
-//              and public charging networks, we are building a smarter, greener, and more connected transportation ecosystem.
-//             </motion.p>
+//   {/* Description */}
 
-//             {/* Buttons */}
+//   <motion.p
+//     variants={itemVariants}
+//     className="
+//       mt-8
+//       text-lg
+//       leading-8
+//       text-slate-300
+//       max-w-[560px]
+//     "
+//   >
 
-//             <motion.div
-//               variants={itemVariants}
-//               className="mt-10 flex flex-wrap gap-5"
-//             >
+//    Our mission is to simplify EV charging through intelligent, accessible solutions 
+//    that power a cleaner and more sustainable future. Through end-to-end EV charging 
+//    solutions for homes, businesses, fleet operators, and public charging networks, we 
+//    are building a smarter, greener, and more connected transportation ecosystem.
 
-//               {/* Primary */}
+//     {/* <br />
+//     <br />
 
-//               <button
-//                onClick={() => router.push('/products')}
-//                 className="
-//                 group
-//                 h-11
-//                 rounded-2xl
-//                 bg-lime-500
-//                 px-6
-//                 font-semibold
-//                 text-white
-//                 shadow-lg
-//                 shadow-lime-500/20
-//                 transition-all
-//                 duration-300
-//                 hover:scale-105
-//                 hover:bg-lime-400
-//                 cursor-pointer
-//                 "
-//               >
+//     Through end-to-end EV charging solutions for homes,
+//     businesses, fleet operators and public charging
+//     networks, we are building a smarter, greener and
+//     more connected transportation ecosystem. */}
 
-//                 <span className="flex items-center gap-3">
+//   </motion.p>
 
-//                   Explore Products
-//                   <ArrowRight
-//                     size={18}
-//                     className="transition-transform duration-300 group-hover:translate-x-1"
-//                   />
+//   {/* Buttons */}
 
-//                 </span>
+//   <motion.div
+//     variants={itemVariants}
+//     className="mt-10 flex flex-wrap gap-4"
+//   >
 
-//               </button>
+//     <button
+//       onClick={() => router.push("/products")}
+//       className="
+//         group
+//         inline-flex
+//         h-14
+//         items-center
+//         gap-3
+//         rounded-full
+//         bg-lime-500
+//         px-8
+//         font-semibold
+//         text-black
+//         shadow-[0_20px_60px_rgba(132,204,22,.35)]
+//         transition-all
+//         duration-300
+//         hover:-translate-y-1
+//         hover:bg-lime-400
+//       "
+//     >
 
-//               {/* Secondary */}
+//       Explore Products
 
-//               <button
-//                 onClick={() => router.push('/about')}
-//                 className="
-//                 h-11
-//                 rounded-2xl
-//                 border
-//                 border-white/20
-//                 bg-white/10
-//                 backdrop-blur-xl
-//                 px-6
-//                 font-semibold
-//                 text-white
-//                 transition-all
-//                 duration-300
-//                 hover:bg-white/20
-//                 hover:border-white/40
-//                 cursor-pointer
-//                 "
-//               >
-//               Learn More
+//       <ArrowRight
+//         className="
+//         h-5
+//         w-5
+//         transition-transform
+//         duration-300
+//         group-hover:translate-x-1
+//         "
+//       />
 
-//               </button>
+//     </button>
 
-//             </motion.div>
+//     <button
+//       onClick={() => router.push("/about")}
+//       className="
+//         inline-flex
+//         h-14
+//         items-center
+//         rounded-full
+//         border
+//         border-white/20
+//         bg-white/10
+//         backdrop-blur-xl
+//         px-8
+//         font-semibold
+//         text-white
+//         transition-all
+//         duration-300
+//         hover:bg-white/20
+//       "
+//     >
 
+//       Learn More
 
+//     </button>
+
+//     {/* ========================================================= */}
+// {/* PREMIUM FEATURE RIBBON */}
+// {/* ========================================================= */}
+
+// <motion.div
+//   variants={itemVariants}
+//   className="mt-14 hidden xl:block max-w-[760px]"
+// >
+//   <div
+//     className="
+//       flex
+//       overflow-hidden
+//       rounded-[24px]
+//       border
+//       border-white/10
+//       bg-white/[0.06]
+//       backdrop-blur-2xl
+//       shadow-[0_20px_60px_rgba(0,0,0,.25)]
+//     "
+//   >
+//     {[
+//       {
+//         icon: <Cpu className="w-5 h-5" />,
+//         value: "AI",
+//         label: "Powered",
+//       },
+//       {
+//         icon: <BatteryCharging className="w-5 h-5" />,
+//         value: "AC & DC",
+//         label: "Chargers",
+//       },
+//       {
+//         icon: <Network className="w-5 h-5" />,
+//         value: "CMS",
+//         label: "Cloud Platform",
+//       },
+//       {
+//         icon: <Leaf className="w-5 h-5" />,
+//         value: "Green",
+//         label: "Energy",
+//       },
+//     ].map((item, index) => (
+//       <motion.div
+//         key={item.label}
+//         whileHover={{
+//           backgroundColor: "rgba(255,255,255,.05)",
+//         }}
+//         className={`
+//           group
+//           relative
+//           flex-1
+//           px-6
+//           py-5
+//           text-center
+//           transition-all
+//           duration-300
+//           ${
+//             index !== 3
+//               ? "border-r border-white/10"
+//               : ""
+//           }
+//         `}
+//       >
+//         {/* Icon */}
+
+//         <div
+//           className="
+//             mx-auto
+//             mb-3
+//             flex
+//             h-11
+//             w-11
+//             items-center
+//             justify-center
+//             rounded-full
+//             bg-lime-400/10
+//             text-lime-400
+//             transition-all
+//             duration-300
+//             group-hover:bg-lime-400
+//             group-hover:text-black
+//             group-hover:scale-110
+//           "
+//         >
+//           {item.icon}
+//         </div>
+
+//         {/* Value */}
+
+//         <h3 className="text-lg font-bold text-white">
+//           {item.value}
+//         </h3>
+
+//         {/* Label */}
+
+//         <p className="mt-1 text-sm text-slate-300">
+//           {item.label}
+//         </p>
+//       </motion.div>
+//     ))}
+//   </div>
+// </motion.div>
+
+// {/* ========================================================= */}
+// {/* TRUSTED BY */}
+// {/* ========================================================= */}
+
+// <motion.div
+//   variants={itemVariants}
+//   className="
+//     mt-10
+//     hidden
+//     xl:flex
+//     items-center
+//     gap-6
+//   "
+// >
+
+//   <span
+//     className="
+//       text-sm
+//       uppercase
+//       tracking-[0.25em]
+//       text-slate-400
+//       whitespace-nowrap
+//     "
+//   >
+//     Trusted Across
+//   </span>
+
+//   <div className="h-px flex-1 bg-white/10" />
+
+//   <div className="flex items-center gap-10 text-white/60">
+
+//     <span className="font-semibold">Corporate</span>
+
+//     <span className="font-semibold">Fleet</span>
+
+//     <span className="font-semibold">Hospitality</span>
+
+//     <span className="font-semibold">Residential</span>
+
+//     <span className="font-semibold">Public</span>
+
+//   </div>
+
+// </motion.div>
+
+//   </motion.div>
 //                         {/* ================= RIGHT FEATURE CARDS ================= */}
 
-           
+
 
 //           </motion.div>
 

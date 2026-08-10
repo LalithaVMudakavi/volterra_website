@@ -952,7 +952,7 @@ help you at every step.
   "
 >
 
-       <option value="">Select Business Type</option>
+        <option value="">Select Business Type</option>
         <option>Residential Community</option>
         <option>Hotel</option>
         <option>Corporate Office</option>
@@ -1026,6 +1026,7 @@ help you at every step.
   hover:shadow-[0_20px_50px_rgba(132,204,22,.35)]
   disabled:cursor-not-allowed
   disabled:opacity-60
+  cursor-pointer
   "
 >
   {loading ? "Submitting..." : "Submit The Details"}
