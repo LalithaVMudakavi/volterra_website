@@ -33,7 +33,7 @@ const {
 });
 
 await transporter.verify();
-console.log("SMTP Connected Successfully");
+console.log("SMTP Connected Successfully.");
 
     // ==========================
     // Email to Admin
