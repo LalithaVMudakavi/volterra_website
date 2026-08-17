@@ -74,7 +74,7 @@ const products: Product[] = [
     name: "Volterra One",
     category: "Residential",
     power: "11 kW",
-     image: "/images/productsimages/11kwcharger.png",
+     image: "/images/productsimages/11kw_charger.png",
     description:
       "Smart and efficient charging solutions designed for locations where vehicles have longer parking durations.",
 
@@ -90,7 +90,7 @@ const products: Product[] = [
     name: "Volterra Pro",
     category: "Corporate",
     power: "22kW",
-    image: "/images/productsimages/image.png",
+    image: "/images/productsimages/22kw_charger.png",
     description:
       "Smart and efficient charging solutions designed for locations where vehicles have longer parking durations.",
 
