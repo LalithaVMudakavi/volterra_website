@@ -23,7 +23,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Call Us",
-    value: "+91 80954 34443",
+    value: "+91 96063 64400",
     sub: "Mon - Sat | 9:30 AM - 6:30 PM",
   },
 

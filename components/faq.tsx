@@ -367,7 +367,7 @@ Charging Management System and nationwide support.
 
               <p className="font-semibold">
 
-                +91 80954 34443
+                +91 96063 64400
 
               </p>
 

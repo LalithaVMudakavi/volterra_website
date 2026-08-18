@@ -696,7 +696,7 @@ export default function PrivacyPolicy() {
 
                 <p className="mt-3 text-gray-300">
 
-                  +91 80954 34443
+                  +91 96063 64400
 
                 </p>
 
