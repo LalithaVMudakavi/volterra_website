@@ -601,6 +601,11 @@ const solutions = [
     href: 'https://www.linkedin.com/company/volterra-energy-ev-charging',
     label: 'LinkedIn',
   },
+      {
+      icon: BsTwitter,
+      href: 'https://x.com/VolterraEV',
+      label:'Twitter'
+    },
 ];
 
 
@@ -672,7 +677,7 @@ lg:px-14 px-6 py-20">
         Follow Us
       </h3>
 
-     <div className="flex gap-3">
+    <div className="flex gap-3">
   {socialLinks.map((social) => {
     const Icon = social.icon;
 
@@ -680,13 +685,15 @@ lg:px-14 px-6 py-20">
       <motion.button
         key={social.label}
         type="button"
-        onClick={() => window.open(social.href, '_blank', 'noopener,noreferrer')}
+        onClick={() =>
+          window.open(social.href, '_blank', 'noopener,noreferrer')
+        }
         whileHover={{ y: -3 }}
         whileTap={{ scale: 0.95 }}
         aria-label={`Visit Volterra Energy on ${social.label}`}
-        className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border border-white/10 bg-white/5 text-gray-300 transition hover:border-lime-400 hover:bg-lime-400 hover:text-black"
+        className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl border border-lime-400/40 bg-lime-600 text-white shadow-lg shadow-lime-500/20 transition duration-300 hover:bg-gray-200 hover:text-[#0B1F35] hover:shadow-xl hover:shadow-[#FFB21A]/30"
       >
-        <Icon size={18} />
+        <Icon size={19} />
       </motion.button>
     );
   })}
