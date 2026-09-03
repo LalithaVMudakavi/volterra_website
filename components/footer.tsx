@@ -585,29 +585,25 @@ const solutions = [
     },
   ];
 
-  const socialLinks = [
-    {
-      icon: FaFacebook,
-      href: '#',
-    },
-    {
-      icon: BsInstagram,
-      href: '#',
-    },
-    {
-      icon: LiaLinkedin,
-      href: '#',
-    },
-    {
-      icon: BsTwitter,
-      href: '#',
-    },
-    {
-      icon: BsYoutube,
-      href: '#',
-    },
-  ];
-  
+ const socialLinks = [
+  {
+    icon: FaFacebook,
+    href: 'https://www.facebook.com/profile.php?id=61592038480060',
+    label: 'Facebook',
+  },
+  {
+    icon: BsInstagram,
+    href: 'https://www.instagram.com/volterraenergyev/?hl=en',
+    label: 'Instagram',
+  },
+  {
+    icon: LiaLinkedin,
+    href: 'https://www.linkedin.com/company/volterra-energy-ev-charging',
+    label: 'LinkedIn',
+  },
+];
+
+
   const certifications = [
   "/images/certifications/cert-1.png",
   "/images/certifications/cert-2.png",
@@ -676,30 +672,25 @@ lg:px-14 px-6 py-20">
         Follow Us
       </h3>
 
-      <div className="flex gap-3">
+     <div className="flex gap-3">
+  {socialLinks.map((social) => {
+    const Icon = social.icon;
 
-        {socialLinks.map((social, index) => {
-
-          const Icon = social.icon;
-
-          return (
-
-            <motion.a
-              key={index}
-              href={social.href}
-              whileHover={{ y: -3 }}
-              className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-gray-300 transition hover:border-lime-400 hover:bg-lime-400 hover:text-black"
-            >
-
-              <Icon size={18} />
-
-            </motion.a>
-
-          );
-
-        })}
-
-      </div>
+    return (
+      <motion.button
+        key={social.label}
+        type="button"
+        onClick={() => window.open(social.href, '_blank', 'noopener,noreferrer')}
+        whileHover={{ y: -3 }}
+        whileTap={{ scale: 0.95 }}
+        aria-label={`Visit Volterra Energy on ${social.label}`}
+        className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border border-white/10 bg-white/5 text-gray-300 transition hover:border-lime-400 hover:bg-lime-400 hover:text-black"
+      >
+        <Icon size={18} />
+      </motion.button>
+    );
+  })}
+</div>
 
     </div>
 
