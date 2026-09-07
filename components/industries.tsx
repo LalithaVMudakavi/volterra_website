@@ -859,8 +859,15 @@ export default function Industries() {
   const Icon = current.icon;
 
   return (
-    <section className="relative overflow-hidden bg-[#F8FAFC] py-28 sm:py-24 lg:py-34"
-    >
+<section
+id="products"
+className="
+relative
+overflow-hidden
+bg-[#F7F9FC]
+py-34
+"
+>
       {/* Background Glow */}
 
       <div className="absolute left-0 top-0 h-125 w-125 rounded-full bg-lime-400/10 blur-[140px]" />
