@@ -733,6 +733,7 @@ mx-auto
 max-w-375
 px-6
 lg:px-10
+-mt-10
 "
 >
 
@@ -782,7 +783,7 @@ text-lime-600
           px-4
           py-2
          text-xs
-            font-semibold
+            font-black
             tracking-[3px]
             uppercase
           text-white
@@ -810,7 +811,7 @@ text-slate-900
 "
 >
 
-Powering Your Journey,
+Powering Your Journey, {" "}
 
 <span className="text-lime-600">
 
@@ -820,7 +821,7 @@ Powering Your Journey,
 
 </h2>
 
-<p
+ <p
 className="
 mx-auto
 mt-2
@@ -845,7 +846,7 @@ text-slate-600
         {/* PROCESS GRID */}
         {/* ============================ */}
 
-        <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
           {processSteps.map((step, index) => {
   const Icon = step.icon;
