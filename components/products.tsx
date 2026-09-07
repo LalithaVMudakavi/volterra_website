@@ -12,9 +12,7 @@ import {
   X,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-// import FloatingCalculator from "./calculator/FloatingCalculator";
-// import RevenueCalculator from "./calculator/RevenueCalculator";
-// import { chargers, type Charger } from "./calculator/chargerData";
+
 
 interface Product {
   id: number;
@@ -181,21 +179,6 @@ const products: Product[] = [
     protocol: "OCPP 1.6J/2.0.1",
   },
 
-  // {
-  //   id: 10,
-  //   name: "Volterra Infinity",
-  //   category: "Ultra DC",
-  //   power: "360kW",
-  //    image: "/images/productsimages/360kw_charger.png",
-  //   description:
-  //     "High-performance DC charging infrastructure designed for faster turnaround and high-utilization locations.",
-
-  //  inputSupply: "3-Phase AC",
-  //   connector: "CCS-2",
-  //   communication: "4G / Ethernet",
-  //   ip: "IP54/IP55/IP65",
-  //   protocol: "OCPP 1.6J/2.0.1",
-  // },
 ];
 
 export function Products() {
@@ -203,11 +186,6 @@ export function Products() {
     const router = useRouter()
 
        const [showPartnerModal, setShowPartnerModal] = useState(false);
-
-      //  const [calculatorOpen, setCalculatorOpen] = useState(false);
-
-// const [selectedCharger, setSelectedCharger] =
-//   useState<Charger | null>(null);
 
        const investorForm =
   "https://docs.google.com/forms/d/e/1FAIpQLSctRL3vu3BlnSh-BkhTGda8dszCS3Lv21sSinrKr-6VnMNjnw/viewform";
@@ -222,23 +200,6 @@ const openInvestorForm = () => {
 const openHostForm = () => {
   window.open(hostForm, "_blank");
 };
-
-// const openCalculator = (power: string) => {
-
-//   const kw = parseFloat(
-//     power.replace("kW", "").trim()
-//   );
-
-//   const charger =
-//     chargers.find(
-//       (item) => item.power === kw
-//     ) ?? chargers[0];
-
-//   setSelectedCharger(charger);
-
-//   setCalculatorOpen(true);
-
-// };
 
   const [selectedCategory, setSelectedCategory] =
     useState("All Products");
@@ -317,239 +278,250 @@ lg:px-10
 >
 
 <motion.div
-
-initial={{ opacity:0,y:30 }}
-
-whileInView={{ opacity:1,y:0 }}
-
-viewport={{ once:true }}
-
-transition={{ duration:.8 }}
-
-className="text-center"
-
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
+  className="text-center"
 >
+  <div
+    className="
+      inline-flex
+      items-center
+      rounded-full
+      border
+      border-lime-500/20
+      bg-lime-500
+      px-4
+      py-2
+      text-xs
+      font-semibold
+      uppercase
+      tracking-[3px]
+      text-white
+      shadow-[0_20px_50px_rgba(132,204,22,.35)]
 
- <div
-              className="
-              inline-flex
-              items-center
-              rounded-full
-              border
-              border-lime-500/20
-              bg-lime-500
-              px-4
-              py-2
-              text-xs
-              font-semibold
-              uppercase
-              tracking-[3px]
-              text-white
-              shadow-[0_20px_50px_rgba(132,204,22,.35)]
+      max-sm:px-3
+      max-sm:text-[10px]
+      max-sm:tracking-[2px]
+    "
+  >
+    Our Products
+  </div>
 
-              "
-            >
+  <h2
+    className="
+      mt-4
+      text-4xl
+      lg:text-5xl
+      font-black
+      leading-tight
+      text-slate-900
 
-Our Products
+      max-sm:px-2
+      max-sm:text-3xl
 
-</div>
+      md:text-4xl
+    "
+  >
+    Premium EV Charging
 
-<h2
-   className="
-            mt-4
-            text-4xl
-            lg:text-5xl
-            font-black
-            leading-tight
-            text-slate-900
-            "
->
+    <span className="text-lime-600">
+      {" "}Solutions
+    </span>
+  </h2>
 
-Premium EV Charging
+  <p
+    className="
+      mx-auto
+      mt-3
+      max-w-4xl
+      text-lg
+      leading-7
+      text-slate-600
 
-<span className=" text-lime-600">
+      max-sm:px-2
+      max-sm:text-sm
+      max-sm:leading-6
 
-{" "}Solutions
+      md:px-4
+      md:text-base
+      md:leading-7
+    "
+  >
+    Built for homes, businesses, commercial fleets and public charging
+    infrastructure with industry-leading performance, intelligent connectivity
+    and future-ready technology.
 
-</span>
+    <span
+      className="
+        block
+        mt-1
+        text-slate-600
 
-</h2>
-
-<p
-   className="
-            mx-auto
-            mt-3
-            max-w-4xl
-            text-lg
-            leading-7
-            text-slate-600
-            "
->
-
-Built for homes, businesses,
-commercial fleets and public
-charging infrastructure with
-industry-leading performance,
-intelligent connectivity and
-future-ready technology.
-<span className="block mt-1 text-slate-600">
-✔ Certified for Quality • Safety • Performance • Reliability</span>
-</p>
-
+        max-sm:mt-2
+        max-sm:text-xs
+        max-sm:leading-5
+      "
+    >
+      ✔ Certified for Quality • Safety • Performance • Reliability
+    </span>
+  </p>
 </motion.div>
 
 
+{/* ================================= */}
+{/* CATEGORY BUTTONS */}
+{/* ================================= */}
 
 <motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ delay: 0.2 }}
+  className="
+    mt-8
+    flex
+    flex-wrap
+    justify-center
+    gap-4
 
-initial={{ opacity:0 }}
+    max-sm:mt-6
+    max-sm:gap-2
 
-whileInView={{ opacity:1 }}
-
-viewport={{ once:true }}
-
-transition={{ delay:.2 }}
-
-className="
-mt-8
-flex
-flex-wrap
-justify-center
-gap-4
-"
-
+    md:gap-3
+  "
 >
+  {categories.map((category) => (
+    <button
+      key={category}
+      onClick={() => setSelectedCategory(category)}
+      className={`
+        rounded-full
+        px-4
+        py-2
+        font-semibold
+        transition-all
+        duration-300
 
-{categories.map((category)=>(
+        max-sm:px-3
+        max-sm:py-2
+        max-sm:text-xs
 
-<button
-
-key={category}
-
-onClick={()=>setSelectedCategory(category)}
-
-className={`
-rounded-full
-px-4
-py-2
-font-semibold
-transition-all
-duration-300
-
-${
-selectedCategory===category
-
-?
-
-"bg-lime-500 text-white shadow-lg shadow-lime-500/30"
-
-:
-
-"bg-white border border-slate-200 text-slate-700 hover:border-lime-500 hover:text-lime-600"
-
-}
-`}
-
->
-
-{category}
-
-</button>
-
-))}
-
+        ${
+          selectedCategory === category
+            ? "bg-lime-500 text-white shadow-lg shadow-lime-500/30"
+            : "bg-white border border-slate-200 text-slate-700 hover:border-lime-500 hover:text-lime-600"
+        }
+      `}
+    >
+      {category}
+    </button>
+  ))}
 </motion.div>
+
 
 {/* ================================= */}
 {/* SEARCH CONTAINER */}
 {/* ================================= */}
 
 <div
-className="
-mt-12
-rounded-[32px]
-border
-border-slate-200
-bg-white/80
-backdrop-blur-2xl
-p-4
-shadow-[0_15px_45px_rgba(0,0,0,.05)]
-"
+  className="
+    relative
+    z-10
+
+    mt-12
+    rounded-[32px]
+    border
+    border-slate-200
+    bg-white/80
+    backdrop-blur-2xl
+    p-4
+    shadow-[0_15px_45px_rgba(0,0,0,.05)]
+
+    max-sm:mt-8
+    max-sm:rounded-[20px]
+    max-sm:p-3
+
+    md:mt-10
+    md:rounded-[26px]
+  "
 >
+  <div className="relative z-20 w-full">
 
-  {/* ========================================= */}
-{/* SEARCH TOOLBAR */}
-{/* ========================================= */}
+    {/* Search */}
 
-<div className="flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between">
+<div className="relative z-30 w-full">
+  
+  <Search
+    className="
+      pointer-events-none
 
-  {/* Search */}
+      absolute
+      left-5
+      top-1/2
+      z-30
 
-  <div className="relative w-full lg:max-w-xl">
+      h-5
+      w-5
 
-    <Search
-      className="absolute left-5 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400"
-    />
+      -translate-y-1/2
 
-    <input
-      type="text"
-      placeholder="Search EV Chargers..."
-      value={search}
-      onChange={(e) => setSearch(e.target.value)}
-      className="
+      text-slate-500
+
+      max-sm:left-4
+      max-sm:h-4
+      max-sm:w-4
+    "
+  />
+
+  <input
+    type="text"
+    placeholder="Search EV Chargers..."
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+    className="
+      relative
+      z-10
+
       h-12
       w-full
+
+      cursor-text
+
       rounded-2xl
       border
       border-slate-200
+
       bg-white
+
       pl-14
       pr-5
+
+      !text-slate-900
+      caret-slate-900
+
+      placeholder:!text-slate-400
+
       outline-none
+
       transition-all
       duration-300
+
       focus:border-lime-500
       focus:ring-4
       focus:ring-lime-500/10
-      "
-    />
 
-  </div>
-
-  {/* Right Side */}
-
-  <div className="flex gap-4">
-
-    <button
-      className="
-      flex
-      items-center
-      gap-3
-      rounded-2xl
-      border
-      border-slate-200
-      bg-white
-      px-4
-      py-2
-      font-semibold
-      text-slate-700
-      transition-all
-      duration-300
-      hover:border-lime-500
-      hover:text-lime-600
-      "
-    >
-
-      <SlidersHorizontal className="h-4 w-4" />
-
-      Filters
-
-    </button>
-
-  </div>
-
+      max-sm:h-11
+      max-sm:rounded-xl
+      max-sm:pl-11
+      max-sm:pr-4
+      max-sm:text-sm
+      max-sm:placeholder:text-sm
+    "
+  />
 </div>
-
+  </div>
 </div>
 
 
@@ -833,48 +805,94 @@ shadow-[0_20px_60px_rgba(0,0,0,.06)]
 
 </div>
 
-<div
-  className="
-  mt-14
-  rounded-2xl
-  border
-  border-slate-200
-  bg-white
-  px-8
-  py-5
-  text-center
-  shadow-sm
-  "
->
-  <p className="text-sm font-bold uppercase tracking-[3px] text-lime-600">
-    Connector Compatibility
-  </p>
+<div 
+  className=" 
+    mt-14 
+    rounded-2xl 
+    border 
+    border-slate-200 
+    bg-white 
+    px-8 
+    py-5 
+    text-center 
+    shadow-sm
 
-  <p className="mt-2 text-lg font-medium text-slate-700">
-    Supports{" "}
-    <span className="font-bold text-slate-900">
-      CCS2
-    </span>
-    <span className="mx-2 text-lime-500">•</span>
+    max-sm:mt-8
+    max-sm:px-4
+    max-sm:py-4
 
-    <span className="font-bold text-slate-900">
-      CHAdeMO
-    </span>
-    <span className="mx-2 text-lime-500">•</span>
+    md:max-lg:px-6
+  " 
+> 
+  <p 
+    className="
+      text-sm 
+      font-bold 
+      uppercase 
+      tracking-[3px] 
+      text-lime-600
 
-    <span className="font-bold text-slate-900">
-      GB/T
-    </span>
-    <span className="mx-2 text-lime-500">•</span>
+      max-sm:text-xs
+      max-sm:tracking-[2px]
+    "
+  > 
+    Connector Compatibility 
+  </p> 
+ 
+  <p 
+    className="
+      mt-2 
+      text-lg 
+      font-medium 
+      text-slate-700
 
-    <span className="font-bold text-slate-900">
-      Type 2
-    </span>
+      max-sm:text-sm
+      max-sm:leading-7
 
-    <span className="ml-2 text-sm text-slate-500">
-      (Subject to OEM & Project Requirements)
-    </span>
-  </p>
+      md:max-lg:text-base
+      md:max-lg:leading-7
+    "
+  > 
+    Supports{" "} 
+
+    <span className="font-bold text-slate-900"> 
+      CCS2 
+    </span> 
+
+    <span className="mx-2 text-lime-500 max-sm:mx-1">•</span> 
+ 
+    <span className="font-bold text-slate-900"> 
+      CHAdeMO 
+    </span> 
+
+    <span className="mx-2 text-lime-500 max-sm:mx-1">•</span> 
+ 
+    <span className="font-bold text-slate-900"> 
+      GB/T 
+    </span> 
+
+    <span className="mx-2 text-lime-500 max-sm:mx-1">•</span> 
+ 
+    <span className="font-bold text-slate-900"> 
+      Type 2 
+    </span> 
+ 
+    <span 
+      className="
+        ml-2 
+        text-sm 
+        text-slate-500
+
+        max-sm:ml-1
+        max-sm:block
+        max-sm:mt-1
+        max-sm:text-xs
+        max-sm:leading-5
+      "
+    > 
+      (Subject to OEM & Project Requirements) 
+    </span> 
+  </p> 
 </div>
 
 {/* ========================================= */}
@@ -885,77 +903,128 @@ shadow-[0_20px_60px_rgba(0,0,0,.06)]
   initial={{ opacity: 0, y: 50 }}
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
-  transition={{ duration: .8 }}
+  transition={{ duration: 0.8 }}
   className="
-  relative
-  mt-16
-  overflow-hidden
-  rounded-[40px]
-  bg-linear-to-r
-  from-slate-900
-  via-[#1F2937]
-  to-slate-900
-  p-16
-  text-center
-  text-white
+    relative
+    mt-16
+    overflow-hidden
+    rounded-[40px]
+    bg-linear-to-r
+    from-slate-900
+    via-[#1F2937]
+    to-slate-900
+    p-16
+    text-center
+    text-white
+
+    /* Mobile only */
+    max-sm:mt-10
+    max-sm:rounded-[24px]
+    max-sm:p-6
+
+    /* Tablet only */
+    md:max-lg:mt-12
+    md:max-lg:rounded-[32px]
+    md:max-lg:p-10
   "
 >
 
+  {/* Background Glow */}
+
   <div
     className="
-    absolute
-    left-1/2
-    top-1/2
-    h-96
-    w-96
-    -translate-x-1/2
-    -translate-y-1/2
-    rounded-full
-    bg-lime-500/20
-    blur-[140px]
+      absolute
+      left-1/2
+      top-1/2
+      h-96
+      w-96
+      -translate-x-1/2
+      -translate-y-1/2
+      rounded-full
+      bg-lime-500/20
+      blur-[140px]
+
+      max-sm:h-64
+      max-sm:w-64
+      max-sm:blur-[100px]
+
+      md:max-lg:h-80
+      md:max-lg:w-80
     "
   />
 
   <div className="relative z-10">
 
+    {/* Badge */}
+
     <div
       className="
-      inline-flex
-      rounded-full
-      bg-white/10
-      px-5
-      py-2
-      text-sm
-      font-semibold
-      uppercase
-      tracking-[3px]
+        inline-flex
+        rounded-full
+        bg-white/10
+        px-5
+        py-2
+        text-sm
+        font-semibold
+        uppercase
+        tracking-[3px]
+
+        max-sm:px-3
+        max-sm:py-2
+        max-sm:text-[10px]
+        max-sm:tracking-[2px]
+
+        md:max-lg:text-xs
       "
     >
       Let's Build Together
     </div>
 
+
+    {/* Heading */}
+
     <h2
       className="
-      mt-8
-      text-5xl
-      font-black
-      leading-tight
+        mt-8
+        text-5xl
+        font-black
+        leading-tight
+
+        max-sm:mt-5
+        max-sm:text-3xl
+        max-sm:leading-tight
+
+        md:max-lg:mt-6
+        md:max-lg:text-4xl
       "
     >
       Need a Custom
+
       <span className="block text-lime-400">
         EV Charging Solution?
       </span>
     </h2>
 
+
+    {/* Description */}
+
     <p
       className="
-      mx-auto
-      mt-8
-      max-w-3xl
-      text-lg
-      leading-9
-      text-slate-300
+        mx-auto
+        mt-6
+        max-w-3xl
+        text-lg
+        leading-9
+        text-slate-300
+
+        max-sm:mt-5
+        max-sm:text-sm
+        max-sm:leading-6
+
+        md:max-lg:mt-6
+        md:max-lg:max-w-2xl
+        md:max-lg:text-base
+        md:max-lg:leading-8
       "
     >
       From residential communities to commercial campuses,
@@ -963,39 +1032,46 @@ shadow-[0_20px_60px_rgba(0,0,0,.06)]
       Volterra provides complete end-to-end EV charging ecosystems.
     </p>
 
-    <div className="mt-12 flex flex-wrap justify-center gap-5">
 
-      {/* <button
-        onClick={() => setShowPartnerModal(true)}
-        className="
-        rounded-2xl
-        bg-lime-500
-        px-8
-        py-4
-        font-semibold
-        text-white
-        transition-all
-        duration-300
-        hover:scale-105
-        cursor-pointer
-        "
-      >
-        Join Volterra
-      </button> */}
+    {/* CTA Button */}
+
+    <div
+      className="
+        mt-12
+        flex
+        flex-wrap
+        justify-center
+        gap-5
+
+        max-sm:mt-7
+        max-sm:gap-3
+
+        md:max-lg:mt-9
+      "
+    >
 
       <button
-           onClick={() => router.push('/contact')}
- className="
-        rounded-2xl
-        bg-lime-500
-        px-8
-        py-3
-        font-semibold
-        text-white
-        transition-all
-        duration-300
-        hover:scale-105
-        cursor-pointer
+        onClick={() => router.push('/contact')}
+        className="
+          rounded-2xl
+          bg-lime-500
+          px-8
+          py-3
+          font-semibold
+          text-white
+          transition-all
+          duration-300
+          hover:scale-105
+          cursor-pointer
+
+          max-sm:w-full
+          max-sm:max-w-[260px]
+          max-sm:rounded-xl
+          max-sm:px-6
+          max-sm:py-3
+          max-sm:text-sm
+
+          md:max-lg:px-7
         "
       >
         Contact Us
@@ -1008,23 +1084,6 @@ shadow-[0_20px_60px_rgba(0,0,0,.06)]
 </motion.div>
 
 </div>
-
-{/* <FloatingCalculator
-  onClick={() => {
-    setSelectedCharger(chargers[5]);
-    setCalculatorOpen(true);
-  }}
-/> */}
-
-{/* <RevenueCalculator
-
-  open={calculatorOpen}
-
-  onClose={() => setCalculatorOpen(false)}
-
-  charger={selectedCharger}
-
-/> */}
 
  <AnimatePresence>
 

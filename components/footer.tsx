@@ -1,5 +1,5 @@
 // 'use client';
-
+ 
 // import { AnimatePresence, motion } from 'framer-motion';
 // import {
 //   Mail,
@@ -677,21 +677,49 @@ lg:px-14 px-6 py-20">
         Follow Us
       </h3>
 
-    <div className="flex gap-3">
+<div className="flex flex-wrap gap-3">
   {socialLinks.map((social) => {
     const Icon = social.icon;
+
+    const socialColors = {
+      Facebook:
+        "bg-[#1877F2] hover:bg-[#166FE5] hover:shadow-[#1877F2]/40",
+
+      Instagram:
+        "bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#FCAF45] hover:shadow-pink-500/40",
+
+      LinkedIn:
+        "bg-[#0A66C2] hover:bg-[#004182] hover:shadow-[#0A66C2]/40",
+
+      Twitter:
+        "bg-black hover:bg-[#1a1a1a] hover:shadow-white/10",
+    };
 
     return (
       <motion.button
         key={social.label}
         type="button"
         onClick={() =>
-          window.open(social.href, '_blank', 'noopener,noreferrer')
+          window.open(social.href, "_blank", "noopener,noreferrer")
         }
-        whileHover={{ y: -3 }}
+        whileHover={{ y: -3, scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         aria-label={`Visit Volterra Energy on ${social.label}`}
-        className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl border border-lime-400/40 bg-lime-600 text-white shadow-lg shadow-lime-500/20 transition duration-300 hover:bg-gray-200 hover:text-[#0B1F35] hover:shadow-xl hover:shadow-[#FFB21A]/30"
+        className={`
+          flex
+          h-11
+          w-11
+          cursor-pointer
+          items-center
+          justify-center
+          rounded-xl
+          text-white
+          shadow-lg
+          transition-all
+          duration-300
+          hover:shadow-xl
+          ${socialColors[social.label as keyof typeof socialColors]}
+        `}
       >
         <Icon size={19} />
       </motion.button>

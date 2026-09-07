@@ -93,9 +93,9 @@ export default function TechnologyCapabilities() {
    const router = useRouter()
 
   return (
-    <section className="relative py-26">
+    <section className="relative py-16 sm:py-20 lg:py-26">
 
-      <div className="mx-auto max-w-[1500px] px-6 lg:px-10">
+      <div className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-10">
 
         {/* Heading */}
 
@@ -130,7 +130,8 @@ export default function TechnologyCapabilities() {
            <h2
               className="
               mt-3
-              text-4xl
+              text-3xl
+              sm:text-4xl
               font-black
               leading-tight
               text-slate-900
@@ -150,7 +151,8 @@ export default function TechnologyCapabilities() {
               mx-auto
               mt-3
               max-w-4xl
-              text-lg
+              text-base
+              sm:text-lg
               leading-7
               text-slate-600
               "
@@ -167,7 +169,7 @@ export default function TechnologyCapabilities() {
 
         {/* Feature Grid */}
 
-        <div className="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-5">
+        <div className="mt-10 grid gap-5 sm:mt-14 sm:gap-8 md:grid-cols-2 xl:grid-cols-5">
 
           {capabilities.map((item, index) => {
 
@@ -197,11 +199,13 @@ export default function TechnologyCapabilities() {
                   group
                   relative
                   overflow-hidden
-                  rounded-[32px]
+                  rounded-3xl
+                  sm:rounded-[32px]
                   border
                   border-slate-200
                   bg-white
-                  p-6
+                  p-5
+                  sm:p-6
                   shadow-[0_20px_60px_rgba(15,23,42,.06)]
                 "
               >
@@ -287,16 +291,21 @@ export default function TechnologyCapabilities() {
           }}
           className="
             relative
-            mt-24
+            mt-14
+            sm:mt-20
+            lg:mt-24
             overflow-hidden
-            rounded-[40px]
+            rounded-3xl
+            sm:rounded-[40px]
             border
             border-lime-200
             bg-gradient-to-r
             from-lime-50
             via-white
             to-green-50
-            p-12
+            p-6
+            sm:p-8
+            lg:p-12
           "
         >
 
@@ -310,7 +319,7 @@ export default function TechnologyCapabilities() {
                 Technology Vision
               </span>
 
-              <h3 className="mt-5 text-4xl font-black text-slate-900">
+              <h3 className="mt-5 text-3xl font-black text-slate-900 sm:text-4xl">
 
                 AI + IoT + CMS + Cloud +
 
@@ -320,7 +329,7 @@ export default function TechnologyCapabilities() {
 
               </h3>
 
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+              <p className="mt-6 max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
 
                 Every charger becomes a connected intelligent node
                 capable of self-monitoring, optimization,
@@ -335,7 +344,8 @@ export default function TechnologyCapabilities() {
               className="
                 rounded-2xl
                 bg-lime-600
-                px-8
+                px-6
+                sm:px-8
                 py-4
                 font-semibold
                 text-white

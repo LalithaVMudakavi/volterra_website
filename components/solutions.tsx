@@ -373,13 +373,44 @@ const openHostForm = () => {
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
   transition={{ duration: 0.8 }}
-  className="relative py-20 overflow-hidden"
+  className="
+    relative
+    overflow-hidden
+    py-20
+
+    max-sm:py-12
+    md:max-lg:py-16
+  "
 >
 
+  <div
+    className="
+      relative
+      z-10
+      mx-auto
+      max-w-375
+      px-8
 
-  <div className="relative z-10 mx-auto max-w-375 px-8">
+      max-sm:px-4
+      md:max-lg:px-6
+    "
+  >
 
-    <div className="grid items-start gap-20 lg:grid-cols-[0.95fr_1.05fr] -mt-10">
+<div 
+  className="
+    grid 
+    items-start 
+    gap-20 
+    lg:grid-cols-[0.95fr_1.05fr] 
+    -mt-10 
+
+    max-sm:-mt-12
+    max-sm:gap-16 
+
+    md:max-lg:-mt-6 
+    md:max-lg:gap-12 
+  "       
+>
 
       {/* ===================================================== */}
       {/* LEFT */}
@@ -391,59 +422,76 @@ const openHostForm = () => {
 
         <div
           className="
-          inline-flex
-          items-center
-          rounded-full
-          border
-              border-lime-500/20
-              bg-lime-500
-          px-4
-          py-2
-         text-xs
+            inline-flex
+            items-center
+            rounded-full
+            border
+            border-lime-500/20
+            bg-lime-500
+            px-4
+            py-2
+            text-xs
             font-semibold
             tracking-[3px]
             uppercase
-          text-white
-          shadow-[0_20px_50px_rgba(132,204,22,.35)]
+            text-white
+            shadow-[0_20px_50px_rgba(132,204,22,.35)]
 
+            max-sm:px-3
+            max-sm:py-2
+            max-sm:text-[10px]
+            max-sm:tracking-[2px]
           "
         >
           THE CHALLENGES
         </div>
 
+
         {/* Heading */}
 
         <h2
           className="
-          mt-5
-          max-w-162.5
-          text-[39px]
-          font-black
-          leading-[1.08]
-          tracking-[-2px]
-          text-slate-900
+            mt-5
+            max-w-162.5
+            text-[39px]
+            font-black
+            leading-[1.08]
+            tracking-[-2px]
+            text-slate-900
+
+            max-sm:mt-4
+            max-sm:text-3xl
+            max-sm:leading-tight
+            max-sm:tracking-[-1px]
+
+            md:max-lg:text-[36px]
           "
         >
-
           India's EV Revolution
 
           <span className="mt-2 block text-lime-600">
-
             Needs Smarter Infrastructure
-
           </span>
 
         </h2>
+
 
         {/* Intro */}
 
         <p
           className="
-          mt-4
-          max-w-4xl
-          text-[20px]
-          leading-8
-          text-slate-600
+            mt-4
+            max-w-4xl
+            text-[20px]
+            leading-8
+            text-slate-600
+
+            max-sm:mt-4
+            max-sm:text-base
+            max-sm:leading-7
+
+            md:max-lg:text-lg
+            md:max-lg:leading-8
           "
         >
           India's electric mobility ecosystem is expanding
@@ -451,15 +499,22 @@ const openHostForm = () => {
           to face significant challenges.
         </p>
 
+
         {/* Description */}
 
         <p
           className="
-          mt-3
-         max-w-4xl
-          text-[20px]
-          leading-8
-          text-slate-600
+            mt-3
+            max-w-4xl
+            text-[20px]
+            leading-8
+            text-slate-600
+
+            max-sm:text-base
+            max-sm:leading-7
+
+            md:max-lg:text-lg
+            md:max-lg:leading-8
           "
         >
           EV users often encounter limited charger
@@ -468,15 +523,49 @@ const openHostForm = () => {
           highways and intercity routes.
         </p>
 
+
         {/* ===================================================== */}
         {/* IMAGE */}
         {/* ===================================================== */}
 
-        <div className="relative mt-10 max-w-190">
+        <div
+          className="
+            relative
+            mt-10
+            max-w-190
+
+            max-sm:mt-7
+            max-sm:pb-16
+
+            md:max-lg:mt-8
+            md:max-lg:pb-14
+          "
+        >
 
           {/* Glow */}
 
-          <div className="absolute left-20 top-10 h-72 w-72 rounded-full bg-lime-500/10 blur-[120px]" />
+          <div
+            className="
+              absolute
+              left-20
+              top-10
+              h-72
+              w-72
+              rounded-full
+              bg-lime-500/10
+              blur-[120px]
+
+              max-sm:left-1/2
+              max-sm:top-4
+              max-sm:h-48
+              max-sm:w-48
+              max-sm:-translate-x-1/2
+
+              md:max-lg:h-60
+              md:max-lg:w-60
+            "
+          />
+
 
           {/* Image */}
 
@@ -491,338 +580,450 @@ const openHostForm = () => {
             }}
             viewport={{ once: true }}
             transition={{
-              duration: .8,
+              duration: 0.8,
             }}
             src="/images/problem-hero.png"
             alt="EV Charging"
             className="
-            relative
-            z-10
-            w-full
-            object-cover
+              relative
+              z-10
+              w-full
+              object-cover
+
+              max-sm:min-h-[240px]
+              max-sm:object-cover
             "
           />
+
 
           {/* ===================================== */}
           {/* INVESTOR CARD */}
           {/* ===================================== */}
 
-         <motion.div
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.6, delay: 0.3 }}
-  whileHover={{ y: -5 }}
-  className="
-    absolute
-    -bottom-6
-    left-6
-    right-6
-    z-20
-    flex
-    items-center
-    gap-6
-    rounded-[20px]
-    bg-[#184F2F]
-    px-7
-    py-5
-    shadow-[0_18px_45px_rgba(0,0,0,0.22)]
-  "
->
-  {/* Icon */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            whileHover={{ y: -5 }}
+            className="
+              absolute
+              -bottom-6
+              left-6
+              right-6
+              z-20
+              flex
+              items-center
+              gap-6
+              rounded-[20px]
+              bg-[#184F2F]
+              px-7
+              py-5
+              shadow-[0_18px_45px_rgba(0,0,0,0.22)]
 
-  <div
-    className="
-      flex
-      h-12
-      w-12
-      shrink-0
-      items-center
-      justify-center
-      rounded-full
-      bg-white
-    "
-  >
-    <TrendingUp
-      strokeWidth={2}
-      className="h-7 w-7 text-[#2E7D32]"
-    />
-  </div>
+              max-sm:-bottom-4
+              max-sm:left-3
+              max-sm:right-3
+              max-sm:gap-3
+              max-sm:rounded-[16px]
+              max-sm:px-4
+              max-sm:py-4
 
-  {/* Text */}
+              md:max-lg:left-5
+              md:max-lg:right-5
+              md:max-lg:gap-4
+              md:max-lg:px-5
+            "
+          >
 
-  <div className="flex-1">
+            {/* Icon */}
 
-    <h3
-      className="
-        text-[14px]
-        font-bold
-        leading-[1.35]
-        text-white
-      "
-    >
-      For investors, the challenge is equally significant:
-    </h3>
+            <div
+              className="
+                flex
+                h-12
+                w-12
+                shrink-0
+                items-center
+                justify-center
+                rounded-full
+                bg-white
 
-    <p
-      className="
-        mt-2
-        max-w-130
-        text-[12px]
-        leading-[1.6]
-        text-green-100
-      "
-    >
-      how to participate in the growing EV infrastructure
-      opportunity without having to operate a technically
-      complex charging business.
-    </p>
+                max-sm:h-10
+                max-sm:w-10
+              "
+            >
+              <TrendingUp
+                strokeWidth={2}
+                className="
+                  h-7
+                  w-7
+                  text-[#2E7D32]
 
-  </div>
-</motion.div>
+                  max-sm:h-5
+                  max-sm:w-5
+                "
+              />
+            </div>
+
+
+            {/* Text */}
+
+            <div className="flex-1">
+
+              <h3
+                className="
+                  text-[14px]
+                  font-bold
+                  leading-[1.35]
+                  text-white
+
+                  max-sm:text-xs
+                  max-sm:leading-5
+                "
+              >
+                For investors, the challenge is equally significant:
+              </h3>
+
+
+              <p
+                className="
+                  mt-2
+                  max-w-130
+                  text-[12px]
+                  leading-[1.6]
+                  text-green-100
+
+                  max-sm:mt-1
+                  max-sm:text-[10px]
+                  max-sm:leading-4
+                "
+              >
+                how to participate in the growing EV infrastructure
+                opportunity without having to operate a technically
+                complex charging business.
+              </p>
+
+            </div>
+
+          </motion.div>
 
         </div>
 
       </div>
 
+
       {/* ===================================================== */}
       {/* RIGHT SIDE */}
-      {/* PART 2 */}
       {/* ===================================================== */}
 
       <div>
 
-       <div className="relative pt-2">
-
-  {/* ========================================= */}
-  {/* Heading */}
-  {/* ========================================= */}
-
-  <motion.div
-    initial={{ opacity: 0, x: 40 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: .7 }}
-    className="flex items-start gap-5"
-  >
-
-    {/* Icon */}
-
-    <div
-      className="
-      flex
-      h-12
-      w-12
-      shrink-0
-      items-center
-      justify-center
-      rounded-full
-      border
-      border-lime-300
-      bg-white
-      shadow-[0_10px_35px_rgba(15,23,42,.08)]
-      "
-    >
-
-      <TrendingUp className="h-8 w-8 text-lime-600"/>
-
-    </div>
-
-    {/* Text */}
-
-    <div className="max-w-140">
-
-      <h3
-        className="
-        text-[18px]
-        font-bold
-        leading-7
-        text-slate-600
-        "
-      >
-
-        Businesses and property owners interested
-        in deploying EV charging infrastructure
-        face{" "}
-
-        <span className="text-green-700">
-
-          challenges
-
-        </span>{" "}
-
-        including:
-
-      </h3>
-
-    </div>
-
-  </motion.div>
-
-  {/* ========================================= */}
-  {/* Challenge Cards */}
-  {/* ========================================= */}
-
-  <div className="mt-10 grid grid-cols-3 gap-6">
-
-    {challenges.map((item, index) => {
-
-      const Icon = item.icon;
-
-      return (
-
-        <motion.div
-          key={item.title}
-          initial={{
-            opacity: 0,
-            y: 30,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{ once: true }}
-          transition={{
-            delay: index * .05,
-            duration: .55,
-          }}
-          whileHover={{
-            y: -8,
-          }}
+        <div
           className="
-          group
-          relative
-          flex
-          min-h-40
-          flex-col
-          items-center
-          justify-center
-          rounded-[28px]
-          border
-          border-slate-100
-          bg-white/50
-          px-3
-          py-1
-          text-center
-          shadow-[0_12px_35px_rgba(15,23,42,.05)]
-          transition-all
-          duration-500
-          hover:border-lime-300
-          hover:shadow-[0_20px_55px_rgba(132,204,22,.15)]
+            relative
+            pt-2
+
+            max-sm:pt-0
           "
         >
 
-          {/* Glow */}
+          {/* Heading */}
 
-          <div
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
             className="
-            absolute
-            inset-0
-            rounded-[28px]
-            bg-linear-to-br
-            from-lime-50
-            to-transparent
-            opacity-0
-            transition
-            duration-500
-            group-hover:opacity-100
-            "
-          />
+              flex
+              items-start
+              gap-5
 
-          {/* Icon */}
-
-          <div
-            className="
-            relative
-            flex
-            h-11
-            w-11
-            items-center
-            justify-center
-            rounded-full
-            bg-lime-50
-            transition-all
-            duration-500
-            group-hover:bg-lime-500
+              max-sm:gap-3
+              md:max-lg:gap-4
             "
           >
 
-            <Icon
+            {/* Icon */}
+
+            <div
               className="
-              h-6
-              w-6
-              text-lime-600
-              transition-all
-              duration-500
-              group-hover:text-white
+                flex
+                h-12
+                w-12
+                shrink-0
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-lime-300
+                bg-white
+                shadow-[0_10px_35px_rgba(15,23,42,.08)]
+
+                max-sm:h-10
+                max-sm:w-10
               "
-            />
+            >
+
+              <TrendingUp
+                className="
+                  h-8
+                  w-8
+                  text-lime-600
+
+                  max-sm:h-6
+                  max-sm:w-6
+                "
+              />
+
+            </div>
+
+
+            {/* Text */}
+
+            <div className="max-w-140">
+
+              <h3
+                className="
+                  text-[18px]
+                  font-bold
+                  leading-7
+                  text-slate-600
+
+                  max-sm:text-base
+                  max-sm:leading-6
+
+                  md:max-lg:text-[17px]
+                "
+              >
+
+                Businesses and property owners interested
+                in deploying EV charging infrastructure
+                face{" "}
+
+                <span className="text-green-700">
+                  challenges
+                </span>{" "}
+
+                including:
+
+              </h3>
+
+            </div>
+
+          </motion.div>
+
+
+          {/* ========================================= */}
+          {/* Challenge Cards */}
+          {/* ========================================= */}
+
+          <div
+            className="
+              mt-10
+              grid
+              grid-cols-3
+              gap-6
+
+              max-sm:mt-7
+              max-sm:grid-cols-2
+              max-sm:gap-3
+
+              md:max-lg:grid-cols-3
+              md:max-lg:gap-4
+            "
+          >
+
+            {challenges.map((item, index) => {
+
+              const Icon = item.icon;
+
+              return (
+
+                <motion.div
+                  key={item.title}
+                  initial={{
+                    opacity: 0,
+                    y: 30,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{ once: true }}
+                  transition={{
+                    delay: index * 0.05,
+                    duration: 0.55,
+                  }}
+                  whileHover={{
+                    y: -8,
+                  }}
+                  className="
+                    group
+                    relative
+                    flex
+                    min-h-40
+                    flex-col
+                    items-center
+                    justify-center
+                    rounded-[28px]
+                    border
+                    border-slate-100
+                    bg-white/50
+                    px-3
+                    py-1
+                    text-center
+                    shadow-[0_12px_35px_rgba(15,23,42,.05)]
+                    transition-all
+                    duration-500
+                    hover:border-lime-300
+                    hover:shadow-[0_20px_55px_rgba(132,204,22,.15)]
+
+                    max-sm:min-h-[145px]
+                    max-sm:rounded-[20px]
+                    max-sm:px-2
+                    max-sm:py-3
+
+                    md:max-lg:min-h-[150px]
+                    md:max-lg:rounded-[24px]
+                  "
+                >
+
+                  {/* Glow */}
+
+                  <div
+                    className="
+                      absolute
+                      inset-0
+                      rounded-[28px]
+                      bg-linear-to-br
+                      from-lime-50
+                      to-transparent
+                      opacity-0
+                      transition
+                      duration-500
+                      group-hover:opacity-100
+
+                      max-sm:rounded-[20px]
+                      md:max-lg:rounded-[24px]
+                    "
+                  />
+
+
+                  {/* Icon */}
+
+                  <div
+                    className="
+                      relative
+                      flex
+                      h-11
+                      w-11
+                      items-center
+                      justify-center
+                      rounded-full
+                      bg-lime-50
+                      transition-all
+                      duration-500
+                      group-hover:bg-lime-500
+
+                      max-sm:h-10
+                      max-sm:w-10
+                    "
+                  >
+
+                    <Icon
+                      className="
+                        h-6
+                        w-6
+                        text-lime-600
+                        transition-all
+                        duration-500
+                        group-hover:text-white
+
+                        max-sm:h-5
+                        max-sm:w-5
+                      "
+                    />
+
+                  </div>
+
+
+                  {/* Title */}
+
+                  <h4
+                    className="
+                      relative
+                      mt-2
+                      text-[14px]
+                      font-bold
+                      leading-6
+                      text-slate-900
+
+                      max-sm:text-xs
+                      max-sm:leading-5
+
+                      md:max-lg:text-[13px]
+                    "
+                  >
+
+                    {item.title}
+
+                    <span className="block">
+                      {item.subtitle}
+                    </span>
+
+                  </h4>
+
+                </motion.div>
+
+              );
+
+            })}
 
           </div>
 
-          {/* Title */}
 
-          <h4
+          {/* ========================================= */}
+          {/* Bottom Illustration */}
+          {/* ========================================= */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 30,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.4,
+            }}
             className="
-            relative
-            mt-2
-            text-[14px]
-            font-bold
-            leading-6
-            text-slate-900
+              mt-4
+
+              max-sm:mt-6
+              md:max-lg:mt-5
             "
           >
 
-            {item.title}
+            <img
+              src="/images/city-line.png"
+              alt="City Illustration"
+              className="
+                w-full
+                opacity-70
 
-            <span className="block">
+                max-sm:min-h-[80px]
+                max-sm:object-contain
+              "
+            />
 
-              {item.subtitle}
+          </motion.div>
 
-            </span>
-
-          </h4>
-
-        </motion.div>
-
-      );
-
-    })}
-
-  </div>
-
-  {/* ========================================= */}
-  {/* Bottom Illustration */}
-  {/* ========================================= */}
-
-  <motion.div
-    initial={{
-      opacity: 0,
-      y: 30,
-    }}
-    whileInView={{
-      opacity: 1,
-      y: 0,
-    }}
-    viewport={{ once: true }}
-    transition={{
-      delay: .4,
-    }}
-    className="mt-4"
-  >
-
-    <img
-      src="/images/city-line.png"
-      alt="City Illustration"
-      className="
-      w-full
-      opacity-70
-      "
-    />
-
-  </motion.div>
-
-</div>
+        </div>
 
       </div>
 
@@ -835,861 +1036,1054 @@ const openHostForm = () => {
 
 
 
-                {/* ===================================================== */}
-        {/* OUR SOLUTION */}
-        {/* ===================================================== */}
+            {/* ===================================================== */}
+{/* OUR SOLUTION */}
+{/* ===================================================== */}
 
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="relative mt-3"
-        >
-          {/* Background Number */}
-
-          <div
-            className="
-            absolute
-            -top-10
-            right-0
-            select-none
-            text-[180px]
-            font-black
-            leading-none
-            text-slate-100
-            "
-          >
-            01
-          </div>
-
-          {/* Heading */}
-
-          <div className="relative z-10 text-center">
-
-             <div
-              className="
-              inline-flex
-              items-center
-              rounded-full
-              border
-              border-lime-500/20
-              bg-lime-500
-              px-4
-              py-2
-              text-xs
-              font-semibold
-              uppercase
-              tracking-[3px]
-              text-white
-              shadow-[0_20px_50px_rgba(132,204,22,.35)]
-
-              "
-            >
-              Our Solution
-            </div>
-
-            <h2
-              className="
-              mt-3
-              text-4xl
-              font-black
-              leading-tight
-              text-slate-900
-              lg:text-5xl
-              "
-            >
-              One Platform.
-              <span className="block text-lime-600">
-                One Network. Intelligent Mobility.
-              </span>
-            </h2>
-
-           <p
-              className="
-              mx-auto
-              mt-3
-              max-w-4xl
-              text-lg
-              leading-7
-              text-slate-600
-              "
-            >
-              VOLTERRA Energy provides an integrated ecosystem to
-              design, deploy, operate, monitor and continuously
-              optimize EV charging infrastructure.
-
-              Our technology-driven platform connects charging
-              hardware, software, analytics and operations into
-              one intelligent network.
-            </p>
-
-          </div>
-
-                {/* Features */}
-
-       
-          <div className="relative z-10 mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-
-            {solutions.map((solution, index) => {
-
-              const Icon = solution.icon;
-
-              return (
-
-                <motion.div
-                  key={solution.title}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    delay: index * 0.08,
-                    duration: 0.6,
-                  }}
-                  whileHover={{
-                    y: -10,
-                    scale: 1.02,
-                  }}
-                  className="
-                  group
-                  relative
-                  overflow-hidden
-                  rounded-[32px]
-                  border
-                  border-slate-200
-                  bg-white
-                  p-8
-                  shadow-[0_15px_45px_rgba(0,0,0,.05)]
-                  transition-all
-                  duration-500
-                  hover:border-lime-400
-                  hover:shadow-[0_25px_70px_rgba(132,204,22,.18)]
-                  "
-                >
-
-                  {/* Glow */}
-
-                  <div
-                    className="
-                    absolute
-                    -right-16
-                    -top-16
-                    h-44
-                    w-44
-                    rounded-full
-                    bg-lime-500/10
-                    blur-[80px]
-                    opacity-0
-                    transition-all
-                    duration-500
-                    group-hover:opacity-100
-                    "
-                  />
-
-                  {/* Icon */}
-
-                  {/* <div
-                    className="
-                    relative
-                    flex
-                    h-16
-                    w-16
-                    items-center
-                    justify-center
-                    rounded-3xl
-                    bg-lime-500/10
-                    transition-all
-                    duration-500
-                    group-hover:bg-lime-500
-                    "
-                  >
-
-                    <Icon
-                      className="
-                      h-8
-                      w-8
-                      text-lime-600
-                      transition-all
-                      duration-500
-                      group-hover:text-white
-                      "
-                    />
-
-                  </div> */}
-
-                  
-       <div className="flex items-start justify-between">
-
-       <span
-          className="
-          text-2xl
-          font-black
-          text-slate-200
-          transition
-          group-hover:text-lime-500/30
-          "
-        >
-          {solution.no}
-        </span>
-
-        <div
-          className="
-          flex
-          h-11
-          w-11
-          items-center
-          justify-center
-          rounded-2xl
-          bg-lime-500/10
-          transition-all
-          duration-500
-         
-          group-hover:bg-lime-500
-          "
-        >
-
-          <Icon
-            className="
-            h-6
-            w-6
-            text-lime-600
-            transition-all
-            duration-500
-            group-hover:text-white
-            "
-          />
-
-        </div>
-
-      </div>
-
-
-                  {/* Title */}
-
-                  <h3
-                    className="
-                    mt-8
-                    text-2xl
-                    font-bold
-                    text-slate-900
-                    "
-                  >
-                    {solution.title}
-                  </h3>
-
-                  {/* Description */}
-
-                  <p
-                    className="
-                    mt-4
-                    leading-8
-                    text-slate-600
-                    "
-                  >
-                    {solution.description}
-                  </p>
-
-                </motion.div>
-
-              );
-
-            })}
-
-          </div>
-
-
-        </motion.div>
-
-           
-
-                {/* ===================================================== */}
-        {/* BUSINESS MODELS */}
-        {/* ===================================================== */}
-
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="relative mt-36"
-        >
-          {/* Background Number */}
-
-          <div
-            className="
-            absolute
-            left-0
-            -top-8
-            select-none
-            text-[180px]
-            font-black
-            leading-none
-            text-slate-100
-            "
-          >
-            02
-          </div>
-
-          {/* Heading */}
-
-          <div className="relative z-10 text-center">
-
-            <div
-              className="
-              inline-flex
-              items-center
-              rounded-full
-              border
-              border-lime-500/20
-              bg-lime-500
-              px-4
-              py-2
-              text-xs
-              font-semibold
-              uppercase
-              tracking-[3px]
-              text-white
-              shadow-[0_20px_50px_rgba(132,204,22,.35)]
-
-              "
-            >
-              Business Models
-            </div>
-
-             <h2
-              className="
-              mt-3
-              text-4xl
-              font-black
-              leading-tight
-              text-slate-900
-              lg:text-5xl
-              "
-            >
-              Flexible Models.
-              <span className="block text-lime-600">
-                Scalable Opportunities.
-              </span>
-            </h2>
-
-            <p
-              className="
-              mx-auto
-              mt-3
-              max-w-4xl
-              text-lg
-              leading-7
-              text-slate-600
-              "
-            >
-              Every charging location has different investment,
-              ownership and operational requirements.
-
-              VOLTERRA Energy offers flexible business models
-              designed for investors, businesses, fleet operators,
-              property owners and strategic partners.
-            </p>
-
-          </div>
-
-          {/* ========================================================= */}
-{/* Business Model Selector */}
-{/* ========================================================= */}
-
-<div className="relative z-10 mt-10">
-
-<div
+<motion.div
+  initial={{ opacity: 0, y: 60 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
   className="
-    mx-auto
-    flex
-    w-full
-    max-w-7xl
-    items-center
-    rounded-[24px]
-    border
-    border-slate-200
-    bg-white/80
-    p-2
-    shadow-[0_20px_60px_rgba(15,23,42,.08)]
-    backdrop-blur-xl
+    relative
+    mt-3
+
+    max-sm:mt-2
+    md:max-lg:mt-3
   "
 >
+  {/* Background Number */}
 
-    {businessModels.map((model, index) => {
+  <div
+    className="
+      absolute
+      -top-10
+      right-0
+      select-none
+      text-[180px]
+      font-black
+      leading-none
+      text-slate-100
 
-      const ItemIcon = model.icon;
+      max-sm:-top-4
+      max-sm:right-2
+      max-sm:text-[90px]
+
+      md:max-lg:-top-8
+      md:max-lg:text-[130px]
+    "
+  >
+    01
+  </div>
+
+
+  {/* Heading */}
+
+  <div
+    className="
+      relative
+      z-10
+      text-center
+
+      max-sm:px-2
+      md:max-lg:px-4
+    "
+  >
+
+    <div
+      className="
+        inline-flex
+        items-center
+        rounded-full
+        border
+        border-lime-500/20
+        bg-lime-500
+        px-4
+        py-2
+        text-xs
+        font-semibold
+        uppercase
+        tracking-[3px]
+        text-white
+        shadow-[0_20px_50px_rgba(132,204,22,.35)]
+
+        max-sm:px-3
+        max-sm:py-2
+        max-sm:text-[10px]
+        max-sm:tracking-[2px]
+      "
+    >
+      Our Solution
+    </div>
+
+
+    <h2
+      className="
+        mt-3
+        text-4xl
+        font-black
+        leading-tight
+        text-slate-900
+        lg:text-5xl
+
+        max-sm:mt-4
+        max-sm:text-3xl
+        max-sm:leading-tight
+
+        md:max-lg:text-4xl
+      "
+    >
+      One Platform.
+
+      <span className="block text-lime-600">
+        One Network. Intelligent Mobility.
+      </span>
+    </h2>
+
+
+    <p
+      className="
+        mx-auto
+        mt-3
+        max-w-4xl
+        text-lg
+        leading-7
+        text-slate-600
+
+        max-sm:px-2
+        max-sm:text-sm
+        max-sm:leading-6
+
+        md:max-lg:px-4
+        md:max-lg:text-base
+        md:max-lg:leading-7
+      "
+    >
+      VOLTERRA Energy provides an integrated ecosystem to
+      design, deploy, operate, monitor and continuously
+      optimize EV charging infrastructure.
+
+      Our technology-driven platform connects charging
+      hardware, software, analytics and operations into
+      one intelligent network.
+    </p>
+
+  </div>
+
+
+  {/* ===================================================== */}
+  {/* Features */}
+  {/* ===================================================== */}
+
+  <div
+    className="
+      relative
+      z-10
+      mt-20
+      grid
+      gap-8
+      md:grid-cols-2
+      xl:grid-cols-3
+
+      max-sm:mt-10
+      max-sm:gap-5
+
+      md:max-lg:mt-14
+      md:max-lg:gap-6
+    "
+  >
+
+    {solutions.map((solution, index) => {
+
+      const Icon = solution.icon;
 
       return (
 
-       <motion.button
-  key={model.id}
-  onClick={() => setActive(index)}
-  whileHover={{ y: -2 }}
-  whileTap={{ scale: 0.98 }}
-  className="
-    relative
-    flex-1
-    min-w-0
-    overflow-hidden
-    rounded-2xl
-  
-  "
->
-  {/* Active Background */}
+        <motion.div
+          key={solution.title}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: index * 0.08,
+            duration: 0.6,
+          }}
+          whileHover={{
+            y: -10,
+            scale: 1.02,
+          }}
+          className="
+            group
+            relative
+            overflow-hidden
+            rounded-[32px]
+            border
+            border-slate-200
+            bg-white
+            p-8
+            shadow-[0_15px_45px_rgba(0,0,0,.05)]
+            transition-all
+            duration-500
+            hover:border-lime-400
+            hover:shadow-[0_25px_70px_rgba(132,204,22,.18)]
 
-  {active === index && (
-    <motion.div
-      layoutId="businessModelActive"
-      transition={{
-        type: "spring",
-        stiffness: 300,
-        damping: 30,
-      }}
-      className={`
-        absolute
-        inset-0
-        rounded-2xl
-        bg-gradient-to-r
-        ${model.color}
-      `}
-    />
-  )}
+            max-sm:rounded-[24px]
+            max-sm:p-5
 
-  {/* Content */}
+            md:max-lg:rounded-[28px]
+            md:max-lg:p-6
+          "
+        >
 
-  <div
-    className={`
-      relative
-      z-10
-      flex
-      items-center
-      justify-center
-      gap-3
-      px-4
-      py-4
-      transition-all
-      duration-300
-      ${
-        active === index
-          ? "text-white"
-          : "text-slate-700 hover:bg-slate-50"
-      }
-    `}
-  >
-    {/* Icon */}
+          {/* Glow */}
 
-    <ItemIcon
-      className={`
-        h-5
-        w-5
-        flex-shrink-0
-        ${
-          active === index
-            ? "text-white"
-            : "text-lime-600"
-        }
-      `}
-    />
+          <div
+            className="
+              absolute
+              -right-16
+              -top-16
+              h-44
+              w-44
+              rounded-full
+              bg-lime-500/10
+              blur-[80px]
+              opacity-0
+              transition-all
+              duration-500
+              group-hover:opacity-100
 
-    {/* Number */}
-
-    {/* <span
-      className={`
-        text-xs
-        font-bold
-        tracking-[2px]
-        ${
-          active === index
-            ? "text-white/80"
-            : "text-lime-600"
-        }
-      `}
-    >
-      {model.number}
-    </span> */}
-
-    {/* Title */}
-
-    <span className="truncate text-sm font-bold lg:text-base">
-      {model.title}
-    </span>
-
-  </div>
-</motion.button>
-      );
-
-    })}
-
-  </div>
-
-</div>
+              max-sm:-right-20
+              max-sm:-top-20
+              max-sm:h-36
+              max-sm:w-36
+            "
+          />
 
 
-{/* ========================================================= */}
-{/* Business Model Details Card */}
-{/* ========================================================= */}
+          {/* Top Section */}
 
-<div className="relative z-10 mt-14">
+          <div className="flex items-start justify-between">
 
-  <AnimatePresence mode="wait">
+            <span
+              className="
+                text-2xl
+                font-black
+                text-slate-200
+                transition
+                group-hover:text-lime-500/30
 
-    <motion.div
-      key={current.id}
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: .45 }}
-      className="
-      relative
-      overflow-hidden
-      rounded-[36px]
-      border
-      border-slate-200
-      bg-white/80
-      backdrop-blur-xl
-      shadow-[0_30px_80px_rgba(15,23,42,.08)]
-      "
-    >
+                max-sm:text-xl
+              "
+            >
+              {solution.no}
+            </span>
 
-      {/* Decorative Glow */}
 
-      <div
-        className={`
-        absolute
-        -right-24
-        -top-24
-        h-72
-        w-72
-        rounded-full
-        bg-gradient-to-br
-        ${current.color}
-        opacity-10
-        blur-[110px]
-        `}
-      />
+            <div
+              className="
+                flex
+                h-11
+                w-11
+                items-center
+                justify-center
+                rounded-2xl
+                bg-lime-500/10
+                transition-all
+                duration-500
+                group-hover:bg-lime-500
 
-      {/* Main Layout */}
+                max-sm:h-10
+                max-sm:w-10
+                max-sm:rounded-xl
+              "
+            >
 
-      <div className="relative z-10 grid gap-12 p-10 lg:grid-cols-[1.15fr_.85fr]">
+              <Icon
+                className="
+                  h-6
+                  w-6
+                  text-lime-600
+                  transition-all
+                  duration-500
+                  group-hover:text-white
 
-        {/* ===================================================== */}
-        {/* LEFT CONTENT */}
-        {/* ===================================================== */}
+                  max-sm:h-5
+                  max-sm:w-5
+                "
+              />
 
-        <div>
+            </div>
 
-          {/* Icon */}
-
-          <motion.div
-            initial={{ scale: .85 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: .4 }}
-            className={`
-            flex
-            h-14
-            w-14
-            items-center
-            justify-center
-            rounded-2xl
-            bg-gradient-to-br
-            ${current.color}
-            shadow-xl
-            `}
-          >
-
-            <Icon className="h-8 w-8 text-white" />
-
-          </motion.div>
+          </div>
 
 
           {/* Title */}
 
           <h3
             className="
-            mt-5
-            text-4xl
-            font-black
-            leading-tight
-            text-slate-900
+              mt-8
+              text-2xl
+              font-bold
+              text-slate-900
+
+              max-sm:mt-5
+              max-sm:text-xl
+
+              md:max-lg:mt-6
             "
           >
-            {current.title}
+            {solution.title}
           </h3>
 
-          {/* Subtitle */}
-
-          <p
-            className="
-         
-            text-lg
-            font-medium
-            text-slate-500
-            "
-          >
-            {current.subtitle}
-          </p>
-
-          {/* Divider */}
-
-          <div
-            className={`
-            mt-6
-            h-1
-            w-28
-            rounded-full
-            bg-gradient-to-r
-            ${current.color}
-            `}
-          />
-
-          {/* Headline */}
-
-          <h4
-            className="
-            mt-6
-            max-w-2xl
-            text-3xl
-            font-bold
-            leading-tight
-            text-slate-900
-            "
-          >
-            {current.headline}
-          </h4>
 
           {/* Description */}
 
           <p
             className="
-            mt-3
-            max-w-2xl
-            text-lg
-            leading-8
-            text-slate-600
+              mt-4
+              leading-8
+              text-slate-600
+
+              max-sm:mt-3
+              max-sm:text-sm
+              max-sm:leading-6
+
+              md:max-lg:leading-7
             "
           >
-            {current.description}
+            {solution.description}
           </p>
+
+        </motion.div>
+
+      );
+
+    })}
+
+  </div>
+
+</motion.div>
+
+           
+
+              {/* ===================================================== */}
+{/* BUSINESS MODELS */}
+{/* ===================================================== */}
+
+<motion.div
+  initial={{ opacity: 0, y: 60 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
+  className="
+    relative
+    mt-36
+
+    max-sm:mt-20
+    md:max-lg:mt-28
+  "
+>
+  {/* Background Number */}
+
+  <div
+    className="
+      absolute
+      left-0
+      -top-8
+      select-none
+      text-[180px]
+      font-black
+      leading-none
+      text-slate-100
+
+      max-sm:-top-4
+      max-sm:text-[100px]
+
+      md:max-lg:text-[140px]
+    "
+  >
+    02
+  </div>
+
+
+  {/* ===================================================== */}
+  {/* Heading */}
+  {/* ===================================================== */}
+
+  <div
+    className="
+      relative
+      z-10
+      text-center
+
+      max-sm:px-2
+      md:max-lg:px-4
+    "
+  >
+    <div
+      className="
+        inline-flex
+        items-center
+        rounded-full
+        border
+        border-lime-500/20
+        bg-lime-500
+        px-4
+        py-2
+        text-xs
+        font-semibold
+        uppercase
+        tracking-[3px]
+        text-white
+        shadow-[0_20px_50px_rgba(132,204,22,.35)]
+
+        max-sm:px-3
+        max-sm:text-[10px]
+        max-sm:tracking-[2px]
+      "
+    >
+      Business Models
+    </div>
+
+
+    <h2
+      className="
+        mt-3
+        text-4xl
+        font-black
+        leading-tight
+        text-slate-900
+        lg:text-5xl
+
+        max-sm:text-3xl
+        max-sm:leading-tight
+
+        md:max-lg:text-4xl
+      "
+    >
+      Flexible Models.
+
+      <span className="block text-lime-600">
+        Scalable Opportunities.
+      </span>
+    </h2>
+
+
+    <p
+      className="
+        mx-auto
+        mt-3
+        max-w-4xl
+        text-lg
+        leading-7
+        text-slate-600
+
+        max-sm:px-2
+        max-sm:text-sm
+        max-sm:leading-6
+
+        md:max-lg:px-4
+        md:max-lg:text-base
+      "
+    >
+      Every charging location has different investment,
+      ownership and operational requirements.
+
+      VOLTERRA Energy offers flexible business models
+      designed for investors, businesses, fleet operators,
+      property owners and strategic partners.
+    </p>
+  </div>
+
+
+  {/* ===================================================== */}
+  {/* BUSINESS MODEL SELECTOR */}
+  {/* ===================================================== */}
+
+  <div
+    className="
+      relative
+      z-10
+      mt-10
+
+      max-sm:mt-7
+      md:max-lg:mt-8
+    "
+  >
+    <div
+      className="
+        mx-auto
+        flex
+        w-full
+        max-w-7xl
+        items-center
+        rounded-[24px]
+        border
+        border-slate-200
+        bg-white/80
+        p-2
+        shadow-[0_20px_60px_rgba(15,23,42,.08)]
+        backdrop-blur-xl
+
+        max-sm:flex-col
+        max-sm:items-stretch
+        max-sm:gap-1
+        max-sm:rounded-[20px]
+
+        md:max-lg:flex-wrap
+      "
+    >
+      {businessModels.map((model, index) => {
+        const ItemIcon = model.icon;
+
+        return (
+          <motion.button
+            key={model.id}
+            onClick={() => setActive(index)}
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.98 }}
+            className="
+              relative
+              flex-1
+              min-w-0
+              overflow-hidden
+              rounded-2xl
+
+              max-sm:w-full
+              max-sm:flex-none
+
+              md:max-lg:min-w-[calc(50%-4px)]
+              md:max-lg:flex-none
+            "
+          >
+            {/* Active Background */}
+
+            {active === index && (
+              <motion.div
+                layoutId="businessModelActive"
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 30,
+                }}
+                className={`
+                  absolute
+                  inset-0
+                  rounded-2xl
+                  bg-gradient-to-r
+                  ${model.color}
+                `}
+              />
+            )}
+
+
+            {/* Content */}
+
+            <div
+              className={`
+                relative
+                z-10
+                flex
+                items-center
+                justify-center
+                gap-3
+                px-4
+                py-4
+                transition-all
+                duration-300
+
+                max-sm:justify-start
+                max-sm:px-4
+                max-sm:py-3
+
+                ${
+                  active === index
+                    ? "text-white"
+                    : "text-slate-700 hover:bg-slate-50"
+                }
+              `}
+            >
+              <ItemIcon
+                className={`
+                  h-5
+                  w-5
+                  flex-shrink-0
+                  ${
+                    active === index
+                      ? "text-white"
+                      : "text-lime-600"
+                  }
+                `}
+              />
+
+              <span className="truncate text-sm font-bold lg:text-base">
+                {model.title}
+              </span>
+            </div>
+          </motion.button>
+        );
+      })}
+    </div>
+  </div>
+
+
+  {/* ===================================================== */}
+  {/* BUSINESS MODEL DETAILS CARD */}
+  {/* ===================================================== */}
+
+  <div
+    className="
+      relative
+      z-10
+      mt-14
+
+      max-sm:mt-8
+      md:max-lg:mt-10
+    "
+  >
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={current.id}
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.45 }}
+        className="
+          relative
+          overflow-hidden
+          rounded-[36px]
+          border
+          border-slate-200
+          bg-white/80
+          backdrop-blur-xl
+          shadow-[0_30px_80px_rgba(15,23,42,.08)]
+
+          max-sm:rounded-[24px]
+          md:max-lg:rounded-[30px]
+        "
+      >
+        {/* Decorative Glow */}
+
+        <div
+          className={`
+            absolute
+            -right-24
+            -top-24
+            h-72
+            w-72
+            rounded-full
+            bg-gradient-to-br
+            ${current.color}
+            opacity-10
+            blur-[110px]
+
+            max-sm:-right-32
+            max-sm:-top-32
+            max-sm:h-56
+            max-sm:w-56
+          `}
+        />
+
+
+        {/* Main Layout */}
+
+        <div
+          className="
+            relative
+            z-10
+            grid
+            gap-12
+            p-10
+            lg:grid-cols-[1.15fr_.85fr]
+
+            max-sm:gap-7
+            max-sm:p-5
+
+            md:max-lg:gap-8
+            md:max-lg:p-7
+          "
+        >
+          {/* ===================================================== */}
+          {/* LEFT CONTENT */}
+          {/* ===================================================== */}
+
+          <div>
+            {/* Icon */}
+
+            <motion.div
+              initial={{ scale: 0.85 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.4 }}
+              className={`
+                flex
+                h-14
+                w-14
+                items-center
+                justify-center
+                rounded-2xl
+                bg-gradient-to-br
+                ${current.color}
+                shadow-xl
+
+                max-sm:h-12
+                max-sm:w-12
+              `}
+            >
+              <Icon className="h-8 w-8 text-white max-sm:h-6 max-sm:w-6" />
+            </motion.div>
+
+
+            <h3
+              className="
+                mt-5
+                text-4xl
+                font-black
+                leading-tight
+                text-slate-900
+
+                max-sm:mt-4
+                max-sm:text-3xl
+
+                md:max-lg:text-4xl
+              "
+            >
+              {current.title}
+            </h3>
+
+
+            <p
+              className="
+                text-lg
+                font-medium
+                text-slate-500
+
+                max-sm:text-sm
+                md:max-lg:text-base
+              "
+            >
+              {current.subtitle}
+            </p>
+
+
+            <div
+              className={`
+                mt-6
+                h-1
+                w-28
+                rounded-full
+                bg-gradient-to-r
+                ${current.color}
+
+                max-sm:mt-5
+                max-sm:w-20
+              `}
+            />
+
+
+            <h4
+              className="
+                mt-6
+                max-w-2xl
+                text-3xl
+                font-bold
+                leading-tight
+                text-slate-900
+
+                max-sm:mt-5
+                max-sm:text-2xl
+
+                md:max-lg:text-3xl
+              "
+            >
+              {current.headline}
+            </h4>
+
+
+            <p
+              className="
+                mt-3
+                max-w-2xl
+                text-lg
+                leading-8
+                text-slate-600
+
+                max-sm:text-sm
+                max-sm:leading-6
+
+                md:max-lg:text-base
+                md:max-lg:leading-7
+              "
+            >
+              {current.description}
+            </p>
+
 
             {/* Ideal For */}
 
-          <div
-            className="
-            rounded-[28px]
-            border
-            border-slate-200
-            bg-white
-            p-7
-            mt-8
-            "
-          >
+            <div
+              className="
+                rounded-[28px]
+                border
+                border-slate-200
+                bg-white
+                p-7
+                mt-8
 
-            <h5 className="text-xl font-bold text-slate-900">
-              Ideal For
-            </h5>
+                max-sm:mt-6
+                max-sm:rounded-[20px]
+                max-sm:p-4
 
-            <div className="mt-4 flex flex-wrap gap-3">
+                md:max-lg:p-6
+              "
+            >
+              <h5
+                className="
+                  text-xl
+                  font-bold
+                  text-slate-900
 
-              {current.idealFor.map((item) => (
+                  max-sm:text-lg
+                "
+              >
+                Ideal For
+              </h5>
 
-                <span
-                  key={item}
-                  className="
-                  rounded-full
-                  border
-                  border-lime-200
-                  bg-lime-50
-                  px-4
-                  py-2
-                  text-sm
-                  font-medium
-                  text-lime-700
-                  "
-                >
-                  {item}
-                </span>
 
-              ))}
+              <div
+                className="
+                  mt-4
+                  flex
+                  flex-wrap
+                  gap-3
 
-            </div>
-
-          </div>
-
-        </div>
-
-        {/* ===================================================== */}
-        {/* RIGHT SIDE STARTS IN PART 3B */}
-        {/* ===================================================== */}
-                {/* ===================================================== */}
-        {/* RIGHT CONTENT */}
-        {/* ===================================================== */}
-
-        <div className="space-y-5">
-
-          {/* Benefits Card */}
-
-          <div
-            className="
-            rounded-[28px]
-            border
-            border-slate-200
-            bg-slate-50
-            p-7
-            "
-          >
-
-            <h5 className="text-xl font-bold text-slate-900">
-              Key Benefits
-            </h5>
-
-            <div className="mt-4 space-y-2">
-
-              {current.benefits.map((benefit) => (
-
-                <motion.div
-                  key={benefit}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: .3 }}
-                  className="flex items-start gap-3"
-                >
-
-                  <div
+                  max-sm:gap-2
+                "
+              >
+                {current.idealFor.map((item) => (
+                  <span
+                    key={item}
                     className="
-                    mt-1
-                    flex
-                    h-4
-                    w-4
-                    items-center
-                    justify-center
-                    rounded-full
-                    bg-lime-500/10
+                      rounded-full
+                      border
+                      border-lime-200
+                      bg-lime-50
+                      px-4
+                      py-2
+                      text-sm
+                      font-medium
+                      text-lime-700
+
+                      max-sm:px-3
+                      max-sm:py-1.5
+                      max-sm:text-xs
                     "
                   >
-
-                    <div className="h-2 w-2 rounded-full bg-lime-500" />
-
-                  </div>
-
-                  <span className="leading-6 text-slate-600">
-
-                    {benefit}
-
+                    {item}
                   </span>
-
-                </motion.div>
-
-              ))}
-
+                ))}
+              </div>
             </div>
-
           </div>
 
-        
 
-          {/* Quick Stats */}
+          {/* ===================================================== */}
+          {/* RIGHT CONTENT */}
+          {/* ===================================================== */}
 
           <div
             className="
-            overflow-hidden
-            rounded-[28px]
-            bg-slate-900
-            p-7
-            text-white
+              space-y-5
+
+              max-sm:space-y-4
             "
           >
-
-            <div className="grid grid-cols-3 gap-6">
-
-              <div>
-
-                <p className="text-3xl font-black text-lime-400">
-
-                  24×7
-
-                </p>
-
-                <p className="mt-2 text-sm text-slate-300">
-
-                  Monitoring
-
-                </p>
-
-              </div>
-
-              <div>
-
-                <p className="text-3xl font-black text-lime-400">
-
-                  AI
-
-                </p>
-
-                <p className="mt-2 text-sm text-slate-300">
-
-                  Analytics
-
-                </p>
-
-              </div>
-
-              <div>
-
-                <p className="text-3xl font-black text-lime-400">
-
-                  CMS
-
-                </p>
-
-                <p className="mt-2 text-sm text-slate-300">
-
-                  Platform
-
-                </p>
-
-              </div>
-
-            </div>
+            {/* Benefits Card */}
 
             <div
               className="
-              mt-7
-              rounded-2xl
-              border
-              border-white/10
-              bg-white/5
-              p-5
+                rounded-[28px]
+                border
+                border-slate-200
+                bg-slate-50
+                p-7
+
+                max-sm:rounded-[20px]
+                max-sm:p-5
+
+                md:max-lg:p-6
               "
             >
+              <h5
+                className="
+                  text-xl
+                  font-bold
+                  text-slate-900
 
-              <p className="text-sm uppercase tracking-[3px] text-lime-400">
+                  max-sm:text-lg
+                "
+              >
+                Key Benefits
+              </h5>
 
-                Why VOLTERRA?
 
-              </p>
+              <div
+                className="
+                  mt-4
+                  space-y-2
 
-              <p className="mt-3 leading-7 text-slate-300">
+                  max-sm:mt-3
+                "
+              >
+                {current.benefits.map((benefit) => (
+                  <motion.div
+                    key={benefit}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="flex items-start gap-3"
+                  >
+                    <div
+                      className="
+                        mt-1
+                        flex
+                        h-4
+                        w-4
+                        flex-shrink-0
+                        items-center
+                        justify-center
+                        rounded-full
+                        bg-lime-500/10
+                      "
+                    >
+                      <div className="h-2 w-2 rounded-full bg-lime-500" />
+                    </div>
 
-                Every business model is powered by our intelligent
-                charging platform, ensuring reliable operations,
-                real-time monitoring, seamless user experiences,
-                and scalable growth.
+                    <span
+                      className="
+                        leading-6
+                        text-slate-600
 
-              </p>
-
+                        max-sm:text-sm
+                        max-sm:leading-6
+                      "
+                    >
+                      {benefit}
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
             </div>
 
+
+            {/* Quick Stats */}
+
+            <div
+              className="
+                overflow-hidden
+                rounded-[28px]
+                bg-slate-900
+                p-7
+                text-white
+
+                max-sm:rounded-[20px]
+                max-sm:p-5
+
+                md:max-lg:p-6
+              "
+            >
+              <div
+                className="
+                  grid
+                  grid-cols-3
+                  gap-6
+
+                  max-sm:gap-2
+                "
+              >
+                <div>
+                  <p className="text-3xl font-black text-lime-400 max-sm:text-xl">
+                    24×7
+                  </p>
+
+                  <p className="mt-2 text-sm text-slate-300 max-sm:text-[10px]">
+                    Monitoring
+                  </p>
+                </div>
+
+
+                <div>
+                  <p className="text-3xl font-black text-lime-400 max-sm:text-xl">
+                    AI
+                  </p>
+
+                  <p className="mt-2 text-sm text-slate-300 max-sm:text-[10px]">
+                    Analytics
+                  </p>
+                </div>
+
+
+                <div>
+                  <p className="text-3xl font-black text-lime-400 max-sm:text-xl">
+                    CMS
+                  </p>
+
+                  <p className="mt-2 text-sm text-slate-300 max-sm:text-[10px]">
+                    Platform
+                  </p>
+                </div>
+              </div>
+
+
+              <div
+                className="
+                  mt-7
+                  rounded-2xl
+                  border
+                  border-white/10
+                  bg-white/5
+                  p-5
+
+                  max-sm:mt-5
+                  max-sm:p-4
+                "
+              >
+                <p
+                  className="
+                    text-sm
+                    uppercase
+                    tracking-[3px]
+                    text-lime-400
+
+                    max-sm:text-xs
+                    max-sm:tracking-[2px]
+                  "
+                >
+                  Why VOLTERRA?
+                </p>
+
+                <p
+                  className="
+                    mt-3
+                    leading-7
+                    text-slate-300
+
+                    max-sm:text-sm
+                    max-sm:leading-6
+                  "
+                >
+                  Every business model is powered by our intelligent
+                  charging platform, ensuring reliable operations,
+                  real-time monitoring, seamless user experiences,
+                  and scalable growth.
+                </p>
+              </div>
+            </div>
           </div>
-
         </div>
-
-      </div>
-
-    </motion.div>
-
-  </AnimatePresence>
-
-</div>
+      </motion.div>
+    </AnimatePresence>
+  </div>
 </motion.div>
 
          
@@ -1697,110 +2091,174 @@ const openHostForm = () => {
         {/* CTA */}
         {/* ===================================================== */}
 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: .8 }}
-          className="
-          mt-32
-          overflow-hidden
-          rounded-[40px]
-          bg-linear-to-r
-          from-slate-900
-          via-[#111827]
-          to-slate-900
-          p-12
-          shadow-[0_30px_80px_rgba(0,0,0,.18)]
-          "
-        >
-
-          <div className="grid items-center gap-12 lg:grid-cols-[1fr_auto]">
-
-            <div>
-
-              <div
-                className="
-                inline-flex
-                rounded-full
-                border
-                border-lime-500/20
-                bg-lime-500/10
-                px-5
-                py-2
-                text-xs
-                font-semibold
-                uppercase
-                tracking-[3px]
-                text-lime-400
-                "
-              >
-                Want to join VOLTERRA ?
-              </div>
-
-              <h2
-                className="
-                mt-6
-                text-4xl
-                font-black
-                leading-tight
-                text-white
-                lg:text-5xl
-                "
-              >
-                Let's Build India's
-
-                <span className="text-lime-400">
-                  {" "}EV Charging Future
-                </span>
-
-              </h2>
-
-              <p
-                className="
-                mt-6
-                max-w-2xl
-                text-lg
-                leading-8
-                text-slate-300
-                "
-              >
-                Whether you're an investor, enterprise, fleet operator,
-                property owner or strategic partner, VOLTERRA Energy
-                provides the technology, infrastructure and business
-                model to help you succeed in India's rapidly growing
-                EV ecosystem.
-              </p>
-
-            </div>
-
-            <button
-            onClick={() => router.push('/contact')}
-  // onClick={() => setShowPartnerModal(true)}
+       <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
   className="
-  rounded-2xl
-  bg-gradient-to-r
-  from-lime-500
-  to-green-600
-  px-10
-  py-4
-  text-lg
-  font-semibold
-  text-white
-  transition-all
-  duration-300
-  hover:-translate-y-1
-  hover:scale-105
-  hover:shadow-[0_20px_50px_rgba(132,204,22,.45)]
-  cursor-pointer
+    mt-32
+    overflow-hidden
+    rounded-[40px]
+    bg-linear-to-r
+    from-slate-900
+    via-[#111827]
+    to-slate-900
+    p-12
+    shadow-[0_30px_80px_rgba(0,0,0,.18)]
+
+    /* Mobile only */
+    max-sm:mt-16
+    max-sm:rounded-[24px]
+    max-sm:p-6
+
+    /* Tablet only */
+    md:max-lg:mt-24
+    md:max-lg:rounded-[32px]
+    md:max-lg:p-8
   "
 >
- Contact Us
-</button>
 
-          </div>
+  <div
+    className="
+      grid
+      items-center
+      gap-12
+      lg:grid-cols-[1fr_auto]
 
-        </motion.div>
+      /* Mobile only */
+      max-sm:gap-7
+      max-sm:text-center
+
+      /* Tablet only */
+      md:max-lg:gap-8
+    "
+  >
+
+    {/* Content */}
+
+    <div>
+
+      <div
+        className="
+          inline-flex
+          rounded-full
+          border
+          border-lime-500/20
+          bg-lime-500/10
+          px-5
+          py-2
+          text-xs
+          font-semibold
+          uppercase
+          tracking-[3px]
+          text-lime-400
+
+          /* Mobile only */
+          max-sm:px-3
+          max-sm:py-2
+          max-sm:text-[10px]
+          max-sm:tracking-[2px]
+
+          /* Tablet only */
+          md:max-lg:text-xs
+        "
+      >
+        Want to join VOLTERRA ?
+      </div>
+
+
+      <h2
+        className="
+          mt-6
+          text-4xl
+          font-black
+          leading-tight
+          text-white
+          lg:text-5xl
+
+          /* Mobile only */
+          max-sm:mt-4
+          max-sm:text-3xl
+
+          /* Tablet only */
+          md:max-lg:text-4xl
+        "
+      >
+        Let's Build India's
+
+        <span className="text-lime-400">
+          {" "}EV Charging Future
+        </span>
+
+      </h2>
+
+
+      <p
+        className="
+          mt-6
+          max-w-2xl
+          text-lg
+          leading-8
+          text-slate-300
+
+          /* Mobile only */
+          max-sm:mt-4
+          max-sm:text-sm
+          max-sm:leading-6
+
+          /* Tablet only */
+          md:max-lg:text-base
+          md:max-lg:leading-7
+        "
+      >
+        Whether you're an investor, enterprise, fleet operator,
+        property owner or strategic partner, VOLTERRA Energy
+        provides the technology, infrastructure and business
+        model to help you succeed in India's rapidly growing
+        EV ecosystem.
+      </p>
+
+    </div>
+
+
+    {/* Button */}
+
+    <button
+      onClick={() => router.push('/contact')}
+      className="
+        rounded-2xl
+        bg-gradient-to-r
+        from-lime-500
+        to-green-600
+        px-10
+        py-4
+        text-lg
+        font-semibold
+        text-white
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:scale-105
+        hover:shadow-[0_20px_50px_rgba(132,204,22,.45)]
+        cursor-pointer
+
+        /* Mobile only */
+        max-sm:w-full
+        max-sm:px-6
+        max-sm:py-3
+        max-sm:text-base
+
+        /* Tablet only */
+        md:max-lg:px-8
+      "
+    >
+      Contact Us
+    </button>
+
+  </div>
+
+</motion.div>
 
       </div>
 

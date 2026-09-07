@@ -38,8 +38,8 @@ const ecosystem = [
 
 export default function TechnologySection() {
   return (
-    <section className="py-26">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="py-16 sm:py-20 lg:py-26">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -72,7 +72,8 @@ export default function TechnologySection() {
           <h2
               className="
               mt-3
-              text-4xl
+              text-3xl
+              sm:text-4xl
               font-black
               leading-tight
               text-slate-900
@@ -90,7 +91,8 @@ export default function TechnologySection() {
               mx-auto
               mt-3
               max-w-4xl
-              text-lg
+              text-base
+              sm:text-lg
               leading-7
               text-slate-600
               "
@@ -102,7 +104,7 @@ export default function TechnologySection() {
 
         </motion.div>
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+        <div className="mt-10 grid gap-5 sm:mt-14 sm:gap-8 lg:mt-16 lg:grid-cols-2">
 
           {ecosystem.map((item, index) => {
 
@@ -122,10 +124,10 @@ export default function TechnologySection() {
                 whileHover={{
                   y: -8,
                 }}
-                className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-sm"
+                className="rounded-3xl border border-slate-200 bg-white p-5 sm:rounded-[32px] sm:p-8 shadow-sm"
               >
 
-                <div className="flex items-start gap-5">
+                <div className="flex items-start gap-3 sm:gap-5">
 
                   <div className="rounded-2xl bg-lime-100 p-2">
 
@@ -135,7 +137,7 @@ export default function TechnologySection() {
 
                   <div>
 
-                    <h3 className="text-2xl font-black text-slate-900">
+                    <h3 className="text-xl font-black text-slate-900 sm:text-2xl">
                       {item.title}
                     </h3>
 
