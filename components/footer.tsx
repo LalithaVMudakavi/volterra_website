@@ -598,7 +598,7 @@ const solutions = [
   },
   {
     icon: LiaLinkedin,
-    href: 'https://www.linkedin.com/company/volterra-energy-ev-charging',
+    href: 'https://www.linkedin.com/company/volterra-energy-ev-charging/?viewAsMember=true',
     label: 'LinkedIn',
   },
       {
