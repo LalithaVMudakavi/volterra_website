@@ -16,6 +16,7 @@ import {
   Building2,
   User,
   ArrowRight,
+  ClipboardList,
 } from "lucide-react";
 import { SearchSelect } from "./ui/search-select";
 
@@ -649,23 +650,25 @@ help you at every step.
   onChange={handleChange}
   placeholder="Enter your name"
   required
-          className="
-          h-12
-          w-full
-          rounded-2xl
-          border
-          border-slate-200
-          bg-slate-50
-          pl-12
-          pr-4
-          outline-none
-          transition-all
-          duration-300
-          focus:border-lime-500
-          focus:bg-white
-          focus:ring-4
-          focus:ring-lime-500/10
-          "
+      className="
+  h-12
+  w-full
+  rounded-2xl
+  border
+  border-slate-200
+  bg-slate-50
+  pl-12
+  pr-4
+  text-slate-900
+  placeholder:text-slate-400
+  outline-none
+  transition-all
+  duration-300
+  focus:border-lime-500
+  focus:bg-white
+  focus:ring-4
+  focus:ring-lime-500/10
+"
         />
 
       </div>
@@ -700,23 +703,25 @@ help you at every step.
   value={formData.company}
   onChange={handleChange}
   placeholder="Your company"
-          className="
-          h-12
-          w-full
-          rounded-2xl
-          border
-          border-slate-200
-          bg-slate-50
-          pl-12
-          pr-4
-          outline-none
-          transition-all
-          duration-300
-          focus:border-lime-500
-          focus:bg-white
-          focus:ring-4
-          focus:ring-lime-500/10
-          "
+        className="
+  h-12
+  w-full
+  rounded-2xl
+  border
+  border-slate-200
+  bg-slate-50
+  pl-12
+  pr-4
+  text-slate-900
+  placeholder:text-slate-400
+  outline-none
+  transition-all
+  duration-300
+  focus:border-lime-500
+  focus:bg-white
+  focus:ring-4
+  focus:ring-lime-500/10
+"
         />
 
       </div>
@@ -752,23 +757,25 @@ help you at every step.
   onChange={handleChange}
   placeholder="+91 XXXXX XXXXX"
   required
-             className="
-          h-12
-          w-full
-          rounded-2xl
-          border
-          border-slate-200
-          bg-slate-50
-          pl-12
-          pr-4
-          outline-none
-          transition-all
-          duration-300
-          focus:border-lime-500
-          focus:bg-white
-          focus:ring-4
-          focus:ring-lime-500/10
-          "
+        className="
+  h-12
+  w-full
+  rounded-2xl
+  border
+  border-slate-200
+  bg-slate-50
+  pl-12
+  pr-4
+  text-slate-900
+  placeholder:text-slate-400
+  outline-none
+  transition-all
+  duration-300
+  focus:border-lime-500
+  focus:bg-white
+  focus:ring-4
+  focus:ring-lime-500/10
+"
         />
 
       </div>
@@ -804,23 +811,25 @@ help you at every step.
   onChange={handleChange}
   placeholder="example@email.com"
   required
-            className="
-          h-12
-          w-full
-          rounded-2xl
-          border
-          border-slate-200
-          bg-slate-50
-          pl-12
-          pr-4
-          outline-none
-          transition-all
-          duration-300
-          focus:border-lime-500
-          focus:bg-white
-          focus:ring-4
-          focus:ring-lime-500/10
-          "
+      className="
+  h-12
+  w-full
+  rounded-2xl
+  border
+  border-slate-200
+  bg-slate-50
+  pl-12
+  pr-4
+  text-slate-900
+  placeholder:text-slate-400
+  outline-none
+  transition-all
+  duration-300
+  focus:border-lime-500
+  focus:bg-white
+  focus:ring-4
+  focus:ring-lime-500/10
+"
         />
 
       </div>
@@ -830,49 +839,54 @@ help you at every step.
     {/* Location */}
     {/* Street Address */}
 
+{/* Street Address */}
+
 <div className="md:col-span-2">
 
   <label className="mb-2 block font-semibold text-slate-800">
-    Address 
+    Address
   </label>
 
   <div className="relative">
 
     <MapPin
       className="
-      absolute
-      left-4
-      top-5
-      h-4
-      w-4
-      text-slate-400
+        absolute
+        left-4
+        top-5
+        z-10
+        h-4
+        w-4
+        text-slate-400
       "
     />
 
     <textarea
-      rows={2}
+      rows={3}
       name="streetAddress"
       value={formData.streetAddress}
       onChange={handleChange}
       placeholder="Enter address"
       className="
-      w-full
-      rounded-2xl
-      border
-      border-slate-200
-      bg-slate-50
-      pl-12
-      pr-4
-      pt-4
-      pb-4
-      outline-none
-      transition-all
-      duration-300
-      resize-none
-      focus:border-lime-500
-      focus:bg-white
-      focus:ring-4
-      focus:ring-lime-500/10
+        w-full
+        rounded-2xl
+        border
+        border-slate-200
+        bg-slate-50
+        pl-12
+        pr-4
+        pt-4
+        pb-4
+        text-slate-900
+        placeholder:text-slate-400
+        outline-none
+        transition-all
+        duration-300
+        resize-none
+        focus:border-lime-500
+        focus:bg-white
+        focus:ring-4
+        focus:ring-lime-500/10
       "
     />
 
@@ -887,6 +901,7 @@ help you at every step.
   </label>
 
 <SearchSelect
+  instanceId="city-select"
   value={formData.city}
   onChange={(value) =>
     setFormData((prev) => ({
@@ -897,7 +912,6 @@ help you at every step.
   options={CITIES}
   placeholder="Select city"
 />
-
 </div>
 
 <div>
@@ -906,7 +920,8 @@ help you at every step.
     State <span className="text-red-500">*</span>
   </label>
 
-  <SearchSelect
+<SearchSelect
+  instanceId="state-select"
   value={formData.state}
   onChange={(value) =>
     setFormData((prev) => ({
@@ -929,8 +944,8 @@ help you at every step.
         Business Type  <span className="text-red-500">*</span>
       </label>
 
-    <select
-    required
+<select
+  required
   name="businessType"
   value={formData.businessType}
   onChange={handleChange}
@@ -942,6 +957,7 @@ help you at every step.
     border-slate-200
     bg-slate-50
     px-5
+    text-slate-900
     outline-none
     transition-all
     duration-300
@@ -966,6 +982,8 @@ help you at every step.
 
   </div>
 
+
+
   {/* Message */}
 
   <div className="mt-6">
@@ -974,30 +992,52 @@ help you at every step.
       Project Requirements  <span className="text-red-500">*</span>
     </label>
 
-   <textarea
-  rows={3}
-  name="requirements"
-  value={formData.requirements}
-  onChange={handleChange}
-  placeholder="Tell us about your EV charging project..."
+  <div className="relative">
+
+    <ClipboardList
       className="
-      w-full
-      rounded-2xl
-      border
-      border-slate-200
-      bg-slate-50
-      p-5
-      outline-none
-      transition-all
-      duration-300
-      focus:border-lime-500
-      focus:bg-white
-      focus:ring-4
-      focus:ring-lime-500/10
+        absolute
+        left-4
+        top-5
+        z-10
+        h-4
+        w-4
+        text-slate-400
       "
     />
 
+    <textarea
+  rows={2}
+  name="streetAddress"
+  value={formData.streetAddress}
+  onChange={handleChange}
+  placeholder="Tell us about your EV charging project..."
+  className="
+    w-full
+    rounded-2xl
+    border
+    border-slate-200
+    bg-slate-50
+    pl-12
+    pr-4
+    pt-4
+    pb-4
+    text-slate-900
+    placeholder:text-slate-400
+    outline-none
+    transition-all
+    duration-300
+    resize-none
+    focus:border-lime-500
+    focus:bg-white
+    focus:ring-4
+    focus:ring-lime-500/10
+  "
+/>
+
   </div>
+
+</div>
 
   {/* Submit */}
 

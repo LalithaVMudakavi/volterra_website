@@ -7,6 +7,7 @@ interface SearchSelectProps {
   onChange: (value: string) => void;
   options: string[];
   placeholder: string;
+  instanceId?: string;
 }
 
 export function SearchSelect({
@@ -14,6 +15,7 @@ export function SearchSelect({
   onChange,
   options,
   placeholder,
+  instanceId,
 }: SearchSelectProps) {
   const selectOptions = options.map((item) => ({
     label: item,
@@ -22,6 +24,7 @@ export function SearchSelect({
 
   return (
     <Select
+      instanceId={instanceId}
       isSearchable
       options={selectOptions}
       placeholder={placeholder}
@@ -35,7 +38,9 @@ export function SearchSelect({
           minHeight: 48,
           height: 48,
           borderRadius: 16,
-          borderColor: state.isFocused ? "#84cc16" : "#e2e8f0",
+          borderColor: state.isFocused
+            ? "#84cc16"
+            : "#e2e8f0",
           backgroundColor: "#f8fafc",
           boxShadow: state.isFocused
             ? "0 0 0 4px rgba(132,204,22,.12)"
@@ -54,6 +59,12 @@ export function SearchSelect({
           ...base,
           margin: 0,
           padding: 0,
+          color: "#0f172a",
+        }),
+
+        singleValue: (base) => ({
+          ...base,
+          color: "#0f172a",
         }),
 
         placeholder: (base) => ({
